@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="148" viewBox="0 0 340 148">
+    <g data-name="그룹 66719">
+        <g data-name="사각형 25299" style="fill:#fff;stroke:#dfdfdf">
+            <rect width="340" height="148" rx="4" style="stroke:none"/>
+            <rect x=".5" y=".5" width="339" height="147" rx="3.5" style="fill:none"/>
+        </g>
+        <text data-name="이메일 인증" transform="translate(17 37)" style="font-size:10px;font-family:NotoSansCJKkr-Medium,Noto Sans CJK KR;font-weight:500;fill:#202020;letter-spacing:-.07em"><tspan x="0" y="0">이메일 인증</tspan></text>
+        <text data-name="1" transform="translate(37 21)" style="font-size:10px;font-family:NotoSansCJKkr-Medium,Noto Sans CJK KR;font-weight:500;fill:#202020;letter-spacing:-.07em"><tspan x="0" y="0">1</tspan></text>
+        <text data-name="2" transform="translate(123 21)" style="font-size:10px;font-family:NotoSansCJKkr-Medium,Noto Sans CJK KR;font-weight:500;fill:#202020;letter-spacing:-.07em"><tspan x="0" y="0">2</tspan></text>
+        <text data-name="사업자 정보 입력" transform="translate(95 37)" style="font-size:10px;font-family:NotoSansCJKkr-Medium,Noto Sans CJK KR;font-weight:500;fill:#202020;letter-spacing:-.07em"><tspan x="0" y="0">사업자 정보 입력</tspan></text>
+        <text data-name="4" transform="translate(296 21)" style="font-size:10px;font-family:NotoSansCJKkr-Medium,Noto Sans CJK KR;font-weight:500;fill:#202020;letter-spacing:-.07em"><tspan x="0" y="0">4</tspan></text>
+        <text data-name="판매몰 등록" transform="translate(277 37)" style="font-size:10px;font-family:NotoSansCJKkr-Medium,Noto Sans CJK KR;font-weight:500;fill:#202020;letter-spacing:-.07em"><tspan x="0" y="0">판매몰 등록</tspan></text>
+        <text data-name="3" transform="translate(210 21)" style="font-size:10px;font-family:NotoSansCJKkr-Medium,Noto Sans CJK KR;font-weight:500;fill:#202020;letter-spacing:-.07em"><tspan x="0" y="0">3</tspan></text>
+        <text data-name="결제수단 등록" transform="translate(187 37)" style="font-size:10px;font-family:NotoSansCJKkr-Medium,Noto Sans CJK KR;font-weight:500;fill:#202020;letter-spacing:-.07em"><tspan x="0" y="0">결제수단 등록</tspan></text>
+        <path data-name="패스 26209" d="M-12001.34 2946.678h50l-3.475-3" transform="translate(12059.84 -2928.84)" style="stroke:#e1e1e1;fill:none"/>
+        <path data-name="패스 26210" d="M-12001.34 2946.678h50l-3.475-3" transform="translate(12145.84 -2928.84)" style="stroke:#e1e1e1;fill:none"/>
+        <path data-name="패스 26212" d="M-11965.471 2946.678h16l-3.281-3.309" transform="rotate(90 -4453.331 7568.009)" style="stroke:#e1e1e1;fill:none"/>
+        <path data-name="패스 26211" d="M-12001.34 2946.678h50l-3.475-3" transform="translate(12231.84 -2928.84)" style="stroke:#e1e1e1;fill:none"/>
+        <text transform="translate(145 132)" style="font-size:14px;font-family:NotoSansCJKkr-Bold,Noto Sans CJK KR;font-weight:700;fill:#202020;letter-spacing:-.07em"><tspan x="0" y="0">가입완료</tspan></text>
+        <g data-name="그룹 66152" transform="translate(124.968 -274.032)">
+            <circle data-name="타원 46" cx="15" cy="15" r="15" transform="translate(30.032 356.032)" style="fill:#fcaf1f"/>
+            <path data-name="패스 25227" d="m-18245.232-6255.918 7.43 6 11.359-11.274" transform="translate(18280.268 6626.583)" style="stroke:#fff;fill:none"/>
+        </g>
+    </g>
+</svg>

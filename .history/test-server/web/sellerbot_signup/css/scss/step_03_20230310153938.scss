@@ -1,0 +1,326 @@
+@import "./common", "./modal";
+
+article#bizInfo {
+    margin-top: 80px;
+    margin-bottom: 200px;
+
+    h2 {
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: -0.65px;
+        color: #202020;
+
+        small {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: -0.98px;
+            text-align: left;
+            color: #dedede;
+            margin-left: 4px;
+        }
+    }
+
+    .bg {
+        width: 100%;
+        padding: 40px 10px;
+        box-sizing: border-box;
+        background-color: #f9f9f9;
+        margin-bottom: 10px;
+
+        .wrapper {
+            width: 100%;
+            max-width: 534px;
+            margin: 0 auto;
+
+            p {
+                display: inline;
+                font-size: 14px;
+                font-weight: 500;
+                letter-spacing: -0.98px;
+                color: #474246;
+                position: relative;
+
+                &.essential::after {
+                    content: '*';
+                    position: absolute;
+                    top: 0px;
+                    right: -7px;
+                    display: block;
+                }
+
+                &.question {
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        margin-left: 5px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .row,
+            .flexRow {
+                position: relative;
+                margin-top: 5px;
+                margin-bottom: 40px;
+
+                span.underMsg {
+                    font-size: 12px;
+                    font-weight: 500;
+                    line-height: 1.67;
+                    letter-spacing: -0.84px;
+                    text-align: left;
+                    color: #bbb;
+                    position: absolute;
+                    top: 100%;
+                    left: 4px;
+
+                    b {
+                        font-weight: 500;
+                        color: #3d78ff;
+                    }
+
+                    &.red {
+                        color: #ff7070;
+                        display: none;
+                    }
+
+                    &.marginLeft {
+                        margin-left: 112px;
+                    }
+                }
+
+                span.errMsg {
+                    font-size: 12px;
+                    font-weight: 500;
+                    line-height: 1.67;
+                    letter-spacing: -0.84px;
+                    text-align: left;
+                    color: #ff7070;
+                    position: absolute;
+                    top: calc(100% + 20px);
+                    left: 4px;
+                    display: none;
+                }
+            }
+
+            .row {
+                margin-bottom: 40px;
+
+                input {
+                    width: 100%;
+                    outline: none;
+                    border: 1px solid #e2e2e2;
+                    padding: 12px 0;
+                    text-indent: 10px;
+                    font-size: 12px;
+                }
+
+                select {
+                    width: 100%;
+                    outline: none;
+                    border: 1px solid #e2e2e2;
+                    padding: 11px 0;
+                    text-indent: 10px;
+                    font-size: 12px;
+                }
+            }
+
+            .flexRow {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                input {
+                    flex: 1;
+                    width: 100%;
+                    outline: none;
+                    border: 1px solid #e2e2e2;
+                    padding: 12px 0;
+                    text-indent: 10px;
+                    font-size: 12px;
+
+                    &#bizNum {
+                        margin-right: 12px;
+                    }
+                }
+
+                select#userPhone_1,
+                select#managerPhone_1 {
+                    width: 100px;
+                    margin-right: 12px;
+                    outline: none;
+                    border: 1px solid #e2e2e2;
+                    padding: 11px 0;
+                    text-indent: 10px;
+                    font-size: 12px;
+                }
+
+                button {
+                    width: 100px;
+                    outline: none;
+                    border: 1px solid #e6e6e6;
+                    padding: 12px 0;
+                    background-color: #e6e6e6;
+                    color: #ababab;
+                    font-size: 12px;
+                    letter-spacing: -0.84px;
+                    cursor: pointer;
+
+                    &.blue {
+                        background-color: #3d78ff;
+                        color: white;
+                    }
+
+                    &:disabled {
+                        background-color: #f0f0f0;
+                        color: #ababab;
+                        pointer-events: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+button.fixed3 {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 60%;
+    right: 5%;
+}
+
+.modal#talkInfo {
+    .wrapper {
+        max-width: 1200px;
+        display: flex;
+        padding: 80px 80px 0 80px;
+        box-sizing: border-box;
+
+        .left {
+            width: 40%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .right {
+            .row {
+                &.right {
+                    display: flex;
+                    justify-content: right;
+                    margin-bottom: 60px;
+
+                    img {
+                        width: 100px;
+                    }
+                }
+
+                p {
+                    font-size: 14px;
+                    line-height: 2.14;
+                    letter-spacing: -0.98px;
+                    text-align: left;
+                    color: #2b2b2b;
+                }
+            }
+
+            .flexRow {
+                display: flex;
+                align-items: center;
+                margin-bottom: 30px;
+
+                h2 {
+                    font-size: 36px;
+                    font-weight: bold;
+                    letter-spacing: -2.52px;
+                    color: #2b2b2b;
+                    margin-bottom: 3px;
+                }
+
+                span {
+                    flex: 1;
+                    display: block;
+                    margin-left: 12px;
+                    height: 1px;
+                    background-color: #d6d6d6;
+                }
+            }
+
+            .grayBox {
+                margin-top: 80px;
+                background-color: #f8f8f8;
+                padding: 60px 40px;
+                box-sizing: border-box;
+
+                h3 {
+                    font-size: 26px;
+                    font-weight: bold;
+                    letter-spacing: -1.82px;
+                    color: #2b2b2b;
+                }
+
+                .flexRow {
+                    margin-top: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    position: relative;
+
+                    input {
+                        flex: 1;
+                        width: 100%;
+                        outline: none;
+                        border: 1px solid #e2e2e2;
+                        padding: 12px 0;
+                        text-indent: 10px;
+                        font-size: 12px;
+                        margin-right: 12px;
+                    }
+
+                    select {
+                        width: 120px;
+                        margin-right: 12px;
+                        outline: none;
+                        border: 1px solid #e2e2e2;
+                        padding: 11px 0;
+                        text-indent: 10px;
+                        font-size: 12px;
+                    }
+
+                    button {
+                        width: 120px;
+                        outline: none;
+                        border: 1px solid #2b2b2b;
+                        padding: 12px 0;
+                        background-color: #2b2b2b;
+                        color: white;
+                        font-size: 12px;
+                        letter-spacing: -0.84px;
+                        cursor: pointer;
+                    }
+
+                    span.underMsg {
+                        font-size: 12px;
+                        font-weight: 500;
+                        line-height: 1.67;
+                        letter-spacing: -0.84px;
+                        text-align: left;
+                        color: #bbb;
+                        position: absolute;
+                        bottom: -20px;
+                        left: 4px;
+                        background: none;
+                    }
+                }
+            }
+        }
+    }
+}

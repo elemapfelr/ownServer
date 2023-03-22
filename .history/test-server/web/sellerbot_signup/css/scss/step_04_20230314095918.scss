@@ -1,0 +1,47 @@
+@import "./common", "./modal";
+
+article#top{
+    .flex{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span.line{
+            width: 45%;
+            height: 1px;
+            background-color: #e2e2e2;
+            display: block;
+        }
+        .checkCircle{
+            width: 40px;
+            height: 40px;
+            border: 1px solid #3d78ff;
+            border-radius: 40px;
+            position: relative;
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 18px;
+                height: 1px;
+                background-color: $blue;
+                top: 20px;
+                left: 0px;
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 36px;
+                height: 1px;
+                background-color: $blue;
+                top: 16px;
+                left: 10px;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}

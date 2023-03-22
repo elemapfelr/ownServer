@@ -1,0 +1,49 @@
+@import "./common", "./processBar", "./modal";
+
+article{
+    p.title{
+        font-size: 12px;
+        letter-spacing: -0.84px;
+        text-align: left;
+        color: #202020;
+        margin-bottom: 4px;
+    }
+
+    .imgBox{
+        margin-top: 64px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        span{
+            font-size: 10px;
+            letter-spacing: -0.7px;
+            color: #bcbcbc;
+            margin-bottom: 10px;
+        }
+        img{
+            width: 205px;
+            height: auto;
+        }
+    }
+
+    button{
+        width: 100%;
+        outline: none;
+        border: 1px solid $gray;
+        padding: 15px 0;
+        font-size: 1rem;
+        cursor: pointer;
+
+        &.black{
+            margin-top: 14px;
+            background-color: #202020;
+            color: white;
+        }
+
+        &.yellow {
+            margin: 16px 0 40px 0;
+            background-color: $yellow;
+        }
+    }
+}

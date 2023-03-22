@@ -1,0 +1,15 @@
+@import "./common", "./modal";
+
+article#top{
+    .flex{
+        display: flex;
+        align-items: center;
+
+        span.line{
+            width: 50%;
+            height: 1px;
+            background-color: #bbb;
+            display: block;
+        }
+    }
+}

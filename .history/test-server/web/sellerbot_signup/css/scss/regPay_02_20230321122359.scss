@@ -1,0 +1,354 @@
+@import "./common", "./modal";
+
+
+article#content {
+    margin-top: 80px;
+
+    p {
+        font-size: 18px;
+        line-height: 1.67;
+        letter-spacing: -0.65px;
+        text-align: left;
+        color: #202020;
+        margin-bottom: 12px;
+    }
+
+    h3 {
+        margin-top: 80px;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: -0.65px;
+        text-align: left;
+        color: #202020;
+    }
+
+    .flexBox {
+        margin-top: 10px;
+        border: 1px solid #e2e2e2;
+        display: flex;
+        align-items: center;
+
+        p {
+            margin-bottom: 0;
+        }
+
+        .left {
+            width: 30%;
+            border-right: 1px solid #e2e2e2;
+            padding: 20px 0;
+
+            h5 {
+                font-size: 24px;
+                font-weight: 500;
+                letter-spacing: -1.2px;
+                text-align: center;
+                color: #3d78ff;
+            }
+
+            h4 {
+                font-size: 30px;
+                font-weight: bold;
+                letter-spacing: -1.5px;
+                text-align: center;
+                color: #202020;
+                margin-top: 10px;
+            }
+
+            small {
+                display: block;
+                font-size: 12px;
+                font-weight: 500;
+                letter-spacing: -0.6px;
+                text-align: center;
+                color: #202020;
+            }
+        }
+
+        .right {
+            width: 70%;
+            background-color: #f9f9f9;
+            padding: 48px 0;
+
+            .content {
+                width: 95%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                margin: 0 auto;
+
+                p.gray {
+                    font-size: 14px;
+                    font-weight: 500;
+                    letter-spacing: -0.5px;
+                    text-align: left;
+                    color: #c1c1c1;
+                }
+
+                .blue {
+                    padding: 3px 19px;
+                    background-color: #3d78ff;
+                    border-radius: 20px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    letter-spacing: -0.5px;
+                    text-align: center;
+                    color: #fff;
+                    margin-bottom: 5px;
+                }
+
+                .blue_outline {
+                    padding: 2px 19px;
+                    background-color: #fff;
+                    border: 1px solid #3d78ff;
+                    border-radius: 20px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    letter-spacing: -0.5px;
+                    text-align: center;
+                    color: #3d78ff;
+                    margin-bottom: 5px;
+                }
+
+                p {
+                    font-size: 14px;
+                    font-weight: 500;
+                    letter-spacing: -0.5px;
+                    text-align: center;
+                    color: #202020;
+                }
+
+                span.line {
+                    width: 1px;
+                    display: block;
+                    height: 60px;
+                    background-color: #e1e1e1;
+                }
+            }
+        }
+
+        &.payInfo {
+            .left {
+                h5 {
+                    font-size: 16px;
+                    font-weight: bold;
+                    letter-spacing: -0.8px;
+                    text-align: center;
+                    color: #202020;
+                }
+            }
+
+            .right {
+                padding: 0;
+                background-color: #f9f9f9;
+
+                p {
+                    text-align: center;
+                    font-size: 16px;
+                    font-weight: 500;
+                    letter-spacing: -0.8px;
+                    color: #202020;
+                }
+            }
+        }
+    }
+
+    div#caution {
+        margin-top: 80px;
+
+        h2 {
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: -0.65px;
+            text-align: left;
+            color: #202020;
+        }
+
+        .grayBox {
+            margin-top: 10px;
+            padding: 40px;
+            background-color: #f9f9f9;
+
+            pre {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 1.71;
+                letter-spacing: -0.5px;
+                text-align: left;
+                color: #808080;
+            }
+        }
+    }
+
+    .btnBox {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 40px;
+        margin-bottom: 200px;
+
+        button {
+            width: 260px;
+            font-size: 18px;
+            letter-spacing: -0.65px;
+            text-align: center;
+            color: #202020;
+            outline: none;
+            border: solid 1px #e2e2e2;
+            background-color: #ebebeb;
+            padding: 17px 0;
+            cursor: pointer;
+
+            &.blue {
+                background-color: #3d78ff;
+                color: white;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    article#content {
+        p {
+            font-size: 14px;
+            line-height: 1.71;
+            letter-spacing: -0.98px;
+        }
+
+        h2 {
+            margin-top: 40px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: -0.5px;
+            text-align: left;
+            color: #202020;
+        }
+
+        .flexBox {
+            flex-direction: column;
+
+            &.payInfo {
+                flex-direction: row;
+
+                .left,
+                .right {
+                    width: 50%;
+                    padding: 10px 0;
+                    border: none;
+
+                    h5,
+                    p {
+                        font-size: 12px !important;
+                        font-weight: bold !important;
+                        letter-spacing: -0.7px !important;
+                        text-align: center;
+                        color: #202020;
+                        margin: 0 !important;
+                    }
+                }
+
+                .left {
+                    border-right: 1px solid #e8e8e8;
+                }
+            }
+
+            .left {
+                width: 100%;
+                border-right: 0px;
+                border-bottom: 1px solid #e2e2e2;
+            }
+
+            .right {
+                width: 100%;
+                background-color: #f9f9f9;
+                padding: 13px 0;
+
+                .content {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+                    margin: 0 auto;
+
+                    p.gray {
+                        font-size: 14px;
+                        font-weight: 500;
+                        letter-spacing: -0.5px;
+                        text-align: left;
+                        color: #c1c1c1;
+                    }
+
+                    .blue {
+                        padding: 3px 19px;
+                        background-color: #3d78ff;
+                        border-radius: 20px;
+                        font-size: 14px;
+                        font-weight: 500;
+                        letter-spacing: -0.5px;
+                        text-align: center;
+                        color: #fff;
+                        margin-bottom: 5px;
+                    }
+
+                    .blue_outline {
+                        padding: 2px 19px;
+                        background-color: #fff;
+                        border: 1px solid #3d78ff;
+                        border-radius: 20px;
+                        font-size: 14px;
+                        font-weight: 500;
+                        letter-spacing: -0.5px;
+                        text-align: center;
+                        color: #3d78ff;
+                        margin-bottom: 5px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        font-weight: 500;
+                        letter-spacing: -0.5px;
+                        text-align: center;
+                        color: #202020;
+                    }
+
+                    span.line {
+                        width: 50%;
+                        height: 1px;
+                        background-color: #e1e1e1;
+                        margin: 10px 0;
+                    }
+                }
+            }
+
+            &.payInfo {
+                .left {
+                    h5 {
+                        font-size: 16px;
+                        font-weight: bold;
+                        letter-spacing: -0.8px;
+                        text-align: center;
+                        color: #202020;
+                    }
+                }
+
+                .right {
+                    padding: 10px 0;
+                    background-color: #f9f9f9;
+
+                    p {
+                        text-align: center;
+                        font-size: 16px;
+                        font-weight: 500;
+                        letter-spacing: -0.8px;
+                        color: #202020;
+                    }
+                }
+            }
+        }
+
+        button.blue_outline {
+            display: block;
+        }
+    }
+}

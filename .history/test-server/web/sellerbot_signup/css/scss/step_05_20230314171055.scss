@@ -1,0 +1,1926 @@
+@import "./common", "./modal";
+
+
+//색상 변수
+$dark: #484848;
+$gray: #777777;
+$silver: #c8c8c8;
+$red: #ff7070;
+$yellow: #ffca4f;
+$purple: #7671f8;
+
+@mixin media_screen ($breakpoint){
+    @media screen and (max-width: #{$breakpoint}) {
+        @content;
+    }
+}
+
+#wrap {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    margin-top: 80px;
+}
+
+.scrollable {
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+        // display: block;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #b2b2b2;
+        border-radius: 0px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #f9f9f9;
+        border-left: solid 1px #d8d8d8;
+        // border-right: solid 1px #d8d8d8;
+    }
+
+    &::-webkit-scrollbar-button {
+        width: 10px;
+        height: 10px;
+        background-color: #f9f9f9;
+        border-left: solid 1px #d8d8d8;
+    }
+
+    &::-webkit-scrollbar-button:start:decrement {
+        background-image: url('./img/scroll_up.png');
+        background-repeat: no-repeat;
+        background-size: 120%;
+        background-position: center;
+    }
+
+    &::-webkit-scrollbar-button:end:increment {
+        background-image: url('./img/scroll_down.png');
+        background-repeat: no-repeat;
+        background-size: 120%;
+        background-position: center;
+    }
+}
+
+body {
+    button{
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+    button#goTop{
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        padding: 2px 10px 4px 10px;
+        background-color: transparentize($dark, .8);
+        backdrop-filter: blur(5px);
+        z-index: 2;
+
+        i, p{
+            margin: 0 auto;
+            text-align: center;
+            font-size: 12px;
+        }
+    }
+
+    p.subTitle {
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: -1px;
+        text-align: left;
+        color: #202020;
+    }
+
+    span.line {
+        margin-top: 10px;
+        width: 100%;
+        height: 1px;
+        background-color: #d7d7d7;
+        display: block;
+    }
+
+    .bottomBar {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 12px 0 34px 0;
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        background-color: transparentize(#000, .3);
+        transition: all .3s;
+        transform: translateY(100%);
+        opacity: 0;
+        z-index: 1000;
+
+        &.show {
+            transform: translateY(0%);
+            opacity: 1;
+        }
+
+        .closeBtnBox {
+            width: 90%;
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+            justify-content: right;
+
+            button {
+                filter: invert(50%);
+                padding: 12px;
+            }
+        }
+
+        .centerBox {
+            width: 360px;
+            margin: 0 auto;
+
+            p {
+                font-size: 1rem;
+                font-weight: 300;
+                line-height: 1.88;
+                letter-spacing: -0.8px;
+                text-align: center;
+                color: #fff;
+
+                b {
+                    font-weight: 300;
+                }
+
+                text-highlight {
+                    background-color: #1d96ff44;
+                }
+            }
+
+            .btns {
+                margin-top: 20px;
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+
+                button#hideBottomBar {
+                    width: 49%;
+                    padding: 8.5px 0 10.5px;
+                    border-radius: 20px;
+                    color: $silver;
+                    border: 1px solid $silver;
+                    box-sizing: border-box;
+                    background-color: transparent;
+                    font-size: 14px;
+                }
+
+                button#goto {
+                    width: 49%;
+                    padding: 8.5px 0 10.5px;
+                    border-radius: 20px;
+                    color: #fff;
+                    background-color: $blue;
+                    text-align: center;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    article {
+        width: 95%;
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 70px;
+
+        &#article_0 {
+            button.kbBtn {
+                box-sizing: border-box;
+                padding: 10px 15px;
+                background-color: $dark;
+                font-size: 12px;
+                letter-spacing: -0.6px;
+                color: #fff;
+                float: right;
+                margin-top: 10px;
+            }
+
+            .listTopFlex {
+                margin-top: 20px;
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+
+                .statusBtns {
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+
+                    button {
+                        width: 80px;
+                        height: auto;
+                        padding: 2px 0;
+                        box-sizing: border-box;
+                        border-radius: 13px;
+                        margin-right: 5px;
+                        border-style: solid;
+                        border-width: 2px;
+
+                        btn-num {
+                            margin-left: .2rem;
+                        }
+
+                        @mixin default_color($color) {
+                            // border-color: #202020;
+                            border-color: transparentize($color, .5);
+                            // border-color: #fff;
+                            background-color: #fff;
+                            // background-color: transparentize($color, .7);
+                            color: #292929;
+                        }
+
+                        @mixin on_color($color) {
+                            border-color: $color;
+                            background-color: $color;
+                            color: #fff;
+                        }
+
+                        @include default_color(#292929);
+
+                        &.on {
+                            @include on_color(#292929);
+                        }
+
+                        &.color_blue {
+                            @include default_color($blue);
+
+                            &.on {
+                                @include on_color($blue);
+                            }
+                        }
+
+                        &.color_gray {
+                            @include default_color($gray);
+
+                            &.on {
+                                @include on_color($gray);
+                            }
+                        }
+
+                        &.color_silver {
+                            @include default_color($silver);
+
+                            &.on {
+                                @include on_color($silver);
+                            }
+                        }
+
+                        &.color_red {
+                            @include default_color($red);
+
+                            &.on {
+                                @include on_color($red);
+                            }
+                        }
+
+                        &.color_yellow {
+                            @include default_color($yellow);
+
+                            &.on {
+                                @include on_color($yellow);
+                            }
+                        }
+
+                        &.color_purple {
+                            @include default_color($purple);
+
+                            &.on {
+                                @include on_color($purple);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .listHead {
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-around;
+                padding: 12px 0;
+                box-sizing: border-box;
+                background-color: $dark;
+                border: 1px solid $dark;
+                border-bottom: none;
+
+                dt {
+                    flex: 1;
+                    font-size: 12px;
+                    letter-spacing: -0.6px;
+                    text-align: center;
+                    color: #fff;
+                }
+            }
+
+            .listWrap {
+                border: 1px solid #cdcdcd;
+                border-top: none;
+                height: auto; // 20221229 수정
+                max-height: 500px; // 20221229 수정
+                min-height: 150px;// 20230104 수정
+
+                &.open {
+                    max-height: max-content; // 20221229 수정
+                    overflow-y: hidden;
+                }
+
+                h3.noDataText{
+                    font-size: 1rem;
+                    margin: 30px auto;
+                    text-align: center;
+                    font-weight: normal;
+                    color: $dark;
+                }
+
+                ul {
+                    li {
+                        display: flex;
+                        justify-content: space-between;
+                        border-bottom: 1px solid #cdcdcd;
+
+                        &:not(:first-child):last-child {
+                            border-bottom: none;
+
+                            dd {
+                                &.extraInfo, &.tip.msg {
+                                    &:hover {
+                                        &::before {
+                                            border-left: 5px solid transparent;
+                                            border-right: 5px solid transparent;
+                                            border-top: 8px solid $gray;
+                                            border-bottom: 0;
+                                            top: 10%;
+                                            left: 50%;
+                                            transform: translateX(-50%);
+                                        }
+
+                                        &::after {
+                                            top: auto;
+                                            bottom: 90%;
+                                            left: 50%;
+                                            transform: translate(-50%, 0);
+                                        }
+                                    }
+                                }
+
+                                &.logos{
+                                    .imgDiv{
+                                        &:hover {
+                                            &::before {
+                                                border-left: 5px solid transparent;
+                                                border-right: 5px solid transparent;
+                                                border-top: 8px solid $gray;
+                                                border-bottom: 0;
+                                                top: 10%;
+                                                left: 50%;
+                                                transform: translateX(-50%);
+                                            }
+    
+                                            &::after {
+                                                top: auto;
+                                                bottom: 90%;
+                                                left: 50%;
+                                                transform: translate(-50%, 0);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        dd {
+                            flex: 1;
+                            text-align: center;
+                            padding: 10px 0;
+                            box-sizing: border-box;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 12px;
+                            letter-spacing: -0.6px;
+                            text-align: center;
+                            color: #707070;
+                            word-break: break-all; //20230104 수정
+
+                            &.status {
+                                span {
+                                    display: block;
+                                    margin: 5px auto 1px auto;
+                                    width: 12px;
+                                    height: 12px;
+                                    border-radius: 12px;
+                                }
+                            }
+
+                            &.extraInfo {
+                                position: relative;
+
+                                &:hover {
+                                    &::before {
+                                        content: '';
+                                        position: absolute;
+                                        display: block;
+                                        bottom: 10%;
+                                        left: 50%;
+                                        transform: translateX(-50%);
+                                        width: 0;
+                                        height: 0;
+                                        border-left: 5px solid transparent;
+                                        border-right: 5px solid transparent;
+                                        border-bottom: 8px solid $gray;
+                                        opacity: 0;
+                                        animation: fadeIn .5s linear .5s 1 forwards;
+                                    }
+
+                                    &::after {
+                                        content: attr(data-info-key);
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 50%;
+                                        transform: translate(-50%, 0);
+                                        width: 100px;
+                                        height: auto;
+                                        padding: 5px 10px;
+                                        background-color: $gray;
+                                        font-size: 12px;
+                                        font-weight: 300;
+                                        letter-spacing: -0.5px;
+                                        text-align: center;
+                                        color: #fff;
+                                        z-index: 1;
+                                        border-radius: 3px;
+                                        opacity: 0;
+                                        animation: fadeIn .5s linear .5s 1 forwards;
+                                    }
+                                }
+                            }
+
+                            &.logos {
+                                display: flex;
+                                align-items: center;
+
+                                .imgDiv {
+                                    width: 18px;
+                                    padding: 7px 13px;
+                                    position: relative;
+
+                                    img {
+                                        width: 100%;
+                                        display: block;
+                                    }
+
+                                    &:hover {
+                                        &::before {
+                                            content: '';
+                                            position: absolute;
+                                            display: block;
+                                            bottom: 0%;
+                                            left: 50%;
+                                            transform: translateX(-50%);
+                                            width: 0;
+                                            height: 0;
+                                            border-left: 5px solid transparent;
+                                            border-right: 5px solid transparent;
+                                            border-bottom: 8px solid $gray;
+                                            opacity: 0;
+                                            animation: fadeIn .5s linear .5s 1 forwards;
+                                        }
+
+                                        &::after {
+                                            content: attr(data-logo-name);
+                                            display: block;
+                                            position: absolute;
+                                            top: 100%;
+                                            left: 50%;
+                                            transform: translate(-50%, 0);
+                                            width: 100px;
+                                            height: auto;
+                                            padding: 5px 10px;
+                                            background-color: $gray;
+                                            font-size: 12px;
+                                            font-weight: 300;
+                                            letter-spacing: -0.5px;
+                                            text-align: center;
+                                            color: #fff;
+                                            z-index: 1;
+                                            border-radius: 3px;
+                                            opacity: 0;
+                                            animation: fadeIn .5s linear .5s 1 forwards;
+                                        }
+                                    }
+                                }
+
+                                &.more {
+                                    cursor: pointer;
+                                    position: relative;
+
+                                    &::after {
+                                        content: '';
+                                        display: block;
+                                        width: 5px;
+                                        height: 5px;
+                                        border-color: #707070;
+                                        border-style: solid;
+                                        border-width: 1px 1px 0 0;
+                                        position: absolute;
+                                        bottom: 15%;
+                                        transform: rotate(135deg);
+                                    }
+
+                                    &.show {
+                                        &::after {
+                                            display: none;
+                                        }
+
+                                        .moreLogo {
+                                            display: flex;
+                                        }
+                                    }
+
+                                    .moreLogo {
+                                        width: 132px;
+                                        top: 75%;
+                                        position: absolute;
+                                        border: 1px solid;
+                                        padding: 0 15px 16px 15px;
+                                        background-color: #fff;
+                                        display: none;
+                                        flex-wrap: wrap;
+                                        z-index: 1;
+
+                                        &::after {
+                                            content: '';
+                                            display: block;
+                                            width: 5px;
+                                            height: 5px;
+                                            border-color: #707070;
+                                            border-style: solid;
+                                            border-width: 1px 1px 0 0;
+                                            position: absolute;
+                                            bottom: 5%;
+                                            left: 50%;
+                                            transform: translateX(-50%) rotate(-45deg);
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.tip.msg {
+                                position: relative;
+
+                                &:hover {
+                                    &::before {
+                                        content: '';
+                                        position: absolute;
+                                        display: block;
+                                        bottom: 10%;
+                                        left: 50%;
+                                        transform: translateX(-50%);
+                                        width: 0;
+                                        height: 0;
+                                        border-left: 5px solid transparent;
+                                        border-right: 5px solid transparent;
+                                        border-bottom: 8px solid $gray;
+                                        opacity: 0;
+                                        animation: fadeIn .5s linear .5s 1 forwards;
+                                    }
+
+                                    &::after {
+                                        content: attr(data-msg);
+                                        display: block;
+                                        position: absolute;
+                                        top: 90%;
+                                        left: 50%;
+                                        transform: translate(-50%, 0);
+                                        width: 200px;
+                                        height: auto;
+                                        padding: 5px 10px;
+                                        background-color: $gray;
+                                        font-size: 12px;
+                                        font-weight: 300;
+                                        letter-spacing: -0.5px;
+                                        text-align: center;
+                                        color: #fff;
+                                        z-index: 1;
+                                        border-radius: 3px;
+                                        opacity: 0;
+                                        animation: fadeIn .5s linear .5s 1 forwards;
+                                    }
+                                }
+                            }
+
+                            &.btns {
+                                button {
+                                    padding: 4px 10px;
+                                    border-radius: 0;
+                                    border: 1px solid #3d3d3d77;
+                                    letter-spacing: -0.6px;
+                                    text-align: center;
+                                    cursor: pointer;
+
+                                    &#modLi {
+                                        background: darken(#fff, .5); // 20221229 수정
+                                        color: #707070;
+                                        margin-right: 5px;
+                                    }
+
+                                    &#delLi {
+                                        background: lighten(#3d3d3d, 45); // 20221229 수정
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+
+                        // &.normal {
+                        &.NR {
+                            // 정상
+                            background-color: white;
+
+                            .status {
+                                span {
+                                    background-color: $blue;
+                                }
+                            }
+                        }
+
+                        &.gathering {
+                            // 수집중
+                            background-color: transparentize($gray, .8);
+
+                            .status {
+                                span {
+                                    background-color: $gray;
+                                }
+                            }
+                        }
+
+                        &.waiting {
+                            // 대기
+                            background-color: white;
+
+                            .status {
+                                span {
+                                    background-color: $silver;
+                                }
+                            }
+                        }
+
+                        // &.error {
+                        &.ERR {
+                            // 오류
+                            background-color: transparentize($red, .8);
+
+                            .status {
+                                span {
+                                    background-color: $red;
+                                }
+                            }
+
+                            .tip {
+                                text-decoration: underline;
+                                text-underline-offset: 2px;
+                                color: $red;
+                                cursor: pointer;
+                            }
+                        }
+
+                        // &.inspection {
+                        &.INS {
+                            // 점검
+                            background-color: transparentize($yellow, .8);
+
+                            .status {
+                                span {
+                                    background-color: $yellow;
+                                }
+                            }
+                        }
+
+                        // &.beOpened {
+                        &.PRE {
+                            // 오픈예정
+                            background-color: transparentize($purple, .8);
+
+                            .status {
+                                span {
+                                    background-color: $purple;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                ol {
+                    display: none;
+
+                    li {
+                        width: 100%;
+                        height: auto;
+                        border: 1px solid #dadada;
+                        border-radius: 8px 8px 0 0;
+                        box-sizing: border-box;
+                        margin-bottom: 20px;
+
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+
+                        .top,
+                        .mid,
+                        .bot {
+                            padding: 8px 16px;
+                            box-sizing: border-box;
+                        }
+
+                        &.NR {
+                            .top {
+                                background-color: white;
+
+                                span {
+                                    background-color: $blue;
+                                }
+                            }
+                        }
+
+                        &.gathering {
+                            .top {
+                                background-color: transparentize($gray, .8);
+
+                                span {
+                                    background-color: $gray;
+                                }
+                            }
+                        }
+
+                        &.waiting {
+                            .top {
+                                background-color: white;
+
+                                span {
+                                    background-color: $silver;
+                                }
+                            }
+                        }
+
+                        &.ERR {
+                            .top {
+                                background-color: transparentize($red, .8);
+
+                                span {
+                                    background-color: $red;
+                                }
+                            }
+                        }
+
+                        &.INS {
+                            .top {
+                                background-color: transparentize($yellow, .8);
+
+                                span {
+                                    background-color: $yellow;
+                                }
+                            }
+                        }
+
+                        &.PRE {
+                            .top {
+                                background-color: transparentize($purple, .8);
+
+                                span {
+                                    background-color: $purple;
+                                }
+                            }
+                        }
+
+                        .top {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            border-bottom: 1px solid #dadada;
+                            border-radius: 8px 8px 0 0;
+
+                            p {
+                                font-size: 12px;
+                                letter-spacing: -0.5px;
+                                text-align: left;
+                                color: #484848;
+                            }
+                            span{
+                                width: 10px;
+                                height: 10px;
+                                border-radius: 10px;
+                                display: block;
+                            }
+                        }
+
+                        .mid{
+                            .row{
+                                display: flex;
+                                align-items: center;
+                                padding: 8px 0;
+                                border-bottom: 1px solid #e8e8e8;
+
+                                &.logos{
+                                    dd{
+                                        display: flex;
+                                        .imgDiv {
+                                            width: 18px;
+                                            padding: 7px 5px;
+                                            position: relative;
+        
+                                            img {
+                                                width: 100%;
+                                                display: block;
+                                            }
+        
+                                            &:hover {
+                                                &::before {
+                                                    content: '';
+                                                    position: absolute;
+                                                    display: block;
+                                                    bottom: 0%;
+                                                    left: 50%;
+                                                    transform: translateX(-50%);
+                                                    width: 0;
+                                                    height: 0;
+                                                    border-left: 5px solid transparent;
+                                                    border-right: 5px solid transparent;
+                                                    border-bottom: 8px solid $gray;
+                                                    opacity: 0;
+                                                    animation: fadeIn .5s linear 1 forwards;
+                                                }
+        
+                                                &::after {
+                                                    content: attr(data-logo-name);
+                                                    display: block;
+                                                    position: absolute;
+                                                    top: 100%;
+                                                    left: 50%;
+                                                    transform: translate(-50%, 0);
+                                                    width: 100px;
+                                                    height: auto;
+                                                    padding: 5px 10px;
+                                                    background-color: $gray;
+                                                    font-size: 12px;
+                                                    font-weight: 300;
+                                                    letter-spacing: -0.5px;
+                                                    text-align: center;
+                                                    color: #fff;
+                                                    z-index: 1;
+                                                    border-radius: 3px;
+                                                    opacity: 0;
+                                                    animation: fadeIn .5s linear 1 forwards;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                &:last-child{
+                                    border-bottom: none;
+                                    padding-bottom: 0;
+                                }
+
+                                dt{
+                                    min-width: 80px;
+                                    width: 25%;
+                                    font-size: 12px;
+                                    letter-spacing: -0.5px;
+                                    text-align: left;
+                                    color: #484848;
+                                }
+                                dd{
+                                    width: 80%;
+                                    font-size: 12px;
+                                    letter-spacing: -0.5px;
+                                    text-align: left;
+                                    color: #484848;
+                                }
+                            }
+                        }
+
+                        .bot{
+                            background-color: #f3f3f3;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            b{
+                                font-size: 12px;
+                                letter-spacing: -0.5px;
+                                text-align: left;
+                                color: #484848;
+                                font-weight: normal;
+                            }
+
+                            .btns{
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+
+                                button{
+                                    font-size: 12px;
+                                    letter-spacing: -0.5px;
+                                    text-align: center;
+                                    color: #c8c8c8;
+                                    padding: 0 5px;
+
+                                    &#modLi{
+                                        margin-right: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .listBottom {
+                width: 100%;
+                padding: 1rem 0;
+                border-collapse: collapse;
+                border: 1px solid #cdcdcd;
+                border-top: 0;
+                background-color: #f6f6f6;
+                box-sizing: border-box;
+
+                &.under_10{
+                    padding: 37px 0;
+
+                    button{
+                        display: none;
+                    }
+                }
+
+                button {
+                    display: block;
+                    margin: 0 auto;
+                    height: auto;
+                    padding: 11px 95px 12px 95px;
+                    background-color: #e2e2e2;
+                    border: none;
+
+                    b {
+                        font-weight: normal;
+                        font-size: 12px;
+                        letter-spacing: -0.6px;
+                        text-align: left;
+                        color: #202020;
+                        position: relative;
+
+                        &::after {
+                            content: '';
+                            width: 5px;
+                            height: 5px;
+                            display: block;
+                            position: absolute;
+                            top: 50%;
+                            right: -1rem;
+                            border-style: solid;
+                            border-color: #707070;
+                            border-width: 1px 1px 0 0;
+                            transform: rotate(135deg) translate(-70%);
+                        }
+                    }
+
+                    &.open {
+                        b {
+                            &::after {
+                                transform: rotate(-45deg) translate(0%) !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &#article_1 {
+
+            .gridTopFlex {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 20px;
+
+                .left {
+                    min-width: 250px;
+                    border: 1px solid #d7d7d7;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    input {
+                        flex: 1;
+                        border: none;
+                        padding: 10px 0;
+                        text-indent: .5rem;
+                        color: #cdcdcd;
+
+                        &:focus {
+                            outline: none;
+                        }
+
+                        &::placeholder {
+                            color: #cdcdcd;
+                        }
+                    }
+
+                    button {
+                        border: none;
+                        padding: 12px;
+                        box-sizing: border-box;
+                        background: none;
+                        cursor: pointer;
+                    }
+                }
+
+                .right {
+                    min-width: 220px;
+
+                    button.black {
+                        box-sizing: border-box;
+                        padding: 12.5px 15px;
+                        background-color: $dark;
+                        font-size: 12px;
+                        letter-spacing: -0.6px;
+                        color: #fff;
+                    }
+                }
+            }
+
+            .grayBox {
+                margin-top: 20px;
+                padding: 0; // 20221229 수정
+                box-sizing: border-box;
+                background-color: #f5f5f5;
+                border: 1px solid #d8d8d8;
+                max-height: 390px;
+
+                &::-webkit-scrollbar-track {
+                    border-right: solid 1px #d8d8d8;
+                }
+
+                &::-webkit-scrollbar-button {
+                    border-right: solid 1px #d8d8d8;
+                }
+
+                p.gridTitle {
+                    font-size: 20px;
+                    font-weight: bold;
+                    letter-spacing: -1px;
+                    text-align: left;
+                    color: #202020;
+                    padding: 15px 20px 15px 20px; // 20221229 수정
+                    background-color: #e9e9e9; // 20221229 수정
+                    position: sticky; // 20221229 수정
+                    top: 0; // 20221229 수정
+                    border-bottom: 1px solid #d8d8d8;
+                    box-sizing: border-box;
+                    z-index: 1;
+                }
+
+                .gridArea {
+                    // margin-top: 10px; // 20221229 수정
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+                    grid-auto-rows: 60px;
+                    overflow: hidden;
+
+                    .item {
+                        padding: 11px 8px;
+                        border: solid 1px #d8d8d8;
+                        background-color: #fff;
+                        box-sizing: border-box;
+                        border-collapse: collapse;
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+
+                        &:hover {
+                            filter: brightness(.95);
+                        }
+
+                        &:active {
+                            filter: brightness(.9);
+                        }
+
+                        img {
+                            width: auto;
+                            height: auto;
+                            max-width: 50%;
+                        }
+
+                        b {
+                            width: 50%;
+                            font-size: 14px;
+                            font-weight: bold;
+                            letter-spacing: -0.7px;
+                            text-align: center;
+                            color: #202020;
+                        }
+
+                        &.on {
+                            margin: -1px; // 20221229 수정
+                            border: 2px solid $blue;
+                            position: relative;
+
+                            &::after {
+                                content: attr(data-num);
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                display: block;
+                                background-color: $blue;
+                                font-size: 10px;
+                                font-weight: bold;
+                                letter-spacing: -0.5px;
+                                text-align: center;
+                                color: #fff;
+                                padding: 3px 8px 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &#article_2 {
+            margin-bottom: 100px; //20221229 수정
+            .flexArea {
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-between;
+
+                .left,
+                .right {
+                    height: auto;
+
+                    .btns {
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+
+                        button {
+                            height: 100%;
+                            font-size: 12px;
+                            text-align: center;
+                            color: #fff;
+                            border: none;
+                            border-radius: 0;
+
+                            &#initialize {
+                                flex: 1;
+                                background: #cfcfcf;
+                            }
+
+                            &#updateAll {
+                                flex: 3;
+                                background: $blue;
+
+                                &.unActivated{
+                                    background-color: #8d8d8d;
+                                }
+                            }
+
+                            &#videoGuide {
+                                flex: 1;
+                                background: #8d8d8d;
+                            }
+
+                            &#showDetail {
+                                flex: 1;
+                                background: #3f3f3f;
+                            }
+                        }
+                    }
+                }
+
+                .left {
+                    width: 39%;
+                    margin-right: 20px;
+
+                    .contents {
+                        height: auto;
+                        max-height: 735px;
+                        padding: 20px 13px;
+                        box-sizing: border-box;
+                        background-color: #f5f5f5;
+                        border: 1px solid #d8d8d8;
+                        border-bottom: none;
+                        // border-left: 1px solid #d8d8d8;
+                        // border-top: 1px solid #d8d8d8;
+
+                        h3.noDataText{
+                            font-size: 14px;
+                            margin: 30px auto;
+                            text-align: center;
+                            font-weight: normal;
+                            color: $dark;
+
+                            &.hide{
+                                display: none;
+                            }
+                        }
+
+                        .modifyArea {
+                            .modifyBox {
+                                border: 1px solid $red;
+                                background-color: #fff;
+                                margin-top: 20px;
+
+                                button#modifyOkBtn {
+                                    width: 100%;
+                                    border: none;
+                                    background-color: $red;
+                                    padding: 10px 0;
+                                    font-size: 14px;
+                                    color: #fff;
+                                    cursor: pointer;
+                                }
+
+                                &:first-child {
+                                    position: relative;
+
+                                    &::before{
+                                        content: '수정 중';
+                                        display: block;
+                                        position: absolute;
+                                        left: -1px;
+                                        top: -20px;
+                                        padding: 0 20px;
+                                        height: 20px;
+                                        line-height: 20px;
+                                        font-size: 10px;
+                                        background-color: $red;
+                                        color: #fff;
+                                        z-index: 1;
+                                    }
+                                }
+
+                                &:last-child {
+                                    position: relative;
+                                    margin-bottom: 60px;
+
+                                    &::after {
+                                        content: '';
+                                        position: absolute;
+                                        bottom: -20px;
+                                        display: block;
+                                        width: 100%;
+                                        height: 1px;
+                                        background-color: #e1e1e1;
+                                    }
+                                }
+                            }
+                        }
+
+                        .registerArea {
+                            .registerBox {
+                                border: 1px solid #d8d8d8;
+                                margin-top: 20px;
+                                background-color: #fff;
+
+                                &:first-child {
+                                    position: relative;
+
+                                    &::before{
+                                        content: '등록 중';
+                                        display: block;
+                                        position: absolute;
+                                        left: -1px;
+                                        top: -20px;
+                                        padding: 0 20px;
+                                        height: 20px;
+                                        line-height: 20px;
+                                        font-size: 10px;
+                                        background-color: $dark;
+                                        color: #fff;
+                                        z-index: 1;
+                                    }
+                                }
+
+                                button#registerOkBtn {
+                                    width: 100%;
+                                    border: none;
+                                    background-color: #3f3f3f;
+                                    padding: 10px 0;
+                                    font-size: 14px;
+                                    color: #fff;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+
+                        .modifyBox,
+                        .registerBox {
+                            box-sizing: border-box;
+
+                            &.active{
+                                    border: 3px solid $yellow;
+                                    border-radius: 3px;
+                                    margin: 18px -2px -2px -2px;
+                            }
+
+                            .main {
+                                padding: 14px;
+                                box-sizing: border-box;
+
+                                span.smallLine {
+                                    margin: 10px 0;
+                                    width: 100%;
+                                    height: 1px;
+                                    display: block;
+                                    background-color: #e1e1e1;
+                                }
+
+                                .top {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+
+                                    b {
+                                        width: 30%;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                        letter-spacing: -0.7px;
+                                        text-align: left;
+                                        color: #202020;
+                                        overflow: hidden;
+                                        white-space: nowrap;
+                                        text-overflow: ellipsis;
+                                        display: block;
+                                    }
+
+                                    img.mallLogo {
+                                        max-width: 101px;
+                                        width: 30%;
+                                    }
+
+                                    span.msg {
+                                        max-width: 140px;
+                                        flex: 1;
+                                        // width: 23%;
+                                        font-size: 10px;
+                                        letter-spacing: -0.5px;
+                                        text-align: center;
+                                        color: #fff;
+                                        padding: 4px 0 5px;
+
+                                        &.gathering {
+                                            background-color: $gray;
+                                        }
+
+                                        &.waiting {
+                                            background-color: $silver;
+                                        }
+
+                                        &.ERR {
+                                            background-color: $red;
+                                        }
+
+                                        &.INS {
+                                            background-color: $yellow;
+                                        }
+
+                                        &.PRE {
+                                            background-color: $purple;
+                                        }
+                                    }
+
+                                    button {
+                                        width: 5.5%;
+                                        padding: 5px;
+                                        border: none;
+                                        background: none;
+                                        cursor: pointer;
+                                    }
+                                }
+
+                                .middle {
+                                    display: grid;
+                                    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+                                    grid-auto-rows: 50px; // 20221229 수정
+                                    column-gap: 10px;
+                                    row-gap: 10px;
+                                    align-items: flex-end;
+
+                                    .item {
+                                        width: 100%;
+
+                                        // 20221229 수정 여기부터
+                                        &.row_100{
+                                            grid-column: 1/-1;
+
+                                            input,select{
+                                                min-width: 100px;
+                                                width: calc((100% - 20px) / 3);
+                                            }
+                                        }
+                                        // 20221229 수정 여기까지
+
+                                        p {
+                                            font-size: 12px;
+                                            letter-spacing: -0.6px;
+                                            text-align: left;
+                                            color: #202020;
+                                            margin-bottom: 3px;
+                                            display: flex;
+
+                                            &.checkNeed {
+                                                color: $blue;
+                                                cursor: pointer;
+                                                width: 100%;
+                                                white-space: nowrap;
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                                text-decoration: underline;
+                                                text-underline-offset: 1px;
+                                                display: block;
+
+                                                &:hover{
+                                                    overflow: initial;
+                                                    text-overflow: initial;
+                                                    white-space: initial;
+                                                }
+
+                                                b {
+                                                    font-size: 10px;
+                                                    margin-left: 4px;
+                                                    padding: 0 11px 1px;
+                                                    background-color: $blue;
+                                                    color: #fff;
+                                                    border-radius: 10px;
+                                                    font-weight: normal;
+                                                }
+                                            }
+                                        }
+
+                                        input {
+                                            width: 100%;
+                                            padding: 4px 0 5px; // 20221229 수정
+                                            border: solid 1px #c2c2c2;
+                                            box-sizing: border-box;
+                                        }
+
+                                        select {
+                                            width: 100%;
+                                            padding: 3px 0 4px; // 20221229 수정
+                                            border: solid 1px #c2c2c2;
+                                            box-sizing: border-box;
+                                        }
+                                    }
+                                }
+
+                                p.errorMsg {
+                                    margin-top: 4px;
+                                    font-size: 12px;
+                                    letter-spacing: -0.6px;
+                                    text-align: left;
+                                    color: $red;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .right {
+                    width: 60%;
+
+                    .topTitle {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        height: 42px;
+                        background-color: #e9e9e9;
+                        border: 1px solid #d8d8d8;
+                        padding: 8px 18px;
+                        box-sizing: border-box;
+                        font-size: 1rem;
+                        letter-spacing: -0.8px;
+                        text-align: left;
+                        color: #202020;
+
+                        p{
+                            font-size: 14px;
+                        }
+
+                        button{
+                            font-size: 12px;
+                            letter-spacing: -0.6px;
+                            color: #fff;
+                            padding: 7px 10px;
+                            
+                            &.reg{
+                                background-color: $blue;
+                            }
+                            &.err{
+                                background-color: $red;
+                            }
+                        }
+                    }
+
+                    .contents {
+                        height: calc(100% - 82px); //20221229 수정
+                        max-height: 695px; //20221229 수정
+                        padding: 30px 18px;
+                        box-sizing: border-box;
+                        border-left: 1px solid #d8d8d8;
+                        border-right: 1px solid #d8d8d8;
+                        background-color: #f5f5f5;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@include media_screen(860px) {
+
+    .scrollable {
+        overflow-y: auto;
+        overflow-x: hidden;
+    
+        &::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+    
+        &::-webkit-scrollbar-button {
+            width: 6px;
+            height: 6px;
+        }
+    }
+
+    button#goTop{
+        font-size: 10px !important;
+        padding: 2px 6px 2px !important;
+        right: 10px !important;
+        // display: none;
+    }
+
+    .myModal{ // 20221221 .modal -> .myModal 수정
+        &.beOpenedModal{
+            div#beOpenedMallList{
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important;
+                grid-auto-rows: 50px !important;
+                
+                &::-webkit-scrollbar{
+                    display: none;
+                }
+
+                .item {
+                    margin-bottom: -1px;
+                    margin-left: -1px;
+                    margin-right: -1px;
+                    padding: 7px 5px !important;
+                    img{
+                        width: 70px !important;
+                    }
+                    b{
+                        font-size: 10px !important;
+                    }
+                }
+            }
+        }
+    }
+    article {
+        width: 90% !important;
+
+        p.subTitle{
+            font-size: 16px !important;
+        }
+        span.line{
+            margin-top: 3px !important;
+        }
+
+        &#article_0 {
+            button.kbBtn {
+                margin-left: calc(100% - 168px);
+                float: none !important;
+            }
+
+            .listTopFlex {
+                .statusBtns {
+                    flex-wrap: wrap;
+                    row-gap: 8px;
+
+                    button{
+                        width: 70px !important;
+                        font-size: 12px !important;
+                    }
+                }
+            }
+
+            .listHead {
+                display: none !important;
+            }
+
+            .listWrap {
+                margin-top: 14px;
+                height: auto !important;
+                max-height: 480px !important;
+                padding: 10px;
+                border: 1px solid #d8d8d8 !important;
+                background-color: #f5f5f5 !important;
+
+                ul {
+                    display: none !important;
+                }
+
+                ol{
+                    display: block !important;
+
+                    li{
+                        background-color: #fff !important;
+                        
+                        .row{
+                            padding: 4px 0 !important;
+
+                            .imgDiv{
+                                padding: 3px 5px !important;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .listWrap.open{
+                overflow-y: scroll !important;
+            }
+
+            // .listWrap.open + .listBottom{
+            //     position: sticky;
+            //     bottom: 10px;
+            // }
+
+            .listBottom {
+                display: none !important;
+                border: none !important;
+                padding: 0 !important;
+                margin-top: 20px;
+
+                button {
+                    width: 100%;
+                }
+            }
+        }
+
+        &#article_1{
+            .gridTopFlex {
+                .left {
+                    width: 100% !important;
+                }
+
+                .right {
+                    width: 100% !important;
+                    margin-top: 14px !important;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    button.black, a#guideBtn{
+                        width: 48% !important;
+                    }
+                    a#guideBtn{
+                        button{
+                            width: 100% !important;
+                        }
+                    }
+                }
+            }
+
+            .grayBox{
+                padding: 0 !important;
+                border: 1px solid #d8d8d8;
+                position: relative;
+                max-height: 300px !important;
+
+                p.gridTitle{
+                    font-size: 14px !important;
+                    padding: 10px 15px !important;
+                    box-sizing: border-box;
+                    background-color: #f5f5f5;
+                    border-bottom: 1px solid #d8d8d8;
+                    margin-bottom: -1px;
+                    position: sticky;
+                    top: 0;
+                }
+                .gridArea{
+                    margin-top: 2px !important; // 20221229 수정
+                    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important;
+                    grid-auto-rows: 50px !important;
+
+                    .item{
+                        margin-top: -1px;
+                        margin-left: -1px;
+                        margin-right: -1px;
+                        padding: 7px 5px !important;
+                        img{
+                            // width: 70px !important;
+                        }
+                        b{
+                            font-size: 10px !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        &#article_2 {
+            .flexArea {
+                flex-direction: column;
+
+                .left,
+                .right {
+                    width: 100% !important;
+                }
+
+                .right {
+                    margin-top: 14px;
+                }
+
+                .left{
+                    margin-right: 0 !important;
+                    .contents{
+                        padding: 10px !important;
+                        height: 300px !important;
+                        .modifyArea, .registerArea{
+                            .modifyBox, .registerBox{
+                                .main{
+                                    padding: 10px !important;
+                                    .top{
+                                        b{
+                                            font-size: 12px !important;
+                                            // min-width: fit-content !important;
+                                        }
+                                        img.mallLogo{
+                                            // width: 80px !important;
+                                        }
+                                        span.msg{
+                                            padding: 2px 0 3px !important;
+                                        }
+                                    }
+                                    span.smallLine{
+                                        margin: 5px 0 !important;
+                                    }
+                                    .middle{
+                                        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)) !important;
+                                        grid-auto-rows: 45px !important;
+                                        column-gap: 5px !important;
+                                        row-gap: 5px !important;
+
+                                        .item{
+                                            p{
+                                                font-size: 10px !important;
+                                                margin-bottom: 0 !important;
+                                            }
+                                            input{
+                                                padding: 4px 0 5px !important;
+                                                font-size: 10px !important;
+                                            }
+                                            select{
+                                                padding: 4px 0 4px !important;
+                                                font-size: 10px !important;
+                                            }
+                                        }
+                                    }
+                                    p.errorMsg{
+                                        font-size: 10px !important;
+                                    }
+                                }
+                                button{
+                                    &#registerOkBtn, &#modifyOkBtn{
+                                        padding: 8px 0 !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .right{
+                    .topTitle{
+                        font-size: 14px !important;
+                    }
+                    .contents{
+                        height: 390px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .bottomBar{
+        .centerBox{
+            width: 90% !important;
+            p{
+                font-size: 12px !important;
+            }
+            .btns{
+                margin: 20px auto 0 !important;
+                width: 85% !important;
+            }
+        }
+    }
+}
+
+.modal#modal_01{
+    .popupBody{
+        width: 680px;
+
+        .head{
+            width: 100%;
+            height: auto;
+            background-color: #f2f2f2;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 34px;
+            box-sizing: border-box;
+    
+            h5{
+                font-size: 18px;
+                font-weight: bold;
+                letter-spacing: -0.9px;
+                text-align: center;
+                color: #22262f;
+            }
+        }
+        .body{
+            width: 100%;
+            padding: 30px 34px 20px 34px;
+            box-sizing: border-box;
+
+            p{
+                font-size: 14px;
+                line-height: 1.71;
+                letter-spacing: -0.98px;
+                text-align: left;
+                color: #202020;
+            }
+
+            span.line{
+                margin: 30px auto 20px auto;
+                width: 100%;
+                height: 1px;
+                background-color: #ececec;
+                display: block;
+            }
+
+            img{
+                width: 80%;
+                margin: 0 auto;
+                margin-top: 26px;
+            }
+
+            .flex{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                img{
+                    margin-top: 0;
+                    width: fit-content;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .modal#modal_01{
+        .popupBody{
+            width: 100%;
+            .body{
+    
+                img{
+                    width: 100%;
+                }
+    
+                .flex{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+    
+                    img{
+                        margin-top: 0;
+                        width: fit-content;
+                        transform: rotate(90deg);
+                        margin: 20px auto;
+                    }
+                }
+            }
+        }
+    }
+}

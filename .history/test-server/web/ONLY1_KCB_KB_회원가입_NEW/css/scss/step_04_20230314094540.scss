@@ -1,0 +1,64 @@
+@import "./common", "./processBar", "./modal", "./accordion";
+
+article{
+
+    .row{
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+
+        span.check{
+            width: 24px;
+            height: 14px;
+            position: relative;
+            margin-right: 13px;
+            margin-bottom: 22px;
+
+            &::before{
+                content: '';
+                width: 12px;
+                height: 2px;
+                display: block;
+                background-color: $yellow;
+                position: absolute;
+                top: 10px;
+                left: 5px;
+                transform: rotate(40deg);
+            }
+
+            &::after{
+                content: '';
+                width: 23px;
+                height: 2px;
+                display: block;
+                background-color: $yellow;
+                position: absolute;
+                top: 6px;
+                left: 11px;
+                transform: rotate(-45deg);
+            }
+        }
+        p{
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: -1.26px;
+            text-align: left;
+            color: #202020;
+        }
+    }
+
+    button{
+        width: 100%;
+        outline: none;
+        border: 1px solid $gray;
+        padding: 15px 0;
+        font-size: 1rem;
+        cursor: pointer;
+
+        &.yellow {
+            margin-top: 460px;
+            margin-bottom: 40px;
+            background-color: $yellow;
+        }
+    }
+}

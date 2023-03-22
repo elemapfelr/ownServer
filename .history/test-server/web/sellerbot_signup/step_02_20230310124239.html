@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>셀러봇캐시 회원가입</title>
+	<link rel="stylesheet" href="./css/step_02.css">
+	<script type="module" src="./js/step_02.js" defer></script>
+</head>
+
+<body>
+	<!-- <header>는 기존헤더로 대체하면 됩니다 임시로 넣어둠 -->
+	<header></header>
+	<main>
+		<section>
+			<button class="fixed2" id="prevStep">
+				<span>이전</span>
+			</button>
+			<button class="fixed" id="nextStep">
+				<span>다음</span>
+				<img src="./img/rightArrow.svg" />
+			</button>
+			<article id="top">
+				<div class="title">
+					<h1>셀러봇캐시 회원가입</h1>
+				</div>
+				<div class="processBar">
+					<div class="first step">
+						<span class="line"></span>
+						<p>구독 유형 선택</p>
+					</div>
+					<div class="second step active">
+						<span class="line"></span>
+						<p>본인인증/약관동의</p>
+					</div>
+					<div class="third step">
+						<span class="line"></span>
+						<p>사업자정보 입력</p>
+					</div>
+				</div>
+			</article>
+			<article id="selfVerification">
+				<h2>본인인증</h2>
+				<div class="formBg">
+					<div class="formDiv">
+						<p class="essential">이메일</p>
+						<div class="flexRow emailRow">
+							<div class="left">
+								<input type="text" id="email" placeholder="이메일 입력">
+								<span>@</span>
+								<select id="domain">
+									<option value="manual" selected>직접입력</option>
+									<option value="naver.com">naver.com</option>
+									<option value="daum.net">daum.net</option>
+									<option value="hanmail.net">hanmail.net</option>
+									<option value="gmail.com">gmail.com</option>
+									<option value="nate.com">nate.com</option>
+									<option value="me.com">me.com</option>
+									<option value="icloud.com">icloud.com</option>
+									<option value="hotmail.com">hotmail.com</option>
+									<option value="yahoo.com">yahoo.com</option>
+								</select>
+								<input type="text" id="manualDomain">
+							</div>
+							<button id="reqVerificationCode">인증번호 요청</button>
+							<span id="msg1" class="underMsg">이메일을 입력해주세요</span>
+						</div>
+						<p class="essential">인증번호</p>
+						<div class="flexRow">
+							<div class="left">
+								<input class="onlyNumber" type="text" id="verificationCode" placeholder="인증번호 입력">
+							</div>
+							<button id="confirmVerificationCode">확인</button>
+							<span id="msg2" class="underMsg red">인증번호를 다시 확인해주세요.</span>
+						</div>
+						<p class="essential">비밀번호</p>
+						<div class="row">
+							<input type="password" id="pw" placeholder="비밀번호 입력">
+							<span class="underMsg">영문, 숫자, 특수문자를 조합하여 8자 이상 ~20자 이내로 입력 ( 사용가능한 특수문자 : !@#$%^&*+=-[] )</span>
+							<span id="msg3" class="errMsg">비밀번호가 형식에 맞지 않습니다.</span>
+						</div>
+						<p class="essential">비밀번호 확인</p>
+						<div class="row">
+							<input type="password" id="pwCheck" placeholder="비밀번호 입력">
+							<span class="underMsg">비밀번호를 한 번 더 입력해주세요.</span>
+							<span id="msg4" class="errMsg">비밀번호가 일치하지 않습니다.</span>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article id="termsAgree">
+				<h2>약관동의</h2>
+				<div class="formBg">
+					<div class="formDiv">
+						<div class="checkAll">
+							<div class="checkBoxDiv">
+								<input type="checkbox" id="checkAll" class="chkBox">
+								<label class="checkBox" for="checkAll"></label>
+								<label class="text" for="checkAll" style="color:black;"></label>
+							</div>
+							<p class="text_checkBox">셀러봇캐시 약관 전체 동의</p>
+						</div>
+						<div class="grayBox">
+							<pre>전체 동의에는 필수 및 선택 정보에 대한 동의가 포함되어 있으며, 개별적으로 동의를 선택 하실 수 있습니다. 선택 항목에 대한 동의를 거부하시는 경우에도 서비스 이용이 가능합니다.</pre>
+						</div>
+						<div class="accordion">
+							<div class="title">
+								<div class="left">
+									<div class="checkBoxDiv">
+										<input type="checkbox" id="terms_01" class="chkBox">
+										<label class="checkBox" for="terms_01"></label>
+										<label class="text" for="terms_01" style="color:black;"></label>
+									</div>
+									<p class="text_checkBox"><b>[필수]</b> 셀러봇캐시 이용약관</p>
+								</div>
+								<span><img src="./img/right-chevron.png" alt="right-chevron"></span>
+							</div>
+							<div class="panel">
+								<div class="paddingBox">
+									<pre>셀러봇캐시 통합서비스 약관
+        
+                                        제 1장 환영합니다!
+                                        
+                                        제 1조 (목적)
+                                        
+                                        주식회사 온리원(이하 '회사')이 제공하는 서비스를 이용해 주시는 모든 이용자분들께 감사드립니다. 회사는 이용자님들께 정산예정금 통합관리서비스부터 다양한 판매 통계서비스, 금융서비스까지 편리하게 제공해드릴 수</pre>
+								</div>
+							</div>
+						</div>
+						<div class="accordion">
+							<div class="title">
+								<div class="left">
+									<div class="checkBoxDiv">
+										<input type="checkbox" id="terms_02" class="chkBox">
+										<label class="checkBox" for="terms_02"></label>
+										<label class="text" for="terms_02" style="color:black;"></label>
+									</div>
+									<p class="text_checkBox"><b>[필수]</b> 셀러봇캐시 개인정보 처리 방침</p>
+								</div>
+								<span><img src="./img/right-chevron.png" alt="right-chevron"></span>
+							</div>
+							<div class="panel">
+								<div class="paddingBox">
+									<pre>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora iure dolorum doloribus aut placeat perferendis modi provident, rem ipsum laudantium, natus ab porro soluta voluptatum culpa aperiam totam quidem vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde delectus, recusandae aut id quod est iure perspiciatis libero ex exercitationem aspernatur sint neque hic ad expedita aliquid alias debitis. Unde!</pre>
+								</div>
+							</div>
+						</div>
+						<div class="accordion">
+							<div class="title">
+								<div class="left">
+									<div class="checkBoxDiv">
+										<input type="checkbox" id="terms_04" class="chkBox">
+										<label class="checkBox" for="terms_04"></label>
+										<label class="text" for="terms_04" style="color:black;"></label>
+									</div>
+									<p class="text_checkBox">[선택] 제3자 마케팅 활용 동의</p>
+								</div>
+								<span><img src="./img/right-chevron.png" alt="right-chevron"></span>
+							</div>
+							<div class="panel">
+								<div class="paddingBox">
+									<pre>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora iure dolorum doloribus aut placeat perferendis modi provident, rem ipsum laudantium, natus ab porro soluta voluptatum culpa aperiam totam quidem vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde delectus, recusandae aut id quod est iure perspiciatis libero ex exercitationem aspernatur sint neque hic ad expedita aliquid alias debitis. Unde!</pre>
+								</div>
+							</div>
+						</div>
+						<div class="accordion">
+							<div class="title">
+								<div class="left">
+									<div class="checkBoxDiv">
+										<input type="checkbox" id="terms_05" class="chkBox">
+										<label class="checkBox" for="terms_05"></label>
+										<label class="text" for="terms_05" style="color:black;"></label>
+									</div>
+									<p class="text_checkBox">[선택] 제3자 정보제공 동의</p>
+								</div>
+								<span><img src="./img/right-chevron.png" alt="right-chevron"></span>
+							</div>
+							<div class="panel">
+								<div class="paddingBox">
+									<pre>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora iure dolorum doloribus aut placeat perferendis modi provident, rem ipsum laudantium, natus ab porro soluta voluptatum culpa aperiam totam quidem vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde delectus, recusandae aut id quod est iure perspiciatis libero ex exercitationem aspernatur sint neque hic ad expedita aliquid alias debitis. Unde!</pre>
+								</div>
+							</div>
+						</div>
+						<div class="accordion">
+							<div class="title">
+								<div class="left">
+									<div class="checkBoxDiv">
+										<input type="checkbox" id="terms_03" class="chkBox">
+										<label class="checkBox" for="terms_03"></label>
+										<label class="text" for="terms_03" style="color:black;"></label>
+									</div>
+									<p class="text_checkBox">[선택] 셀러봇캐시 마케팅 활용 동의</p>
+								</div>
+								<span><img src="./img/right-chevron.png" alt="right-chevron"></span>
+							</div>
+							<div class="panel marketing">
+								<div class="paddingBox">
+									<pre>셀러봇캐시 마케팅활용 동의 철회를 원하시는 분은 로그인 후 마이페이지 회원정보에서 해지 해주시길 바랍니다. 셀러봇캐시 마케팅활용 미동의 시 셀러봇캐시의 다양한 혜택이 제한됨을 알려드립니다.</pre>
+									<img src="./img/step_02_marketing.png" alt="table">
+								</div>
+							</div>
+							<div class="checkBoxRow">
+								<div class="checkBoxDiv square">
+									<input type="checkbox" id="phoneCall" class="chkBox">
+									<label class="checkBox" for="phoneCall"></label>
+									<label class="text" for="phoneCall" style="color:black;">전화</label>
+								</div>
+								<div class="checkBoxDiv square">
+									<input type="checkbox" id="msg" class="chkBox">
+									<label class="checkBox" for="msg"></label>
+									<label class="text" for="msg" style="color:black;">문자</label>
+								</div>
+								<div class="checkBoxDiv square">
+									<input type="checkbox" id="dm" class="chkBox">
+									<label class="checkBox" for="dm"></label>
+									<label class="text" for="dm" style="color:black;">DM</label>
+								</div>
+								<div class="checkBoxDiv square">
+									<input type="checkbox" id="kakaoTalk" class="chkBox">
+									<label class="checkBox" for="kakaoTalk"></label>
+									<label class="text" for="kakaoTalk" style="color:black;">카카오톡</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</section>
+	</main>
+</body>
+
+</html>

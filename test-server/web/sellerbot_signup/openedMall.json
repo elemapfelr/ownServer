@@ -1,0 +1,206 @@
+[
+	{
+		"mallcd": 494,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/494.png",
+		"mall_name": "11번가",
+		"top": true
+	},
+	{
+		"mallcd": 518,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/518.png",
+		"mall_name": "티몬",
+		"top": true
+	},
+	{
+		"mallcd": 492,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/492.png",
+		"mall_name": "G마켓",
+		"top": true
+	},
+	{
+		"mallcd": 493,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/493.png",
+		"mall_name": "옥션",
+		"top": true
+	},
+	{
+		"mallcd": 517,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/517.png",
+		"mall_name": "쿠팡",
+		"top": true
+	},
+	{
+		"mallcd": 496,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/496.png",
+		"mall_name": "인터파크OM",
+		"top": true
+	},
+	{
+		"mallcd": 536,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/536.png",
+		"mall_name": "위메프2.0",
+		"top": true
+	},
+	{
+		"mallcd": 543,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/543.png",
+		"mall_name": "롯데ON",
+		"top": true
+	},
+	{
+		"mallcd": 495,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/495.png",
+		"mall_name": "이니시스",
+		"top": true
+	},
+	{
+		"mallcd": 499,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/499.png",
+		"mall_name": "스마트스토어",
+		"top": true
+	},
+	{
+		"mallcd": 592,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/592.jpg",
+		"mall_name": "SSG닷컴(오픈마켓)",
+		"top": false
+	},
+	{
+		"mallcd": 829,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/829.jpg",
+		"mall_name": "네이버페이",
+		"top": false
+	},
+	{
+		"mallcd": 745,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/745.png",
+		"mall_name": "카카오스타일(구 지그재그)",
+		"top": false
+	},
+	{
+		"mallcd": 537,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/537.png",
+		"mall_name": "카카오톡스토어",
+		"top": false
+	},
+	{
+		"mallcd": 524,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/524.png",
+		"mall_name": "AK몰",
+		"top": false
+	},
+	{
+		"mallcd": 567,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/567.gif",
+		"mall_name": "CJ온스타일(CJ오쇼핑)",
+		"top": false
+	},
+	{
+		"mallcd": 507,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/507.png",
+		"mall_name": "GS홈쇼핑",
+		"top": false
+	},
+	{
+		"mallcd": 539,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/539.png",
+		"mall_name": "LF몰",
+		"top": false
+	},
+	{
+		"mallcd": 541,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/541.png",
+		"mall_name": "다이소몰",
+		"top": false
+	},
+	{
+		"mallcd": 521,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/521.png",
+		"mall_name": "롯데백화점EDI",
+		"top": false
+	},
+	{
+		"mallcd": 702,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/702.jpg",
+		"mall_name": "알렛츠",
+		"top": false
+	},
+	{
+		"mallcd": 503,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/503.png",
+		"mall_name": "우리홈쇼핑 + 롯데홈쇼핑",
+		"top": false
+	},
+	{
+		"mallcd": 497,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/497.png",
+		"mall_name": "인터파크MD",
+		"top": false
+	},
+	{
+		"mallcd": 534,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/534.png",
+		"mall_name": "카카오톡선물하기",
+		"top": false
+	},
+	{
+		"mallcd": 528,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/528.png",
+		"mall_name": "현대백화점EDI",
+		"top": false
+	},
+	{
+		"mallcd": 544,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/544.png",
+		"mall_name": "홈앤쇼핑",
+		"top": false
+	},
+	{
+		"mallcd": 498,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/498.png",
+		"mall_name": "KCP",
+		"top": false
+	},
+	{
+		"mallcd": 827,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/827.jpg",
+		"mall_name": "네이버페이(결제형)",
+		"top": false
+	},
+	{
+		"mallcd": 581,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/581.png",
+		"mall_name": "모빌리언스",
+		"top": false
+	},
+	{
+		"mallcd": 523,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/523.png",
+		"mall_name": "여신금융협회",
+		"top": false
+	},
+	{
+		"mallcd": 777,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/777.PNG",
+		"mall_name": "토스페이먼츠",
+		"top": false
+	},
+	{
+		"mallcd": 506,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/506.png",
+		"mall_name": "텐바이텐",
+		"top": false
+	},
+	{
+		"mallcd": 530,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/530.png",
+		"mall_name": "1300K",
+		"top": false
+	},
+	{
+		"mallcd": 545,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/545.png",
+		"mall_name": "29CM",
+		"top": false
+	}
+]

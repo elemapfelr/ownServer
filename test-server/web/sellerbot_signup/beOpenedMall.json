@@ -1,0 +1,52 @@
+[
+	{
+		"mallcd": 786,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/786.jpg",
+		"mall_name": "SI빌리지"
+	},
+	{
+		"mallcd": 785,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/785.jpg",
+		"mall_name": "SSF샵"
+	},
+	{
+		"mallcd": 547,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/547.png",
+		"mall_name": "고미스토어"
+	},
+	{
+		"mallcd": 701,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/701.jpg",
+		"mall_name": "멸치쇼핑"
+	},
+	{
+		"mallcd": 575,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/575.jpg",
+		"mall_name": "이랜드몰"
+	},
+	{
+		"mallcd": 552,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/552.png",
+		"mall_name": "인터파크비즈마켓"
+	},
+	{
+		"mallcd": 788,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/788.jpg",
+		"mall_name": "코오롱몰"
+	},
+	{
+		"mallcd": 822,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/822.jpg",
+		"mall_name": "트렌비"
+	},
+	{
+		"mallcd": 509,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/509.png",
+		"mall_name": "현대홈쇼핑"
+	},
+	{
+		"mallcd": 525,
+		"logo_path": "https://www.sellerbot.co.kr/imagefile/logo/525.png",
+		"mall_name": "홈플러스"
+	}
+]

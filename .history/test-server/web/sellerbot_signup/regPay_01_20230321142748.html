@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>셀러봇캐시 이용권안내</title>
+	<link rel="stylesheet" href="./css/regPay_01.css">
+	<script type="module" src="./js/common.js" defer></script>
+	<script type="module" src="./js/regPay_01.js" defer></script>
+	<script src="https://kit.fontawesome.com/133e10f389.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<header>
+		<div class="top">
+			<div class="notification">
+				<div class="text">
+					<i class="fa-solid fa-bell"></i>
+					<div class="notiWrap">
+						<ul>
+							<li>[공지사항] [신규 판매몰 지원] 발란 - 판매몰등록 안내</li>
+							<li>[공지사항] [신규 판매몰 지원] WIZWID - 판매몰등록 안내</li>
+							<li>[공지사항] [신규 판매몰 지원] 29CM - 판매몰등록 안내</li>
+						</ul>
+					</div>
+				</div>
+				<button id="closeHeaderNoti"><img src="./img/xmark.svg" alt="xmark"></button>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="logo"><img src="./img/sellerbotLogo.svg" alt="sellerbot"></div>
+			<div class="right">
+				<button>로그인</button>
+				<span></span>
+				<button>회원가입</button>
+				<span></span>
+				<button>고객센터</button>
+			</div>
+		</div>
+	</header>
+	<main>
+		<section>
+			<div class="ticketFixed">
+				<p><b>파이봇 할인형</b> 선택</p>
+				<span class="close"></span>
+			</div>
+			<button class="fixed" id="nextStep">
+				<span>다음</span>
+				<img src="./img/rightArrow.svg" />
+			</button>
+			<article id="top">
+				<div class="title">
+					<h1>셀러봇캐시 정기구독</h1>
+					<button id="serviceVid">서비스 소개 영상</button>
+				</div>
+				<p>정기 구독을 통해 정산예정금 조회, 판매분석, 리포팅서비스 등<br>
+					셀러에게 꼭 필요한 다양한 컨텐츠를 셀러봇캐시에서 경험해보세요.</p>
+			</article>
+			<article id="subscribingTicket">
+				<h3 class="articleTitle">구독중인 이용권</h3>
+				<div class="grayBox">
+					<p class="noData">사용중인 이용권이 없습니다.<br>
+						이용권을 등록하여 셀러봇캐시를 자유롭게 이용해보세요.</p>
+				</div>
+			</article>
+			<article id="subscribe">
+				<h3 class="articleTitle">이용권 선택</h3>
+				<div class="flexBox">
+					<div class="item" data-itemname="로니봇">
+						<div class="title">
+							<h2>로니봇</h2>
+							<span></span>
+						</div>
+						<div class="content">
+							<div class="tag"></div>
+							<h3>월 55,000원<small>(VAT 포함)</small></h3>
+							<span class="line"></span>
+							<div class="flexRow">
+								<div class="left">
+									<p>가입비</p>
+								</div>
+								<div class="right">
+									<span class="check"></span>
+									<div class="discount">
+										<p class="dc">30,000원</p>
+										<p class="blue">무료</p>
+									</div>
+								</div>
+							</div>
+							<div class="flexRow">
+								<div class="left">
+									<p>판매몰 계좌</p>
+								</div>
+								<div class="right">
+									<span class="check"></span>
+									<!-- 20230310 수정 -->
+									<p>5개 등록</p>
+								</div>
+							</div>
+							<div class="flexRow">
+								<div class="left">
+									<p>판매몰 ID</p>
+								</div>
+								<div class="right">
+									<span class="check"></span>
+									<!-- 20230310 수정 -->
+									<p>5개 등록</p>
+								</div>
+							</div>
+							<div class="btnImg">
+								<img class="white" src="./img/step_01_btn_white.png" alt="btnImg">
+								<img class="blue" src="./img/step_01_btn_blue.png" alt="btnImgActivated">
+							</div>
+						</div>
+						<!-- 20230310 수정 -->
+						<span class="noti">14일 무료체험 종료 후 매월 자동결제</span>
+					</div>
+					<div class="item" data-itemname="파이봇">
+						<div class="title">
+							<h2>파이봇</h2>
+							<span></span>
+						</div>
+						<div class="content">
+							<div class="tag">
+								<img src="./img/step_01_tag_blue.png" alt="추천">
+							</div>
+							<h3>월 111,000원<small>(VAT 포함)</small></h3>
+							<span class="line"></span>
+							<div class="flexRow">
+								<div class="left">
+									<p>가입비</p>
+								</div>
+								<div class="right">
+									<span class="check"></span>
+									<div class="discount">
+										<p class="dc">30,000원</p>
+										<p class="blue">무료</p>
+									</div>
+								</div>
+							</div>
+							<div class="flexRow">
+								<div class="left">
+									<p>판매몰 계좌</p>
+								</div>
+								<div class="right">
+									<span class="check"></span>
+									<!-- 20230310 수정 -->
+									<p style="font-weight:bold;">무제한 등록</p>
+								</div>
+							</div>
+							<div class="flexRow">
+								<div class="left">
+									<p>판매몰 ID</p>
+								</div>
+								<div class="right">
+									<span class="check"></span>
+									<!-- 20230310 수정 -->
+									<p style="font-weight:bold;">무제한 등록</p>
+								</div>
+							</div>
+							<div class="btnImg">
+								<img class="white active" src="./img/step_01_btn_white.png" alt="btnImg">
+								<img class="blue" src="./img/step_01_btn_blue.png" alt="btnImgActivated">
+							</div>
+						</div>
+						<!-- 20230310 수정 -->
+						<span class="noti">14일 무료체험 종료 후 매월 자동결제</span>
+					</div>
+					<div class="item" data-itemname="파이봇 할인형">
+						<div class="title">
+							<h2>파이봇 할인형</h2>
+							<span></span>
+						</div>
+						<div class="content">
+							<div class="tag">
+								<img src="./img/step_01_tag_skyblue.png" alt="추천">
+							</div>
+							<h3>월 55,000원<small>(VAT 포함)</small></h3>
+							<span class="line"></span>
+							<div class="flexRow">
+								<div class="left">
+									<p>가입비</p>
+								</div>
+								<div class="right">
+									<span class="check"></span>
+									<div class="discount">
+										<p class="dc">30,000원</p>
+										<p class="blue">무료</p>
+									</div>
+								</div>
+							</div>
+							<div class="flexRow">
+								<div class="left">
+									<p>판매몰 계좌</p>
+								</div>
+								<div class="right">
+									<span class="check"></span>
+									<!-- 20230310 수정 -->
+									<p style="font-weight:bold;">무제한 등록</p>
+								</div>
+							</div>
+							<div class="flexRow">
+								<div class="left">
+									<p>판매몰 ID</p>
+								</div>
+								<div class="right">
+									<span class="check"></span>
+									<!-- 20230310 수정 -->
+									<p style="font-weight:bold;">무제한 등록</p>
+								</div>
+							</div>
+							<div class="btnImg">
+								<img class="white active" src="./img/step_01_btn_white.png" alt="btnImg">
+								<img class="blue" src="./img/step_01_btn_blue.png" alt="btnImgActivated">
+							</div>
+							<div class="banner-container">
+								<div class="banner">
+									<img src="./img/logo_kb.jpg" alt="kb">
+									<img src="./img/logo_shb.jpg" alt="shb">
+									<img src="./img/logo_sc.jpg" alt="sc">
+									<img src="./img/logo_sodeone.jpg" alt="sodeone">
+									<img src="./img/logo_kb.jpg" alt="kb">
+									<img src="./img/logo_shb.jpg" alt="shb">
+									<img src="./img/logo_sc.jpg" alt="sc">
+									<img src="./img/logo_sodeone.jpg" alt="sodeone">
+								</div>
+							</div>
+						</div>
+						<!-- 20230310 수정 -->
+						<span class="noti">14일 무료체험 종료 후 매월 자동결제</span>
+					</div>
+				</div>
+			</article>
+			<article id="bankBot">
+				<h3 class="articleTitle">셀러봇캐시 자동대사 서비스<i class="blue">(각 이용권에 추가하여 사용 가능합니다. 예시: 파이봇-뱅크봇)</i></h3>
+				<div class="flexBox">
+					<div class="item" data-itemname="뱅크봇">
+						<div class="title">
+							<h2>뱅크봇</h2>
+						</div>
+						<div class="content">
+							<div class="tag"></div>
+							<h3>기간한정 무료</h3>
+							<p class="gray">프로모션 종료 시 결제 후 이용가능</p>
+							<span class="line"></span>
+							<div class="flexRow">
+								<div class="right">
+									<span class="check"></span>
+									<p>카페24 회원전용</p>
+								</div>
+							</div>
+							<div class="flexRow">
+								<div class="right">
+									<span class="check"></span>
+									<p>자동입금확인서비스</p>
+								</div>
+							</div>
+							<div class="flexRow">
+								<div class="right">
+									<span class="check"></span>
+									<p>자동입금확인 현황 알림톡</p>
+								</div>
+							</div>
+							<div class="btnImg">
+								<img class="white" src="./img/step_01_btn_white.png" alt="btnImg">
+								<img class="blue" src="./img/step_01_btn_blue.png" alt="btnImgActivated">
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<div class="grayBanner">
+				<div class="content">
+					<img src="./img/step_01_bill.png" alt="bill">
+					<p>유료 버전 사용 후 만족스럽지 않으면 당일 내 100% 환불이 가능합니다.</p>
+				</div>
+			</div>
+			<article id="detail">
+				<h1>상세기능</h1>
+				<div class="flexBox">
+					<div class="box">
+						<div class="background shadow">
+							<span></span>
+							<p>정산예정금 조회</p>
+							<img src="./img/step_01_detail_1.png" alt="01">
+						</div>
+						<p class="bottom">한 번에 확인 가능한 일자별 상세 정산내역</p>
+					</div>
+					<div class="box">
+						<div class="background">
+							<span></span>
+							<p>판매분석</p>
+							<img src="./img/step_01_detail_2.png" alt="02">
+						</div>
+						<p class="bottom">통계분석 및 그래프 등 매출 현황 및 추이 분석</p>
+					</div>
+					<div class="box">
+						<div class="background">
+							<span></span>
+							<p>리포팅 서비스</p>
+							<img src="./img/step_01_detail_3.png" alt="03">
+						</div>
+						<p class="bottom">일자별/판매몰별/배송상태별<br>정산예정금 알림톡 서비스</p>
+					</div>
+				</div>
+				<div class="gridBox">
+					<div class="gridItem">
+						<div class="left">
+							<div class="content">
+								<span class="check"></span>
+								<p>정산계좌 통합관리</p>
+							</div>
+						</div>
+						<div class="right">
+							<p>-판매몰별 입금내역</p>
+							<p>-정산계좌 입출금 상세내역</p>
+						</div>
+					</div>
+					<div class="gridItem">
+						<div class="left">
+							<div class="content">
+								<span class="check"></span>
+								<p>점프 서비스</p>
+							</div>
+						</div>
+						<div class="right">
+							<p>-판매몰부터 금융사, 쇼핑몰관리, 매입채널, 관공서까지 로그인 절차없이 필요한 사이트로 바로 이동</p>
+						</div>
+					</div>
+					<div class="gridItem">
+						<div class="left">
+							<div class="content">
+								<span class="check"></span>
+								<p>동종업계 매출추이</p>
+							</div>
+						</div>
+						<div class="right">
+							<p>-나의 매출랭킹</p>
+							<p>-매출랭킹 변동추이</p>
+							<p>-분야별 랭킹 TOP100</p>
+						</div>
+					</div>
+					<div class="gridItem">
+						<div class="left">
+							<div class="content">
+								<span class="check"></span>
+								<p>금융 서비스</p>
+							</div>
+						</div>
+						<div class="right">
+							<p>-내게 맞는 금융상품 추천 받기</p>
+						</div>
+					</div>
+				</div>
+			</article>
+			<div class="serviceBanner">
+				<div class="left">
+					<h3>셀러들에게 꼭 필요한 서비스</h3>
+				</div>
+				<div class="right">
+					<div class="row">
+						<!-- 20230310 수정 -->
+						<h4 data-text="누적 판매량" data-number="123456789" data-intersected="false">0</h4>
+						<p>지금 이 순간에도 매일 셀러봇캐시를 이용하는 사람들이 증가하고 있습니다.</p>
+					</div>
+					<span></span>
+					<div class="row">
+						<!-- 20230310 수정 -->
+						<h4 data-text="사용 유저" data-number="45611" data-intersected="false">0</h4>
+						<p>1인 사업자부터 대형 유통사까지 다양한 셀러님들이 셀러봇캐시와 함께 성장하고 있습니다.</p>
+					</div>
+					<span></span>
+					<div class="row">
+						<!-- 20230310 수정 -->
+						<h4 data-text="지원 판매몰" data-number="53" data-intersected="false">0</h4>
+						<p>11번가, 티몬, 롯데온, 이니시스 등 오픈마켓부터 소셜커머스, 종합몰, 전문몰, PG/VAN사까지 다양한 판매몰들의 정산내역을 통합 관리할 수 있습니다.</p>
+					</div>
+				</div>
+			</div>
+			<div class="questionBanner">
+				<div class="left">
+					<h3>셀러봇캐시 요금 관련 자주 묻는 질문</h3>
+				</div>
+				<div class="right">
+					<div class="accordion">
+						<div class="title">
+							<p>셀러봇캐시 요금제(로니봇,파이봇,금융사 고객전용)는 어떤 차이가 있나요?</p>
+							<!-- 20230310 수정 -->
+							<span><img src="./img/right-chevron.png" alt="right-chevron"></span>
+						</div>
+						<div class="panel">
+							<div class="paddingBox">
+								<!-- 20230310 수정 (하단 pre 전부)-->
+								<pre>셀러봇캐시의 요금제는 해당 대상과 데이터 제공량에 따라 구분됩니다.
+
+									로니봇 요금제는 판매몰 계좌와 판매몰 ID를 각각 5개씩 등록 가능하며 셀러봇캐시 일반 고객 대상의 요금제입니다.
+									파이봇 요금제는 판매몰 계좌와 판매몰 ID를 무제한으로 등록 가능하며 셀러봇캐시 일반 고객 대상의 요금제입니다.
+									파이봇(할인)요금제는 판매몰 계좌와 판매몰 ID를 무제한으로 등록 가능하며 KB국민은행, 신한은행, SC제일은행 등 금융사를 이용하는 고객 대상의 금융사 이용 고객 전용 요금제입니다.
+									
+									해당 이용권은 제공 되는 내용은 파이봇 요금제와 동일하나 이용 요금은 로니봇 요금제와 동일하게 적용됩니다.</pre>
+							</div>
+						</div>
+					</div>
+					<div class="accordion">
+						<div class="title">
+							<p>14일 무료체험이 끝나면 바로 결제가 이루어지나요?</p>
+							<!-- 20230310 수정 -->
+							<span><img src="./img/right-chevron.png" alt="right-chevron"></span>
+						</div>
+						<div class="panel">
+							<div class="paddingBox">
+								<pre>네! 14일 무료체험 이후 가입시 등록한 자동이체 방법으로 이용요금을 납입합니다.<br>
+									셀러봇캐시는 무료체험 기간 종료 7일 전 고객님께 알림을 보내 드리고 있으니 혹시나 갑작스러운 정기 결제에 안심하셔도 됩니다 :&#41;</pre>
+							</div>
+						</div>
+					</div>
+					<div class="accordion">
+						<div class="title">
+							<p>결제수단 등록 중 오류가 발생했어요!</p>
+							<!-- 20230310 수정 -->
+							<span><img src="./img/right-chevron.png" alt="right-chevron"></span>
+						</div>
+						<div class="panel">
+							<div class="paddingBox">
+								<!-- 20230310 수정 (하단 pre 전부)-->
+								<pre>결제수단 등록 중 오류가 발생하시는 경우, 아래의 사항을 확인해주세요.<br>
+									1&#41; 개인/법인 구분이잘 되었는지 확인을 해주세요.
+									- 실물 카드의 겉면에 '성함'만 표시되어 있는 경우 '개인' 카드일 가능성이 높아요.
+									반대로 '성함+법인명' 또는 '법인명'만 표시되어 있는 경우에는 '법인'으로 등록해주세요.<br>
+									2&#41; 카드 정보와 명의자 정보가 제대로 입력되어있는지 확인해주세요.
+									- 카드번호나 비밀번호 등 카드 정보와 성함, 생년월일 등 명의자 정보가 일치하지 않는 경우 오류가 나타날 수 있어요.<br>
+									3&#41; 그 외의 오류, 문의사항은 우측 하단의 [1:1 상담톡] 으로 문의를 남겨주시면, 고객센터 운영시간 중에 빠르고 친절한 답변을 해드릴게요!
+									</pre>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div class="footerWrap">
+			<div class="left">
+				<div class="row">
+					<p class="footerTerms" id="footer_term_1">이용약관</p>
+					<span>|</span>
+					<p class="footerTerms" id="footer_term_2"><b>개인정보처리방침</b></p>
+					<span>|</span>
+					<p class="footerTerms" id="footer_term_3">이메일무단수집거부</p>
+				</div>
+				<div class="row flexWrap">
+					<p>(주) 온리원</p>
+					<span>|</span>
+					<p>대표이사 최호식</p>
+					<span>|</span>
+					<p>사업자등록번호 220-88-21655</p>
+					<span>|</span>
+					<p>특허번호 10-1089183</p>
+				</div>
+				<div class="row flexWrap">
+					<p>사업자정보 소프트웨어개발</p>
+					<span>|</span>
+					<p>소재지 경기도 하남시 미사대로 520 현대지식산업센터 한강미사2차 D동 5층 545호</p>
+				</div>
+			</div>
+			<div class="right">
+				<img src="./img/sellerbotLogo.svg" alt="sellerbot">
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>

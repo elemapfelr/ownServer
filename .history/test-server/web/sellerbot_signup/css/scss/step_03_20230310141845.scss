@@ -1,0 +1,23 @@
+@import "./common", "./modal";
+
+article#bizInfo{
+    margin-top: 80px;
+
+    h2{
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: -0.65px;
+        color: #202020;
+
+        small{
+            font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: -0.98px;
+  text-align: left;
+  color: #dedede;
+        }
+    }
+}

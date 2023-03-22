@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>셀러봇캐시 회원가입</title>
+	<link rel="stylesheet" href="./css/step_05.css">
+	<script type="module" src="./js/step_05.js" defer></script>
+</head>
+
+<body>
+	<!-- <header>는 기존헤더로 대체하면 됩니다 임시로 넣어둠 -->
+	<header></header>
+	<main>
+		<section>
+			<button class="fixed active" id="nextStep">
+				<span>다음</span>
+				<img src="./img/rightArrow.svg" />
+			</button>
+			<article id="top">
+				<div class="title">
+					<h1>서비스 정보 등록</h1>
+					<span id="ticketInfo">이용권안내</span>
+				</div>
+				<div class="processBar">
+					<div class="first step active">
+						<span class="line"></span>
+						<p>판매몰 등록</p>
+					</div>
+					<div class="second step">
+						<span class="line"></span>
+						<p>결제수단 등록</p>
+					</div>
+					<div class="third step">
+						<span class="line"></span>
+						<p>계좌 등록</p>
+					</div>
+				</div>
+			</article>
+			<div id="wrap">
+				<button id="goTop">
+					<i class="fa-solid fa-caret-up"></i>
+					<p>TOP</p>
+				</button>
+				<!-- 20221221 class="modal" -> class="myModal" 수정 -->
+				<div class="myModal">
+					<div class="content">
+						<div class="top">
+							<p class="modalTitle">제목</p>
+							<button id="title_closeModal"><img src="./img/xmark.svg" alt="xmark"></button>
+						</div>
+						<button id="closeModal"><img src="./img/xmark.svg" alt="xmark"></button>
+						<div class="main">
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem quo distinctio esse laudantium
+								vero
+								dolores quasi, magnam tenetur ratione repellat delectus ipsam, recusandae vel soluta amet
+								consectetur voluptatum? Veniam, adipisci?</p>
+						</div>
+						<div class="bottom">
+						</div>
+					</div>
+				</div>
+				<article id="article_0">
+					<p class="subTitle">등록한 판매몰</p>
+					<span class="line"></span>
+					<button class="black kbBtn">KB 매출더하기론 판매몰 관리</button>
+					<div class="listTopFlex">
+						<div class="statusBtns">
+							<button class="color_black on">전체<btn-num>50</btn-num></button>
+							<button class="color_blue">정상<btn-num>35</btn-num></button>
+							<button class="color_gray">수집중<btn-num>5</btn-num></button>
+							<button class="color_silver">대기<btn-num>3</btn-num></button>
+							<button class="color_red">오류<btn-num>2</btn-num></button>
+							<button class="color_yellow">점검<btn-num>5</btn-num></button>
+							<button class="color_purple">오픈예정<btn-num>5</btn-num></button>
+						</div>
+					</div>
+					<div class="listHead">
+						<dt>상태</dt>
+						<dt>판매몰</dt>
+						<dt>아이디</dt>
+						<dt>부가정보</dt>
+						<dt>제휴서비스</dt>
+						<dt>TIP</dt>
+						<dt>관리</dt>
+					</div>
+					<div class="listWrap scrollable">
+						<ul></ul>
+						<ol></ol>
+					</div>
+					<div class="listBottom">
+						<button id="showListBtn"><b>전체보기</b></button>
+					</div>
+				</article>
+				<article id="article_1">
+					<p class="subTitle">지원 판매몰 리스트</p>
+					<span class="line"></span>
+					<div class="gridTopFlex">
+						<div class="left">
+							<input type="text" placeholder="판매몰 검색">
+							<button id="searchText"><img src="./img/magnifier.svg" alt="search"></button>
+						</div>
+						<div class="right">
+							<button id="beOpenedBtn" class="black">오픈예정몰(사전등록)</button>
+							<a id="guideBtn" href="https://www.sellerbot.co.kr/static/guide/KB_B/index.html ">
+								<button class="black">등록가이드</button>
+							</a>
+						</div>
+					</div>
+					<div id="top10" class="grayBox scrollable">
+						<p class="gridTitle">TOP10</p>
+						<div class="gridArea"></div>
+					</div>
+					<div id="allMalls" class="grayBox scrollable">
+						<p class="gridTitle">이름순</p>
+						<div class="gridArea"></div>
+					</div>
+				</article>
+				<article id="article_2">
+					<p class="subTitle">판매몰 등록/수정</p>
+					<span class="line"></span>
+					<div class="flexArea">
+						<div class="left">
+							<div class="contents scrollable">
+								<!-- 20221229 수정 -->
+								<h3 class="noDataText">등록할 판매몰을<br>[ 지원 판매몰 리스트 ] 에서 선택해주세요.</h3>
+								<div class="modifyArea">
+
+								</div>
+								<div class="registerArea">
+
+								</div>
+							</div>
+							<div class="btns">
+								<button id="initialize">초기화</button>
+								<button id="updateAll">한 번에 업데이트</button>
+							</div>
+						</div>
+						<div class="right">
+							<!-- 20221226 수정 -->
+							<div class="topTitle">
+								<p>판매몰 도움말이 없습니다.</p>
+								<button class="reg">등록 방법</button>
+							</div>
+							<div class="contents scrollable"></div>
+							<div class="btns">
+								<button id="videoGuide">영상가이드</button>
+								<button id="showDetail">상세보기</button>
+							</div>
+						</div>
+					</div>
+				</article>
+				<div class="bottomBar">
+					<div class="closeBtnBox">
+						<button id="closeBottomBar"><img src="./img/xmark.svg" alt="xmark"></button>
+					</div>
+					<div class="centerBox">
+						<p>현재 선택한 판매몰은 <b id="total">0</b>건 입니다. (<text-highlight>등록 <b id="reg">0</b>건 / 수정 <b id="mod">0</b>건</text-highlight>)<br>아래 판매몰 등록/수정에서 입력을 완료해주세요.</p>
+						<div class="btns">
+							<button id="hideBottomBar">닫기</button>
+							<button id="goto">바로가기</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</body>
+
+</html>

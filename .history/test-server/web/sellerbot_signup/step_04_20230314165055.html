@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>셀러봇캐시 회원가입</title>
+	<link rel="stylesheet" href="./css/step_04.css">
+	<script type="module" src="./js/step_04.js" defer></script>
+	<script src="https://kit.fontawesome.com/133e10f389.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<header>
+		<div class="top">
+			<div class="notification">
+				<div class="text">
+					<i class="fa-solid fa-bell"></i>
+					<p>[공지사항] [신규 판매몰 지원] 발란 - 판매몰등록 안내</p>
+				</div>
+				<button><img src="./img/xmark.svg" alt="xmark"></button>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="logo"><img src="./img/sellerbotLogo.svg" alt="sellerbot"></div>
+			<div class="right">
+				<button>로그인</button>
+				<span></span>
+				<button>회원가입</button>
+				<span></span>
+				<button>고객센터</button>
+			</div>
+		</div>
+	</header>
+	<main>
+		<section>
+			<button class="fixed active" id="nextStep">
+				<span>다음</span>
+				<img src="./img/rightArrow.svg" />
+			</button>
+			<article id="top">
+				<div class="flex">
+					<span class="line"></span>
+					<div class="checkCircle"></div>
+					<span class="line"></span>
+				</div>
+				<h2>회원가입이 완료되었습니다</h2>
+			</article>
+			<article id="content">
+				<div class="left">
+					<button id="mallReg" class="active">판매몰 등록</button>
+					<button id="accountReg">계좌 등록</button>
+				</div>
+				<div class="center">
+					<div class="bg">
+						<video class="mallRegVid active" src="./vid/mallReg_4sec.mp4" muted autoplay></video>
+						<img class="accRegImg" src="" alt="">
+					</div>
+					<div class="timeOutBar"></div>
+					<div class="bottom">
+						<p>판매몰 등록화면으로 이동합니다.</p>
+						<div class="rightBtns">
+							<button id="stop">정지</button>
+							<button id="nextStep_2" class="blue">다음</button>
+						</div>
+					</div>
+				</div>
+				<div class="right"></div>
+			</article>
+		</section>
+	</main>
+</body>
+
+</html>

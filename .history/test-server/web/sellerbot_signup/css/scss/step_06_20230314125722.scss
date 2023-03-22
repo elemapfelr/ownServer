@@ -1,0 +1,24 @@
+@import "./common", "./modal";
+
+article#payInfo{
+    margin-top: 80px;
+    h2{
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: -0.65px;
+        text-align: left;
+        color: #202020;
+    }
+    .flexBox{
+        display: flex;
+        align-items: center;
+
+        .left{
+            border: 1px solid #e2e2e2;
+        }
+
+        .right{
+            border: 1px solid #e2e2e2;
+        }
+    }
+}

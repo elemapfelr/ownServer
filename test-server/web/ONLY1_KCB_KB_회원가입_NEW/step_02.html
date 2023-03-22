@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>KCB전용 회원가입</title>
+	<link rel="stylesheet" href="./css/step_02.css">
+</head>
+
+<body>
+	<main>
+		<header>
+			<div class="logoArea">
+				<div class="left"><img src="./img/header_logo_sellerbot.svg" alt="sellerbot" id="sellerbotLogo"></div>
+				<div class="right">
+					<div class="logoWrap"><img src="./img/header_logo_KB.svg" alt="KB" id="kbLogo"></div>
+					<div class="logoWrap"><img src="./img/header_logo_kcb.svg" alt="KCB" id="kcbLogo"></div>
+				</div>
+			</div>
+		</header>
+		<section>
+			<div class="processBar">
+				<div class="checkPoint done"></div>
+				<div class="line active"></div>
+				<div class="checkPoint active"></div>
+				<div class="line active"></div>
+				<div class="checkPoint"></div>
+				<div class="line"></div>
+				<div class="checkPoint"></div>
+				<div class="line"></div>
+				<div class="checkPoint"></div>
+				<div class="line"></div>
+				<div class="checkPoint"></div>
+			</div>
+			<article id="bizInfo">
+				<h1>사업자 정보 입력<small id="userEmail">(s-cash1@only1fs.com)</small></h1>
+				<p class="essential">비밀번호</p>
+				<div class="row">
+					<input type="text" id="pw" placeholder="비밀번호 입력">
+					<span class="errMsg">비밀번호를 입력하세요</span>
+				</div>
+				<p class="essential">비밀번호 확인</p>
+				<div class="row">
+					<input type="text" id="pwCheck" placeholder="비밀번호 입력">
+					<span class="errMsg">비밀번호를 입력하세요</span>
+				</div>
+				<p class="essential">상호명</p>
+				<div class="row">
+					<input type="text" id="bizName" placeholder="상호명 입력">
+					<span class="errMsg">상호명을 입력하세요</span>
+				</div>
+				<p class="essential">사업자 등록번호</p>
+				<div class="flexRow spaceBetween">
+					<input type="text" id="bizNum" placeholder="'-'없이 숫자만 입력해주세요." class="onlyNumber">
+					<button id="bizNumCheck">중복확인</button>
+					<span class="errMsg">이미 가입한 사업자 등록번호입니다</span>
+				</div>
+				<p class="essential">대표자명</p>
+				<div class="row">
+					<input type="text" id="userName" placeholder="대표자명 입력">
+					<span class="errMsg">대표자명을 입력하세요</span>
+				</div>
+				<p class="essential">대표자 연락처</p>
+				<div class="flexRow">
+					<select id="userPhone_1">
+						<option value="010">010</option>
+						<option value="011">011</option>
+						<option value="012">012</option>
+						<option value="013">013</option>
+					</select>
+					<input type="text" id="userPhone_2" class="onlyNumber">
+				</div>
+				<p class="underPhone">('-'없이 숫자입력 / 번호를 정확히 입력해야 안내 수신 가능)</p>
+				<p>담당자명(선택)</p>
+				<div class="row">
+					<input type="text" id="managerName" placeholder="담당자명 입력">
+				</div>
+				<p>담당자 연락처(선택)</p>
+				<div class="flexRow">
+					<select id="managerPhone_1">
+						<option value="010">010</option>
+						<option value="011">011</option>
+						<option value="012">012</option>
+						<option value="013">013</option>
+					</select>
+					<input type="text" id="managerPhone_2" class="onlyNumber">
+				</div>
+				<p class="underPhone">('-'없이 숫자입력 / 번호를 정확히 입력해야 안내 수신 가능)</p>
+				<div class="checkBoxDiv">
+					<input type="checkbox" id="regTalk" class="chkBox" checked>
+					<label class="checkBox" for="regTalk"></label>
+					<label class="text" for="regTalk" style="color:black;font-size: 12px;">알림톡 신청하기</label>
+				</div>
+				<p class="talkInfo">정산일자별, 배송상태별, 판매몰별 정산내역을 원하는 시간에 받아볼 수 있는 리포팅 서비스입니다. (수신 시간은 오전 10시로 지정되며, 마이페이지에서 변경 가능)</p>
+
+				<div class="bottomBtn">
+					<button id="confirm" class="yellow">다음</button>
+				</div>
+			</article>
+		</section>
+		<footer>
+			<div class="flexArea">
+				<div class="row">
+					<button id="footerTerm_1">이용약관</button>
+					<button id="footerTerm_2" class="bold">개인정보처리방침</button>
+				</div>
+				<div class="row">
+					<p>사업자등록번호 220-88-21645 특허번호 10-1089183</p>
+					<p>사업자정보 소프트웨어개발</p>
+				</div>
+				<div class="row">
+					<p>경기도 하남시 미사대로 520 현대지식산업센터 한강미사2차 D동 5층 545호</p>
+				</div>
+				<div class="row">
+					<p>ⓒONLY1 CO., LTD. ALL RIGHTS RESERVED</p>
+				</div>
+			</div>
+		</footer>
+	</main>
+	<script type="module" src="./js/common.js"></script>
+	<script src="./js/step_02.js"></script>
+</body>
+
+</html>

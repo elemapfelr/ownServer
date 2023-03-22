@@ -1,0 +1,37 @@
+import modalShow from './import/modalShow.js';
+
+document.querySelector('#prevStep').addEventListener('click', () => {
+	location.href = './step_06.html';
+});
+
+document.querySelector('#regAcc').addEventListener('click', () => {
+	let popupHtml = `
+    <div class="head">
+		<h5>계좌정보 등록</h5>
+		<img src="./img/sellerbotLogo.svg" alt="sellerbot cash">
+	</div>
+	<div class="body">
+		<p>정산계좌 통합관리 서비스를 이용하시려면</p>
+		<p class="red">은행별 홈페이지에서 빠른조회서비스 등록을 진행하신 후 계좌정보를 입력하셔야 합니다.</p>
+        <form action="action.do">
+			<p>은행명</p>
+			<div class="row">
+				<select id="bankName">
+					<option value="" selected>선택해주세요</option>
+					<option value="신한">신한은행</option>
+					<option value="국민">국민은행</option>
+					<option value="농협">농협은행</option>
+				</select>
+			</div>
+			<p>예금주</p>
+			<div class="row">
+
+			</div>
+		</form>
+	</div>`;
+	modalShow({
+		id: 'modal_01',
+		content: popupHtml,
+		function: () => {},
+	});
+});

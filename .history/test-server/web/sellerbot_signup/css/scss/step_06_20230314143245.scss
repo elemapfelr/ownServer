@@ -1,0 +1,75 @@
+@import "./common", "./modal";
+
+article#payInfo{
+    margin-top: 80px;
+    h2{
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: -0.65px;
+        text-align: left;
+        color: #202020;
+    }
+    .flexBox{
+        display: flex;
+        align-items: center;
+
+        .left{
+            flex: 1;
+            border: 1px solid #e2e2e2;
+
+            .top{
+                padding: 18px 0;
+                background-color: #f9f9f9;
+                h5{
+                    font-size: 16px;
+                    font-weight: bold;
+                    letter-spacing: -0.8px;
+                    text-align: center;
+                    color: #202020;
+                }
+            }
+            .center{
+                padding: 32px 0 21px 0;
+
+                h5{
+                    font-size: 24px;
+                    font-weight: 500;
+                    letter-spacing: -1.2px;
+                    text-align: center;
+                    color: #3d78ff;
+                }
+
+                .flex{
+                    display: flex;
+                    justify-content: space-between;
+
+                    .leftArrow{
+                        img{
+                            transform: rotateY(180deg);
+                            filter: grayscale(1) brightness(150%);
+                        }
+                    }
+                    .mid{
+                        h4{
+                            font-size: 30px;
+                            font-weight: bold;
+                            letter-spacing: -1.5px;
+                            text-align: center;
+                            color: #202020;
+                        }
+                    }
+                    .rightArrow{
+                        img{
+                            filter: grayscale(1) brightness(150%);
+                        }
+                    }
+                }
+            }
+        }
+
+        .right{
+            flex: 2;
+            border: 1px solid #e2e2e2;
+        }
+    }
+}

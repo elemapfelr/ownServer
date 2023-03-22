@@ -1,0 +1,18 @@
+@import "./common", "./modal";
+
+article#accountReg{
+    margin-top: 80px;
+
+    p.topText{
+        font-size: 18px;
+        letter-spacing: -0.65px;
+        text-align: left;
+        color: #202020;
+    }
+
+    .tableTop{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

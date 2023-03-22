@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>셀러봇캐시 회원가입</title>
+	<link rel="stylesheet" href="./css/step_07.css">
+	<script type="module" src="./js/step_07.js" defer></script>
+	<script src="https://kit.fontawesome.com/133e10f389.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<header>
+		<div class="top">
+			<div class="notification">
+				<div class="text">
+					<i class="fa-solid fa-bell"></i>
+					<p>[공지사항] [신규 판매몰 지원] 발란 - 판매몰등록 안내</p>
+				</div>
+				<button><img src="./img/xmark.svg" alt="xmark"></button>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="logo"><img src="./img/sellerbotLogo.svg" alt="sellerbot"></div>
+			<div class="right">
+				<button>로그인</button>
+				<span></span>
+				<button>회원가입</button>
+				<span></span>
+				<button>고객센터</button>
+			</div>
+		</div>
+	</header>
+	<main>
+		<section>
+			<button class="fixed _70 active" id="nextStep">
+				<span>완료</span>
+				<img src="./img/rightArrow.svg" />
+			</button>
+			<article id="top">
+				<div class="title">
+					<h1>서비스 정보 등록</h1>
+				</div>
+				<div class="processBar">
+					<div class="first step">
+						<span class="line"></span>
+						<p>판매몰 등록</p>
+					</div>
+					<div class="second step">
+						<span class="line"></span>
+						<p>결제수단 등록</p>
+					</div>
+					<div class="third step active">
+						<span class="line"></span>
+						<p>계좌 등록</p>
+					</div>
+				</div>
+			</article>
+			<article id="accountReg">
+				<p class="topText">나도 모르는 정산금 입금내역, 등록 한 번이면 쉽고 빠르게 볼 수 있습니다.</p>
+				<div class="tableTop">
+					<div class="left">
+						<p>정산계좌 등록현황</p>
+						<span>(<b>전체 1</b> / <b>정상 1</b> / <b class="err">오류 0</b> /<b>점검 0</b>)</span>
+					</div>
+					<div class="right">
+						<button class="blue_outline" id="vidGuide">영상가이드</button>
+						<button class="blue" id="regAcc">+ 계좌등록</button>
+					</div>
+				</div>
+				<div class="tableDiv">
+					<table id="accountList">
+						<thead>
+							<tr>
+								<td>은행</td>
+								<td>계좌번호</td>
+								<td>계좌잔액</td>
+								<td>최종거래일</td>
+								<td>정산몰</td>
+								<td>내용</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="noData">
+								<td colspan="6">등록한 계좌가 없습니다.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</article>
+			<article id="extraInfo">
+				<div class="left">
+					<div class="content">
+						<h4>판매몰별 입금 내역 요약</h4>
+						<p>최근 <b>2023년 03월 01일</b> 부터 <b>2023년 03월 31일</b>까지<br>
+							판매몰에서 입금된 금액의 합계는 10,000,000원 입니다.</p>
+						<h5>입금합계</h5>
+						<div class="gallery">
+							<ul>
+								<li><img src="./img/step_07_img_01.png" alt="summary"></li>
+							</ul>
+						</div>
+						<ul class="bottomUl">
+							<li class="active"></li>
+							<li></li>
+						</ul>
+					</div>
+				</div>
+				<div class="right">
+					<div class="content">
+						<h3>국내 20개 은행의 정산계좌 지원</h3>
+						<p>계좌 현황과 잔액, 정산 판매몰 확인</p>
+						<p>어떤 판매몰에서 얼마나 입금되었는지 확인</p>
+						<p>공인인증서 없이 빠른 조회</p>
+					</div>
+				</div>
+			</article>
+		</section>
+	</main>
+</body>
+
+</html>

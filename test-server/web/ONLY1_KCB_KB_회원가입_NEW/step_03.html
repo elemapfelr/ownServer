@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>KCB전용 회원가입</title>
+	<link rel="stylesheet" href="./css/step_03.css">
+</head>
+
+<body>
+	<main>
+		<header>
+			<div class="logoArea">
+				<div class="left"><img src="./img/header_logo_sellerbot.svg" alt="sellerbot" id="sellerbotLogo"></div>
+				<div class="right">
+					<div class="logoWrap"><img src="./img/header_logo_KB.svg" alt="KB" id="kbLogo"></div>
+					<div class="logoWrap"><img src="./img/header_logo_kcb.svg" alt="KCB" id="kcbLogo"></div>
+				</div>
+			</div>
+		</header>
+		<section>
+			<div class="processBar">
+				<div class="checkPoint done"></div>
+				<div class="line active"></div>
+				<div class="checkPoint done"></div>
+				<div class="line active"></div>
+				<div class="checkPoint active"></div>
+				<div class="line active"></div>
+				<div class="checkPoint"></div>
+				<div class="line"></div>
+				<div class="checkPoint"></div>
+				<div class="line"></div>
+				<div class="checkPoint"></div>
+			</div>
+			<article id="regMall">
+				<h1>쇼핑몰 등록</h1>
+				<p class="title">판매몰 검색</p>
+				<div class="searchDiv">
+					<input type="text" id="searchMall" placeholder="검색하실 판매몰을 입력하세요">
+					<button id="searchBtn"><img src="./img/searchGlass.svg" alt="searchGlass"></button>
+				</div>
+				<div class="mallList">
+					<div class="title">
+						<p>온라인 쇼핑몰 목록</p>
+					</div>
+					<div class="gridArea">
+						<div class="mall">
+							<img src="https://www.sellerbot.co.kr/imagefile/logo/536.png" alt="">
+							<p class="mallName">무신사</p>
+						</div>
+						<div class="mall">
+							<img src="https://www.sellerbot.co.kr/imagefile/logo/536.png" alt="">
+							<p class="mallName">위메프</p>
+						</div>
+						<div class="mall">
+							<img src="https://www.sellerbot.co.kr/imagefile/logo/536.png" alt="">
+							<p class="mallName">옥션</p>
+						</div>
+						<div class="mall">
+							<img src="https://www.sellerbot.co.kr/imagefile/logo/536.png" alt="">
+							<p class="mallName">11번가</p>
+						</div>
+						<div class="mall">
+							<img src="https://www.sellerbot.co.kr/imagefile/logo/536.png" alt="">
+							<p class="mallName">지마켓</p>
+						</div>
+						<div class="mall">
+							<img src="https://www.sellerbot.co.kr/imagefile/logo/536.png" alt="">
+							<p class="mallName">SI빌리지</p>
+						</div>
+						<div class="mall">
+							<img src="https://www.sellerbot.co.kr/imagefile/logo/536.png" alt="">
+							<p class="mallName">티몬</p>
+						</div>
+					</div>
+				</div>
+				<div class="regItems">
+					<p class="title">입력 항목</p>
+					<div class="regList"></div>
+				</div>
+				<div class="bottomBtn">
+					<button id="confirm" class="yellow">완료</button>
+				</div>
+			</article>
+		</section>
+		<footer>
+			<div class="flexArea">
+				<div class="row">
+					<button id="footerTerm_1">이용약관</button>
+					<button id="footerTerm_2" class="bold">개인정보처리방침</button>
+				</div>
+				<div class="row">
+					<p>사업자등록번호 220-88-21645 특허번호 10-1089183</p>
+					<p>사업자정보 소프트웨어개발</p>
+				</div>
+				<div class="row">
+					<p>경기도 하남시 미사대로 520 현대지식산업센터 한강미사2차 D동 5층 545호</p>
+				</div>
+				<div class="row">
+					<p>ⓒONLY1 CO., LTD. ALL RIGHTS RESERVED</p>
+				</div>
+			</div>
+		</footer>
+	</main>
+	<script type="module" src="./js/common.js"></script>
+	<script type="module" src="./js/step_03.js"></script>
+</body>
+
+</html>

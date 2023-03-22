@@ -1,0 +1,16 @@
+@import "./common", "./modal";
+
+article#top{
+    .title{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        button#serviceVid{
+            padding: 11px 25px 12px;
+  object-fit: contain;
+  background-color: #3d78ff;
+        }
+    }
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>셀러봇캐시 회원가입</title>
+	<link rel="stylesheet" href="./css/regPay_01.css">
+	<script type="module" src="./js/common.js" defer></script>
+	<script type="module" src="./js/regPay_01.js" defer></script>
+	<script src="https://kit.fontawesome.com/133e10f389.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<header>
+		<div class="top">
+			<div class="notification">
+				<div class="text">
+					<i class="fa-solid fa-bell"></i>
+					<div class="notiWrap">
+						<ul>
+							<li>[공지사항] [신규 판매몰 지원] 발란 - 판매몰등록 안내</li>
+							<li>[공지사항] [신규 판매몰 지원] WIZWID - 판매몰등록 안내</li>
+							<li>[공지사항] [신규 판매몰 지원] 29CM - 판매몰등록 안내</li>
+						</ul>
+					</div>
+				</div>
+				<button id="closeHeaderNoti"><img src="./img/xmark.svg" alt="xmark"></button>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="logo"><img src="./img/sellerbotLogo.svg" alt="sellerbot"></div>
+			<div class="right">
+				<button>로그인</button>
+				<span></span>
+				<button>회원가입</button>
+				<span></span>
+				<button>고객센터</button>
+			</div>
+		</div>
+	</header>
+	<main>
+		<section>
+			<button class="fixed" id="nextStep">
+				<span>다음</span>
+				<img src="./img/rightArrow.svg" />
+			</button>
+			<article id="top">
+				<div class="title">
+					<h1>결제수단 등록 완료</h1>
+				</div>
+			</article>
+		</section>
+	</main>
+	<footer>
+		<div class="footerWrap">
+			<div class="left">
+				<div class="row">
+					<p class="footerTerms" id="footer_term_1">이용약관</p>
+					<span>|</span>
+					<p class="footerTerms" id="footer_term_2"><b>개인정보처리방침</b></p>
+					<span>|</span>
+					<p class="footerTerms" id="footer_term_3">이메일무단수집거부</p>
+				</div>
+				<div class="row flexWrap">
+					<p>(주) 온리원</p>
+					<span>|</span>
+					<p>대표이사 최호식</p>
+					<span>|</span>
+					<p>사업자등록번호 220-88-21655</p>
+					<span>|</span>
+					<p>특허번호 10-1089183</p>
+				</div>
+				<div class="row flexWrap">
+					<p>사업자정보 소프트웨어개발</p>
+					<span>|</span>
+					<p>소재지 경기도 하남시 미사대로 520 현대지식산업센터 한강미사2차 D동 5층 545호</p>
+				</div>
+			</div>
+			<div class="right">
+				<img src="./img/sellerbotLogo.svg" alt="sellerbot">
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>
+
+<div class="head">
+	<h5>결제수단 등록 완료</h5>
+	<img src="./img/sellerbotLogo.svg" alt="sellerbot cash">
+</div>
+<div class="body">
+	<p>셀러봇캐시를 이용해주셔서 감사합니다.</p>
+	<p>셀러봇캐시 요금제(파이봇) / 자동대사서비스(뱅크봇) 이용이 시작되었습니다.</p>
+	<p><b>다음 정기결제일은 2023년 00월 00일 입니다.</b></p>
+	<h2>최종 결제금액</h2>
+	<div class="flexBox">
+		<div class="left">
+			<h5>총 결제 금액</h5>
+			<h4>149,800원</h4>
+			<small>(VAT 포함)</small>
+		</div>
+		<div class="right">
+			<div class="content">
+				<p class="gray">셀러봇캐시 이용권</p>
+				<div class="box">
+					<div class="blue">파이봇</div>
+					<p>월 111,000원</p>
+				</div>
+				<span class="line"></span>
+				<p class="gray">자동대사서비스</p>
+				<div class="box">
+					<div class="blue_outline">뱅크봇</div>
+					<p>월 8,800원</p>
+				</div>
+				<span class="line"></span>
+				<p class="gray">가입비</p>
+				<p>30,000원</p>
+			</div>
+		</div>
+	</div>
+	<h2>결제정보</h2>
+	<div class="flexBox payInfo">
+		<div class="left">
+			<h5>신용카드</h5>
+		</div>
+		<div class="right">
+			<p>027**********1</p>
+		</div>
+	</div>
+	<button class="blue_outline" id="closeModal">닫기</button>
+</div>
+</div>

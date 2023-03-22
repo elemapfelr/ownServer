@@ -1,0 +1,97 @@
+@import "./common", "./modal";
+
+article#top {
+    .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span.line {
+            width: 45%;
+            height: 1px;
+            background-color: #e2e2e2;
+            display: block;
+        }
+
+        .checkCircle {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #3d78ff;
+            border-radius: 40px;
+            position: relative;
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 18px;
+                height: 2px;
+                background-color: $blue;
+                top: 22px;
+                left: .5px;
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 28px;
+                height: 2px;
+                background-color: $blue;
+                top: 19px;
+                left: 11px;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    h2 {
+        font-size: 26px;
+        font-weight: bold;
+        letter-spacing: -1.3px;
+        text-align: center;
+        color: #2b2b2b;
+    }
+}
+
+article#content{
+    margin-top: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    .left, .right{
+        width: 10%;
+        min-width: 100px;
+    }
+    .left{
+        button{
+            display: block;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            color: #dedede;
+            border: none;
+            background: none;
+            outline: none;
+            margin-bottom: 16px;
+
+            &.active{
+                color: #3d78ff;
+            }
+        }
+    }
+    
+    .center{
+        width: 40%;
+        border-radius: 20px;
+        background-color: #f9f9f9;
+        padding: 15px 125px;
+        box-sizing: border-box;
+
+        img{
+            width: 200px;
+        }
+    }
+}

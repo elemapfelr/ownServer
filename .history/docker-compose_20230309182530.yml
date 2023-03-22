@@ -1,0 +1,15 @@
+version: '1.0'
+
+services:
+  test-server:
+    container_name: test-server
+    image: test-server:${TAG:-v1.0.0}
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./test-server/web/:/var/www/html/web/
+      - ./test-server/server.js:/var/www/html/server.js
+    ports:
+      - "30000:80"
+  

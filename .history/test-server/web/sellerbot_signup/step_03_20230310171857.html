@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>셀러봇캐시 회원가입</title>
+	<link rel="stylesheet" href="./css/step_03.css">
+	<script type="module" src="./js/step_03.js" defer></script>
+</head>
+
+<body>
+	<!-- <header>는 기존헤더로 대체하면 됩니다 임시로 넣어둠 -->
+	<header></header>
+	<main>
+		<section>
+			<button class="fixed2" id="prevStep">
+				<span>이전</span>
+			</button>
+			<button class="fixed" id="nextStep">
+				<span>다음</span>
+				<img src="./img/rightArrow.svg" />
+			</button>
+			<button class="fixed3" id="talkInfo">
+				<img src="./img/talkInfo.png" alt="talkInfo">
+			</button>
+			<article id="top">
+				<div class="title">
+					<h1>셀러봇캐시 회원가입</h1>
+				</div>
+				<div class="processBar">
+					<div class="first step">
+						<span class="line"></span>
+						<p>구독 유형 선택</p>
+					</div>
+					<div class="second step">
+						<span class="line"></span>
+						<p>본인인증/약관동의</p>
+					</div>
+					<div class="third step active">
+						<span class="line"></span>
+						<p>사업자정보 입력</p>
+					</div>
+				</div>
+			</article>
+			<article id="bizInfo">
+				<h2>사업자정보 입력<small id="userEmail">example@gmail.com</small></h2>
+				<div class="bg">
+					<div class="wrapper">
+						<p class="essential">상호명</p>
+						<div class="row">
+							<input type="text" id="bizName" placeholder="상호명 입력">
+							<span id="msg1" class="underMsg red">상호명을 입력해주세요.</span>
+						</div>
+						<p class="essential">사업자등록번호</p>
+						<div class="flexRow">
+							<input class="onlyNumber" type="text" id="bizNum" placeholder="사업자등록번호 입력">
+							<button id="bizNumCheck">중복확인</button>
+							<span class="underMsg">('-'없이 숫자만 입력)</span>
+							<span id="msg2" class="errMsg">사업자번호를 입력해주세요.</span>
+						</div>
+					</div>
+				</div>
+				<div class="bg">
+					<div class="wrapper">
+						<p class="essential">대표자명</p>
+						<div class="row">
+							<input type="text" id="userName" placeholder="대표자명 입력">
+							<span id="msg3" class="underMsg red">대표자명을 입력해주세요.</span>
+						</div>
+						<p class="essential">대표자 연락처</p>
+						<div class="flexRow">
+							<select id="userPhone_1">
+								<option value="010" selected>010</option>
+								<option value="011">011</option>
+								<option value="016">016</option>
+								<option value="017">017</option>
+								<option value="018">018</option>
+								<option value="019">019</option>
+							</select>
+							<input class="onlyNumber" type="text" id="userPhone_2">
+							<span class="underMsg marginLeft">('-'없이 숫자입력 / 입력하신 연락처로 중요한 공지 및 혜택을 안내드리거나 알림톡
+								리포트를 보내드리고 있어 정확히 입력해주세요.)</span>
+							<span id="msg4" class="errMsg">대표자 연락처를 입력해주세요.</span>
+						</div>
+						<p class="question">알림톡 신청 시간 <img id="talkInfo" src="./img/questionBtn.svg" alt="manual open"></p>
+						<div class="row">
+							<select id="talkTime_1">
+								<option value="">알림톡 신청시간 선택</option>
+								<option value="0800">08:00</option>
+								<option value="0900">09:00</option>
+								<option value="1000" selected>10:00</option>
+								<option value="1100">11:00</option>
+								<option value="1200">12:00</option>
+								<option value="1300">13:00</option>
+								<option value="1400">14:00</option>
+								<option value="1500">15:00</option>
+								<option value="1600">16:00</option>
+								<option value="1700">17:00</option>
+								<option value="1800">18:00</option>
+								<option value="1900">19:00</option>
+								<option value="2000">20:00</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="bg">
+					<div class="wrapper">
+						<p>담당자명(선택)</p>
+						<div class="row">
+							<input type="text" id="managerName" placeholder="담당자명 입력">
+						</div>
+						<p>담당자 연락처(선택)</p>
+						<div class="flexRow">
+							<select id="managerPhone_1">
+								<option value="010" selected>010</option>
+								<option value="011">011</option>
+								<option value="016">016</option>
+								<option value="017">017</option>
+								<option value="018">018</option>
+								<option value="019">019</option>
+							</select>
+							<input class="onlyNumber" type="text" id="managerPhone_2">
+							<span class="underMsg marginLeft">('-'없이 숫자입력 / 입력하신 연락처로 중요한 공지 및 혜택을 안내드리거나 알림톡
+								리포트를 보내드리고 있어 정확히 입력해주세요.)</span>
+						</div>
+						<p class="question">알림톡 신청 시간 <img id="talkInfo" src="./img/questionBtn.svg" alt="manual open"></p>
+						<div class="row">
+							<select id="talkTime_2">
+								<option value="" selected>알림톡 신청시간 선택</option>
+								<option value="0800">08:00</option>
+								<option value="0900">09:00</option>
+								<option value="1000">10:00</option>
+								<option value="1100">11:00</option>
+								<option value="1200">12:00</option>
+								<option value="1300">13:00</option>
+								<option value="1400">14:00</option>
+								<option value="1500">15:00</option>
+								<option value="1600">16:00</option>
+								<option value="1700">17:00</option>
+								<option value="1800">18:00</option>
+								<option value="1900">19:00</option>
+								<option value="2000">20:00</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="bg">
+					<div class="wrapper">
+						<p class="essential">유입경로</p>
+						<div class="row">
+							<select id="funnel">
+								<!-- -리스트 : SMP-공통코드 A020 ‘유입경로’ 기준 -->
+								<option value="null" selected>유입경로 선택</option>
+								<option value="AIN">지인소개</option>
+							</select>
+							<span id="msg5" class="underMsg red">유입경로를 선택해주세요.</span>
+						</div>
+					</div>
+				</div>
+			</article>
+		</section>
+	</main>
+</body>
+
+</html>

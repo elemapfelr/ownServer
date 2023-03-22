@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>KCB전용 회원가입</title>
+	<link rel="stylesheet" href="./css/step_05.css">
+</head>
+
+<body>
+	<main>
+		<header>
+			<div class="logoArea">
+				<div class="left"><img src="./img/header_logo_sellerbot.svg" alt="sellerbot" id="sellerbotLogo"></div>
+				<div class="right">
+					<div class="logoWrap"><img src="./img/header_logo_KB.svg" alt="KB" id="kbLogo"></div>
+					<div class="logoWrap"><img src="./img/header_logo_kcb.svg" alt="KCB" id="kcbLogo"></div>
+				</div>
+			</div>
+		</header>
+		<section>
+			<div class="processBar">
+				<div class="checkPoint done"></div>
+				<div class="line active"></div>
+				<div class="checkPoint done"></div>
+				<div class="line active"></div>
+				<div class="checkPoint done"></div>
+				<div class="line active"></div>
+				<div class="checkPoint done"></div>
+				<div class="line active"></div>
+				<div class="checkPoint active"></div>
+				<div class="line active"></div>
+				<div class="checkPoint"></div>
+			</div>
+			<article id="regPayment">
+				<h1>결제수단 등록</h1>
+				<!-- <p class="title">결제 수단 등록 안내(필수)</p>
+				<div class="textBox">
+					<pre>셀러봇캐시 서비스 가입을 위해서는
+						이용권 정기 결제를 위한 결제수단 등록이 필수입니다.</pre>
+					<pre>아래 튼을 통해 첫 결제 수단 등록 시,
+						무료체험 14일이 제공되며 체험 종료 후 매월 자동 정기결제가 됩니다.
+						해지는 언제든지 가능합니다</pre>
+					<pre>*해지 경로 :
+						[셀러봇캐시 페이지 → 마이페이지 → 결제정보 → (이용권 우측) 해지]</pre>
+				</div> -->
+				<img class="ticket" src="./img/ticket.png" alt="ticket">
+				<div class="accordion">
+					<div class="title">
+						<div class="left">
+							<div class="checkBoxDiv">
+								<input type="checkbox" id="terms_06" class="chkBox">
+								<label class="checkBox" for="terms_06"></label>
+								<label class="text" for="terms_06" style="color:black;"></label>
+							</div>
+							<p>[필수] 셀러봇캐시 유료결제 약관</p>
+						</div>
+						<span><img src="./img/right-chevron.png" alt="right-chevron"></span>
+					</div>
+					<div class="panel">
+						<div class="paddingBox">
+							<pre>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora iure dolorum doloribus aut placeat perferendis modi provident, rem ipsum laudantium, natus ab porro soluta voluptatum culpa aperiam totam quidem vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde delectus, recusandae aut id quod est iure perspiciatis libero ex exercitationem aspernatur sint neque hic ad expedita aliquid alias debitis. Unde!</pre>
+						</div>
+					</div>
+				</div>
+				<p class="title">정기 결제수단 등록</p>
+				<button class="black" id="creditCard">신용카드<small>(14일간 무료)</small></button>
+				<span class="notification"></span>
+				<button class="yellow" id="confirm">다음</button>
+			</article>
+		</section>
+		<footer>
+			<div class="flexArea">
+				<div class="row">
+					<button id="footerTerm_1">이용약관</button>
+					<button id="footerTerm_2" class="bold">개인정보처리방침</button>
+				</div>
+				<div class="row">
+					<p>사업자등록번호 220-88-21645 특허번호 10-1089183</p>
+					<p>사업자정보 소프트웨어개발</p>
+				</div>
+				<div class="row">
+					<p>경기도 하남시 미사대로 520 현대지식산업센터 한강미사2차 D동 5층 545호</p>
+				</div>
+				<div class="row">
+					<p>ⓒONLY1 CO., LTD. ALL RIGHTS RESERVED</p>
+				</div>
+			</div>
+		</footer>
+	</main>
+	<script type="module" src="./js/common.js"></script>
+	<script src="./js/step_05.js"></script>
+</body>
+
+</html>

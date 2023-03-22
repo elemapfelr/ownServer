@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>KCB전용 회원가입</title>
+	<link rel="stylesheet" href="./css/step_05.css">
+</head>
+
+<body>
+	<main>
+		<header>
+			<div class="logoArea">
+				<div class="left"><img src="./img/header_logo_sellerbot.svg" alt="sellerbot" id="sellerbotLogo"></div>
+				<div class="right">
+					<div class="logoWrap"><img src="./img/header_logo_KB.svg" alt="KB" id="kbLogo"></div>
+					<div class="logoWrap"><img src="./img/header_logo_kcb.svg" alt="KCB" id="kcbLogo"></div>
+				</div>
+			</div>
+		</header>
+		<section>
+			<div class="processBar">
+				<div class="checkPoint done"></div>
+				<div class="line active"></div>
+				<div class="checkPoint done"></div>
+				<div class="line active"></div>
+				<div class="checkPoint done"></div>
+				<div class="line active"></div>
+				<div class="checkPoint done"></div>
+				<div class="line active"></div>
+				<div class="checkPoint active"></div>
+				<div class="line active"></div>
+				<div class="checkPoint"></div>
+			</div>
+			<article id="regPayment">
+				<h1>결제수단 등록</h1>
+				<!-- 20230314 수정 여기부터 -->
+				<!-- <img class="ticket" src="./img/ticket.png" alt="ticket"> -->
+				<div class="ticketDiv">
+					<div class="top">
+						<p>KB국민은행 고객전용 이용권</p>
+					</div>
+					<div class="row">
+						<div class="left" style="margin-top:44px;">
+							<p>월 이용료</p>
+						</div>
+						<div class="right column" style="padding-top:20px; padding-bottom:0px;">
+							<small class="up">정상가 월 110,000원</small>
+							<div class="flexText">
+								<span class="check yellow"></span>
+								<p class="big">할인가 월 55,000원</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="left">
+							<p>가입비</p>
+						</div>
+						<div class="right">
+							<div class="flexText">
+								<span class="check yellow"></span>
+								<small class="vertical" style="margin-right:24px;">30,000원</small>
+								<p class="big">무료</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="left">
+							<p>판매몰 계좌</p>
+						</div>
+						<div class="right">
+							<span class="check"></span>
+							<p>무제한 등록</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="left">
+							<p>판매몰 ID</p>
+						</div>
+						<div class="right">
+							<span class="check"></span>
+							<p>무제한 등록</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="left">
+							<p>데이터 조회</p>
+						</div>
+						<div class="right column" style="padding-bottom:0px;">
+							<div class="flexText">
+								<span class="check"></span>
+								<p>일자별 상세 정산 내역</p>
+							</div>
+							<div class="flexText">
+								<span class="check"></span>
+								<p>판매통계분석 및 그래프</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="left">
+							<p>리포팅 서비스</p>
+						</div>
+						<div class="right">
+							<span class="check"></span>
+							<p>매일 정산예정금 알림톡리포트 서비스</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="left">
+							<p>전용 상담 서비스</p>
+						</div>
+						<div class="right">
+							<span class="check"></span>
+							<p>고객상담 우선지원서비스 제공</p>
+						</div>
+					</div>
+				</div>
+				<div class="textBox">
+					<pre>*해지 경로 :
+						[셀러봇캐시 페이지 → 마이페이지 → 결제정보 → (이용권 우측) 해지]</pre>
+				</div>
+				<!-- 20230314 수정 여기까지 -->
+				<div class="accordion">
+					<div class="title">
+						<div class="left">
+							<div class="checkBoxDiv">
+								<input type="checkbox" id="terms_06" class="chkBox">
+								<label class="checkBox" for="terms_06"></label>
+								<label class="text" for="terms_06" style="color:black;"></label>
+							</div>
+							<p>[필수] 셀러봇캐시 유료결제 약관</p>
+						</div>
+						<span><img src="./img/right-chevron.png" alt="right-chevron"></span>
+					</div>
+					<div class="panel">
+						<div class="paddingBox">
+							<pre>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora iure dolorum doloribus aut placeat perferendis modi provident, rem ipsum laudantium, natus ab porro soluta voluptatum culpa aperiam totam quidem vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde delectus, recusandae aut id quod est iure perspiciatis libero ex exercitationem aspernatur sint neque hic ad expedita aliquid alias debitis. Unde!</pre>
+						</div>
+					</div>
+				</div>
+				<p class="title">정기 결제수단 등록</p>
+				<button class="black" id="creditCard">신용카드<small>(14일간 무료)</small></button>
+				<span class="notification"></span>
+				<button class="yellow" id="confirm">다음</button>
+			</article>
+		</section>
+		<footer>
+			<div class="flexArea">
+				<div class="row">
+					<button id="footerTerm_1">이용약관</button>
+					<button id="footerTerm_2" class="bold">개인정보처리방침</button>
+				</div>
+				<div class="row">
+					<p>사업자등록번호 220-88-21645 특허번호 10-1089183</p>
+					<p>사업자정보 소프트웨어개발</p>
+				</div>
+				<div class="row">
+					<p>경기도 하남시 미사대로 520 현대지식산업센터 한강미사2차 D동 5층 545호</p>
+				</div>
+				<div class="row">
+					<p>ⓒONLY1 CO., LTD. ALL RIGHTS RESERVED</p>
+				</div>
+			</div>
+		</footer>
+	</main>
+	<script type="module" src="./js/common.js"></script>
+	<script src="./js/step_05.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+@import "./common", "./modal";
+
+article#top{
+    .flex{
+        display: flex;
+        align-items: center;
+        
+    }
+}

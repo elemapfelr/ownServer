@@ -1,0 +1,18 @@
+version: '1.0'
+
+services:
+  aos-admin:
+    container_name: aos-admin
+    image: aos-admin:${TAG:-v1.0.0}
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./web-aos-admin-v2/api/:/var/www/html/api/
+      - ./web-aos-admin-v2/views/:/var/www/html/views/
+      - ./web-aos-admin-v2/config.js:/var/www/html/config.js
+      - ./web-aos-admin-v2/package.json:/var/www/html/package.json
+      - ./web-aos-admin-v2/server.js:/var/www/html/server.js
+    ports:
+      - "29100:80"
+  

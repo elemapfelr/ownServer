@@ -1,0 +1,98 @@
+@import "./common", "./modal";
+
+article#bizInfo{
+    margin-top: 80px;
+
+    h2{
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: -0.65px;
+        color: #202020;
+
+        small{
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: -0.98px;
+            text-align: left;
+            color: #dedede;
+            margin-left: 4px;
+        }
+    }
+
+    .bg{
+        width: 100%;
+        padding: 40px 0;
+        background-color: #f9f9f9;
+
+        .wrapper{
+            width: 100%;
+            max-width: 534px;
+            margin: 0 auto;
+
+            p {
+                display: inline;
+                font-size: 14px;
+                font-weight: 500;
+                letter-spacing: -0.98px;
+                color: #474246;
+                position: relative;
+    
+                &.essential::after {
+                    content: '*';
+                    position: absolute;
+                    top: 0px;
+                    right: -7px;
+                    display: block;
+                }
+            }
+
+            .row {
+                margin-bottom: 40px;
+
+                input {
+                    width: 100%;
+                    outline: none;
+                    border: 1px solid #e2e2e2;
+                    padding: 12px 0;
+                    text-indent: 10px;
+                    font-size: 12px;
+                    margin-top: 6px;
+                }
+            }
+
+            .flexRow {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                input#bizNum{
+                    flex: 1;
+                    margin-right: 12px;
+                }
+
+                button {
+                    width: 100px;
+                    outline: none;
+                    border: 1px solid #e6e6e6;
+                    padding: 12px 0;
+                    background-color: #e6e6e6;
+                    color: #ababab;
+                    font-size: 12px;
+                    letter-spacing: -0.84px;
+                    cursor: pointer;
+
+                    &.blue {
+                        background-color: #3d78ff;
+                        color: white;
+                    }
+
+                    &:disabled {
+                        background-color: #f0f0f0;
+                        color: #ababab;
+                        pointer-events: none;
+                    }
+                }
+            }
+        }
+    }
+}

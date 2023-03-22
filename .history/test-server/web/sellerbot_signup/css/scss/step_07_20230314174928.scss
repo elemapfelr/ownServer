@@ -1,0 +1,79 @@
+@import "./common", "./modal";
+
+article#accountReg{
+    margin-top: 80px;
+
+    p.topText{
+        font-size: 18px;
+        letter-spacing: -0.65px;
+        text-align: left;
+        color: #202020;
+        margin-bottom: 80px;
+    }
+
+    .tableTop{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .left{
+            display: flex;
+            align-items: center;
+            p{
+                font-size: 18px;
+                font-weight: 500;
+                letter-spacing: -0.65px;
+                text-align: left;
+                color: #202020;
+            }
+            span{
+                margin-left: 4px;
+                font-size: 14px;
+                letter-spacing: -1.12px;
+                text-align: left;
+                color: #474246;
+
+                b{
+                    font-weight: normal;
+
+                    &.err{
+                        color: #ff7070;
+                    }
+                }
+            }
+        }
+
+        .right{
+            display: flex;
+            align-items: center;
+
+            button{
+                padding: 7px 18px;
+                box-sizing: border-box;
+                border: 1px solid #3d78ff;
+                cursor: pointer;
+
+                &.blue_outline{
+                    background-color: #fff;
+                    color: #3d78ff;
+                }
+                &.blue{
+                    background-color: #3d78ff;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    table#accountList{
+        margin-top: 20px;
+
+        thead{
+            tr{
+                td{
+                    background-color: #dedede;
+                }
+            }
+        }
+    }
+}

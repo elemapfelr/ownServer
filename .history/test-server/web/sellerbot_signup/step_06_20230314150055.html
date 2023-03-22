@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>셀러봇캐시 회원가입</title>
+	<link rel="stylesheet" href="./css/step_06.css">
+	<script type="module" src="./js/step_06.js" defer></script>
+	<script src="https://kit.fontawesome.com/133e10f389.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<!-- <header>는 기존헤더로 대체하면 됩니다 임시로 넣어둠 -->
+	<header>
+		<div class="top">
+			<div class="notification">
+				<div class="notiLogo"><i class="fa-solid fa-bell"></i></div>
+				<p>[공지사항] [신규 판매몰 지원] 발란 - 판매몰등록 안내</p>
+				<button><img src="./img/xmark.svg" alt="xmark"></button>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="logo"><img src="./img/sellerbotLogo.svg" alt="sellerbot"></div>
+			<div class="right">
+				<button>로그인</button>
+				<span></span>
+				<button>회원가입</button>
+				<span></span>
+				<button>고객센터</button>
+			</div>
+		</div>
+	</header>
+	<main>
+		<section>
+			<button class="fixed2" id="prevStep">
+				<span>이전</span>
+			</button>
+			<button class="fixed" id="nextStep">
+				<span>다음</span>
+				<img src="./img/rightArrow.svg" />
+			</button>
+			<article id="top">
+				<div class="title">
+					<h1>서비스 정보 등록</h1>
+				</div>
+				<div class="processBar">
+					<div class="first step">
+						<span class="line"></span>
+						<p>판매몰 등록</p>
+					</div>
+					<div class="second step active">
+						<span class="line"></span>
+						<p>결제수단 등록</p>
+					</div>
+					<div class="third step">
+						<span class="line"></span>
+						<p>계좌 등록</p>
+					</div>
+				</div>
+			</article>
+			<article id="payInfo">
+				<h2>이용권 결제정보</h2>
+				<div class="flexBox">
+					<div class="left">
+						<div class="top">
+							<h5>셀러봇캐시는 지금 가입비 무료 이벤트 중! 🎉</h5>
+						</div>
+						<div class="center">
+							<h5>파이봇</h5>
+							<div class="flex">
+								<div class="leftArrow">
+									<img src="./img/step_05_rightArrow.svg" alt="left">
+									<p>로니봇</p>
+								</div>
+								<div class="mid">
+									<h4>월 111,000원</h4>
+									<small>(VAT 포함)</small>
+								</div>
+								<div class="rightArrow">
+									<img src="./img/step_05_rightArrow.svg" alt="right">
+									<p>파이봇 할인형</p>
+								</div>
+							</div>
+							<span>무료체험 14일 이후 정기결제</span>
+						</div>
+						<div class="bottom">
+							<div class="row">
+								<span class="check"></span>
+								<p>판매몰 계좌 : 무제한 등록</p>
+							</div>
+							<div class="row">
+								<span class="check"></span>
+								<p>판매몰 ID : 무제한 등록</p>
+							</div>
+							<div class="row">
+								<span class="check"></span>
+								<p>데이터 조회 : 일자별 상세 정산내역, 판매통계분석 및 그래프</p>
+							</div>
+							<div class="row">
+								<span class="check"></span>
+								<p>리포팅 서비스 : 매영업일 정산예정금 알림톡 리포트 발송</p>
+							</div>
+						</div>
+					</div>
+					<div class="right">
+						<img class="logo" src="./img/sellerbotLogo.svg" alt="sellerbot">
+						<div class="gallery">
+							<ul>
+								<li>
+									<img src="./img/step_06_img_01.png" alt="01">
+								</li>
+								<li>
+									<img src="./img/step_06_img_02.png" alt="02">
+								</li>
+							</ul>
+						</div>
+						<div class="arrowBtns">
+							<div class="galleryLeft"><img src="./img/rightArrow.svg" alt="leftArrow"></div>
+							<div class="galleryRight"><img src="./img/rightArrow.svg" alt="rightArrow"></div>
+						</div>
+						<ul class="bottomUl">
+							<li class="active" data-text="정산예정금 조회"></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</div>
+			</article>
+			<article id="totalPay">
+				<h2>최종 결제금액</h2>
+			</article>
+		</section>
+	</main>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+FROM node:18.13
+
+# COPY web-aos-admin-v2/package*.json ./
+COPY ./web-aos-admin-v2/ /var/www/html/
+
+WORKDIR /var/www/html/
+
+RUN npm install -g nodemon
+RUN npm install
+ENV TZ=Asia/Seoul
+
+EXPOSE 29100
+
+CMD ["npm", "run", "dev"]
