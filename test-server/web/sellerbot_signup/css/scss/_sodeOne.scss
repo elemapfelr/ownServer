@@ -1,0 +1,26 @@
+article#top {
+    .title {
+        img {
+            width: 90px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1200px) {
+    main {
+        section {
+            article#top {
+                .processBar {
+                    .step {
+                        p {
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

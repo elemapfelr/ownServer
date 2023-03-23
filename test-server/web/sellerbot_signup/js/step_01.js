@@ -62,6 +62,7 @@ acc.forEach((el) => {
 	});
 });
 
+// 20230323 수정 여기부터
 //화면에 보이면 숫자 올라가는 애니메이션
 let ioCallback = (entries) => {
 	entries.forEach((entry) => {
@@ -69,10 +70,15 @@ let ioCallback = (entries) => {
 		let intersected = entry.target.dataset.intersected;
 		if (entry.isIntersecting && intersected == 'false') {
 			entry.target.dataset.intersected = 'true';
-			counterAnimate(entry.target, num);
+			if (entry.target.classList.contains('decimal')) {
+				decimalCounterAnimate(entry.target, num);
+			} else {
+				counterAnimate(entry.target, num);
+			}
 		}
 	});
 };
+// 20230323 수정 여기까지
 let io = new IntersectionObserver(ioCallback);
 let target = document.querySelectorAll('.serviceBanner h4');
 target.forEach((el) => {
@@ -102,3 +108,28 @@ const counter = ($counter, max) => {
 function counterAnimate(target, max) {
 	setTimeout(() => counter(target, max), 0);
 }
+
+// 20230323 추가 여기부터
+const decimalCounter = ($counter, max) => {
+	let now = max;
+
+	const handle = setInterval(() => {
+		let str = Math.ceil(max - now).toString();
+		str = str.slice(0, 1) + '.' + str.slice(1);
+
+		$counter.innerHTML = str + '<small>조원↑</small>';
+
+		if (now < 1) {
+			clearInterval(handle);
+		}
+
+		const step = now / 54;
+
+		now -= step;
+	}, 5);
+};
+
+function decimalCounterAnimate(target, max) {
+	setTimeout(() => decimalCounter(target, max), 0);
+}
+// 20230323 추가 여기까지

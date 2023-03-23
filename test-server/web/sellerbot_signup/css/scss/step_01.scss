@@ -510,6 +510,12 @@ article#detail {
                 color: #3d78ff;
                 text-align: center;
                 position: relative;
+                
+                small{
+                    font-size: 35px;
+                    letter-spacing: 0;
+                    margin-left: 2px;
+                }
 
                 &::after{
                     content: attr(data-text);

@@ -5,10 +5,10 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>셀러봇캐시 회원가입</title>
-	<link rel="stylesheet" href="./css/step_07.css">
+	<title>소드원 통합 회원가입</title>
+	<link rel="stylesheet" href="./css/sodeOne_03.css">
 	<script type="module" src="./js/common.js" defer></script>
-	<script type="module" src="./js/step_07.js" defer></script>
+	<script type="module" src="./js/sodeOne_03.js" defer></script>
 	<script src="https://kit.fontawesome.com/133e10f389.js" crossorigin="anonymous"></script>
 </head>
 
@@ -42,88 +42,73 @@
 	</header>
 	<main>
 		<section>
-			<button class="fixed active" id="nextStep">
-				<span>완료</span>
+			<button class="fixed" id="nextStep">
+				<span>다음</span>
 				<img src="./img/rightArrow.svg" />
 			</button>
 			<article id="top">
 				<div class="title">
-					<h1>서비스 정보 등록</h1>
+					<h1>통합 회원가입</h1>
+					<img src="./img/sellerbotLogo_sodeOnePage.png" alt="sellerbot">
+					<img src="./img/sodeOneLogo_sodeOnePage.png" alt="sodeOneLogo">
 				</div>
 				<div class="processBar">
 					<div class="first step">
 						<span class="line"></span>
-						<p>판매몰 등록</p>
+						<p>약관동의</p>
 					</div>
 					<div class="second step">
 						<span class="line"></span>
-						<p>결제수단 등록</p>
+						<p>가입여부 조회</p>
 					</div>
 					<div class="third step active">
 						<span class="line"></span>
-						<p>계좌 등록</p>
+						<p>이메일 본인인증</p>
+					</div>
+					<div class="forth step">
+						<span class="line"></span>
+						<p>사업자정보입력</p>
+					</div>
+					<div class="fifth step">
+						<span class="line"></span>
+						<p>결제수단 등록</p>
 					</div>
 				</div>
 			</article>
-			<article id="accountReg">
-				<!-- 20230323 수정 -->
-				<p class="topText">통장 잔액을 한 눈에 확인하고, 판매몰별 입금 현황을 통해 받기로 한 정산금이 제대로 지급되었는지 확인하세요.</p>
-				<div class="tableTop">
-					<div class="left">
-						<p>정산계좌 등록현황</p>
-						<span>(<b>전체 1</b> / <b>정상 1</b> / <b class="err">오류 0</b> /<b>점검 0</b>)</span>
-					</div>
-					<div class="right">
-						<button class="blue_outline" id="vidGuide">영상가이드</button>
-						<button class="blue" id="regAcc">+ 계좌등록</button>
-					</div>
-				</div>
-				<div class="tableDiv">
-					<table id="accountList">
-						<thead>
-							<tr>
-								<td>은행</td>
-								<td>계좌번호</td>
-								<td>계좌잔액</td>
-								<td>최종거래일</td>
-								<td>정산몰</td>
-								<td>내용</td>
-							</tr>
-						</thead>
-						<tbody>
-							<tr class="noData">
-								<td colspan="6">등록한 계좌가 없습니다.</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</article>
-			<article id="extraInfo">
-				<div class="left">
-					<div class="content">
-						<!-- <h4>판매몰별 입금 내역 요약</h4>
-						<p>최근 <b>2023년 03월 01일</b> 부터 <b>2023년 03월 31일</b>까지<br>
-							판매몰에서 입금된 금액의 합계는 10,000,000원 입니다.</p>
-						<h5>입금합계</h5> -->
-						<div class="gallery">
-							<ul>
-								<li><img src="./img/판매몰별입금내역.jpg" alt="summary"></li>
-								<li><img src="./img/거래내역조회2.jpg" alt="summary"></li>
-							</ul>
+			<article id="joinYN">
+				<h2>이메일 본인인증</h2>
+				<div class="grayBox">
+					<div class="center">
+						<p>셀러봇캐시 아이디(이메일)*</p>
+						<div class="flexRow emailRow">
+							<div class="left">
+								<input type="text" id="email" placeholder="이메일 입력">
+								<span>@</span>
+								<select id="domain">
+									<option value="manual" selected>직접입력</option>
+									<option value="naver.com">naver.com</option>
+									<option value="daum.net">daum.net</option>
+									<option value="hanmail.net">hanmail.net</option>
+									<option value="gmail.com">gmail.com</option>
+									<option value="nate.com">nate.com</option>
+									<option value="me.com">me.com</option>
+									<option value="icloud.com">icloud.com</option>
+									<option value="hotmail.com">hotmail.com</option>
+									<option value="yahoo.com">yahoo.com</option>
+								</select>
+								<input type="text" id="manualDomain">
+							</div>
+							<button id="reqVerificationCode">인증번호 요청</button>
+							<span id="msg1" class="underMsg">이메일을 입력해주세요</span>
 						</div>
-						<ul class="bottomUl">
-							<li class="active"></li>
-							<li></li>
-						</ul>
-					</div>
-				</div>
-				<div class="right">
-					<div class="content">
-						<!-- 20230323 수정 -->
-						<h3>국내 20개 은행의 정산계좌 지원</h3>
-						<p>흩어져 있는 내 모든 계좌 현황과 잔액을 한 곳에서 확인!</p>
-						<p>판매몰별 정산금 입금 현황으로 제대로 받긴 받았는지 샅샅이 확인!</p>
-						<p>공인인증서 없이 바로 가능한 빠른 조회</p>
+						<p class="essential">인증번호</p>
+						<div class="flexRow">
+							<div class="left">
+								<input class="onlyNumber" type="text" id="verificationCode" placeholder="인증번호 입력">
+							</div>
+							<button id="confirmVerificationCode">확인</button>
+							<span id="msg2" class="underMsg red">인증번호를 다시 확인해주세요.</span>
+						</div>
 					</div>
 				</div>
 			</article>

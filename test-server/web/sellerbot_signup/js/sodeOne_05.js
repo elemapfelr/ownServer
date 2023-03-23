@@ -1,71 +1,4 @@
-import numberWithCommas from './import/numberWithCommas.js';
-
-document.querySelector('#nextStep').addEventListener('click', () => {
-	location.href = './regPay_03.html';
-});
-
-// 이용권 좌 우 클릭
-// 20230323 수정
-function ticketSelect() {
-	let index = 0;
-	let galleryItem = document.querySelectorAll('.ticket_gallery ul li');
-	let bankBotPrice = 8000;
-	let joinPrice = 30000;
-	let tickets = [
-		{
-			name: '파이봇',
-			price: 100000,
-		},
-		{
-			name: '파이봇 할인형',
-			price: 50000,
-		},
-		{
-			name: '로니봇',
-			price: 50000,
-		},
-	];
-	document.querySelector('#prevTicket').addEventListener('click', () => {
-		index - 1 < 0 ? (index = galleryItem.length - 1) : index--;
-		document.querySelector('.ticket_gallery ul ').style.left = index * -100 + '%';
-		document.querySelector('#ticketName').innerHTML = tickets[index]['name'];
-		document.querySelector('#ticketPrice').innerHTML = `월 ${numberWithCommas(
-			tickets[index]['price']
-		)}원`;
-		document.querySelector('#totalPrice').innerHTML =
-			numberWithCommas(tickets[index]['price'] + bankBotPrice + joinPrice) + '원';
-	});
-	document.querySelector('#nextTicket').addEventListener('click', () => {
-		index + 1 > galleryItem.length - 1 ? (index = 0) : index++;
-		document.querySelector('.ticket_gallery ul').style.left = index * -100 + '%';
-		document.querySelector('#ticketName').innerHTML = tickets[index]['name'];
-		document.querySelector('#ticketPrice').innerHTML = `월 ${numberWithCommas(
-			tickets[index]['price']
-		)}원`;
-		document.querySelector('#totalPrice').innerHTML =
-			numberWithCommas(tickets[index]['price'] + bankBotPrice + joinPrice) + '원';
-	});
-}
-ticketSelect();
-
-// 갤러리 좌 우 클릭
-function slideGallery() {
-	let index = 0;
-	let galleryItem = document.querySelectorAll('.gallery ul li');
-	document.querySelector('#galleryLeft').addEventListener('click', () => {
-		index - 1 < 0 ? (index = galleryItem.length - 1) : index--;
-		document.querySelector('.gallery ul').style.left = index * -100 + '%';
-		document.querySelectorAll('ul.bottomUl li').forEach((el) => el.classList.remove('active'));
-		document.querySelectorAll('ul.bottomUl li')[index].classList.add('active');
-	});
-	document.querySelector('#galleryRight').addEventListener('click', () => {
-		index + 1 > galleryItem.length - 1 ? (index = 0) : index++;
-		document.querySelector('.gallery ul').style.left = index * -100 + '%';
-		document.querySelectorAll('ul.bottomUl li').forEach((el) => el.classList.remove('active'));
-		document.querySelectorAll('ul.bottomUl li')[index].classList.add('active');
-	});
-}
-slideGallery();
+import modalShow from './import/modalShow.js';
 
 // 아코디언 🎵
 let acc = document.querySelectorAll('.accordion');
@@ -146,7 +79,7 @@ target.forEach((el) => {
 
 //결제수단 등록 완료 시
 document.querySelector('#creditCard').addEventListener('click', () => {
-	location.href = './regPay_03.html';
+	location.href = './sodeOne_06.html';
 });
 
 // 유료 결제 약관

@@ -1071,6 +1071,11 @@ article#detail .gridBox .gridItem .right p {
   text-align: center;
   position: relative;
 }
+.serviceBanner .right .row h4 small {
+  font-size: 35px;
+  letter-spacing: 0;
+  margin-left: 2px;
+}
 .serviceBanner .right .row h4::after {
   content: attr(data-text);
   position: absolute;

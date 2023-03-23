@@ -935,7 +935,7 @@ article#extraInfo .right .content p {
   color: #202020;
 }
 .modal#modal_00 .popupBody .body .flexBox.payInfo .right {
-  padding: 0;
+  padding: 21px 0;
   background-color: #f9f9f9;
 }
 .modal#modal_00 .popupBody .body .flexBox.payInfo .right p {
@@ -944,6 +944,7 @@ article#extraInfo .right .content p {
   font-weight: 500;
   letter-spacing: -0.8px;
   color: #202020;
+  margin-bottom: 0;
 }
 .modal#modal_00 .popupBody .body button.blue_outline {
   padding: 5px 24px;
@@ -1419,6 +1420,7 @@ article#extraInfo .right .content p {
   }
   .modal#modal_00 .popupBody .body .flexBox .right {
     width: 100%;
+    height: 100%;
     background-color: #f9f9f9;
     padding: 13px 0;
   }

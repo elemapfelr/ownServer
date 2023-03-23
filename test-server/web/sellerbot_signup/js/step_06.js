@@ -1,3 +1,5 @@
+import modalShow from './import/modalShow.js';
+
 document.querySelector('#prevStep').addEventListener('click', () => {
 	location.href = './step_05.html';
 });
@@ -5,38 +7,58 @@ document.querySelector('#nextStep').addEventListener('click', () => {
 	location.href = './step_07.html';
 });
 
-// 이용권 좌 우 클릭
+// 이용권 좌 우 클릭 20230323 수정 ticketSelect 함수 전체
 function ticketSelect() {
 	let index = 0;
 	let galleryItem = document.querySelectorAll('.ticket_gallery ul li');
+
+	if (document.querySelector('#prevTicket').clickHandler) {
+		document
+			.querySelector('#prevTicket')
+			.removeEventListener('click', document.querySelector('#prevTicket').clickHandler);
+	}
+	if (document.querySelector('#nextTicket').clickHandler) {
+		document
+			.querySelector('#nextTicket')
+			.removeEventListener('click', document.querySelector('#nextTicket').clickHandler);
+	}
+
 	let tickets = [
 		{
 			name: '파이봇',
-			price: '111,000원',
+			price: '100,000원',
 		},
 		{
 			name: '파이봇 할인형',
-			price: '55,000원',
+			price: '50,000원',
 		},
 		{
 			name: '로니봇',
-			price: '55,000원',
+			price: '50,000원',
 		},
 	];
-	document.querySelector('#prevTicket').addEventListener('click', () => {
+
+	document.querySelector('#prevTicket').clickHandler = () => {
 		index - 1 < 0 ? (index = galleryItem.length - 1) : index--;
 		document.querySelector('.ticket_gallery ul ').style.left = index * -100 + '%';
 		document.querySelector('#ticketName').innerHTML = tickets[index]['name'];
 		document.querySelector('#ticketPrice').innerHTML = `월 ${tickets[index]['price']}`;
 		document.querySelector('#totalPrice').innerHTML = tickets[index]['price'];
-	});
-	document.querySelector('#nextTicket').addEventListener('click', () => {
+	};
+	document
+		.querySelector('#prevTicket')
+		.addEventListener('click', document.querySelector('#prevTicket').clickHandler);
+
+	document.querySelector('#nextTicket').clickHandler = () => {
 		index + 1 > galleryItem.length - 1 ? (index = 0) : index++;
 		document.querySelector('.ticket_gallery ul').style.left = index * -100 + '%';
 		document.querySelector('#ticketName').innerHTML = tickets[index]['name'];
 		document.querySelector('#ticketPrice').innerHTML = `월 ${tickets[index]['price']}`;
 		document.querySelector('#totalPrice').innerHTML = tickets[index]['price'];
-	});
+	};
+	document
+		.querySelector('#nextTicket')
+		.addEventListener('click', document.querySelector('#nextTicket').clickHandler);
 }
 ticketSelect();
 
@@ -147,3 +169,49 @@ fetch('./pay_term.txt')
 	.then((data) => {
 		document.querySelector('#termContent').innerHTML = data;
 	});
+
+// 이전단게에서 로니봇 선택했는데 몰을 5개 초과로 등록한 경우 20230323 수정
+function loanyBotAlert() {
+	let popupHtml = `
+    <div class="head">
+        <h5>이용권 변경 안내</h5>
+        <img src="./img/sellerbotLogo.svg" alt="sellerbot cash">
+    </div>
+    <div class="body">
+        <p>등록 가능한 판매몰(5개) 초과로<br>선택한 이용권이 '파이봇'으로 변경되었어요.</p>
+		<span class="line"></span>
+		<p><b>- 로니봇 이용을 원하시면</b></p>
+		<p>'이전'단계에서 판매몰을 5개 이하로 변경해주세요.</p>
+		<br>
+		<p><b>- 파이봇 이용을 원하시는 경우</b></p>
+		<p>'확인'또는 '닫기'를 눌러 결제를 진행해주세요.</p>
+        <div class="btnFlex">
+            <button class="blue_outline" id="modalPrevPage">이전</button>
+            <button class="blue" id="modalConfirm">확인</button>
+        </div>
+    </div>
+    `;
+	modalShow({
+		id: 'modal_01',
+		content: popupHtml,
+		function: () => {
+			document.querySelector('#modalPrevPage').addEventListener('click', () => {
+				location.href = './step_05.html';
+			});
+			function convertToFiBot() {
+				document.querySelectorAll('.ticket_gallery ul li')[2].remove();
+				document.querySelector('.ticket_gallery ul').style.width = '200%';
+				document.querySelectorAll('.ticket_gallery ul li')[0].style.width = '50%';
+				document.querySelectorAll('.ticket_gallery ul li')[1].style.width = '50%';
+				ticketSelect();
+			}
+			document.querySelector('#modalConfirm').addEventListener('click', () => {
+				document.querySelector('#modal_01').remove();
+				document.querySelector('body').style.overflow = '';
+				convertToFiBot();
+			});
+			document.querySelector('#cancelModal').addEventListener('click', convertToFiBot);
+		},
+	});
+}
+loanyBotAlert();

@@ -586,144 +586,209 @@ footer .footerWrap .right img {
   color: #2e1e00;
 }
 
-article#content {
+article#top .title img {
+  width: 90px;
+  display: inline-block;
+  margin-left: 6px;
+}
+
+@media only screen and (max-width: 1200px) {
+  main section article#top .processBar .step p {
+    font-size: 10px;
+  }
+}
+main .fixed {
+  pointer-events: none;
+}
+main .fixed.active {
+  pointer-events: all;
+}
+
+article#payInfo {
   margin-top: 80px;
 }
-article#content p {
+article#payInfo h2 {
   font-size: 18px;
-  line-height: 1.67;
+  font-weight: 500;
   letter-spacing: -0.65px;
   text-align: left;
   color: #202020;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
-article#content h3 {
+article#payInfo .ticketInfo .top {
+  padding: 10px 30px;
+  box-sizing: border-box;
+  background-color: #3d78ff;
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: -0.98px;
+  text-align: left;
+  color: #fff;
+}
+article#payInfo .ticketInfo .flexArea {
+  width: 100%;
+  height: 200px;
+  background-color: #f9f9f9;
+}
+article#payInfo .grayBox {
+  width: 100%;
+  height: auto;
+  background-color: #f9f9f9;
+  padding: 40px 44px;
+  box-sizing: border-box;
+}
+article#payInfo .grayBox p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2;
+  letter-spacing: -1.12px;
+  text-align: left;
+  color: #202020;
+}
+
+article#terms {
   margin-top: 80px;
+}
+article#terms h2 {
   font-size: 18px;
   font-weight: 500;
   letter-spacing: -0.65px;
   text-align: left;
   color: #202020;
 }
-article#content .flexBox {
+article#terms .accordion .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 40px;
+  box-sizing: border-box;
+  border: 1px solid #e8e8e8;
   margin-top: 10px;
-  border: 1px solid #e2e2e2;
+}
+article#terms .accordion .title .left {
   display: flex;
   align-items: center;
 }
-article#content .flexBox p {
-  margin-bottom: 0;
+article#terms .accordion .title .left p {
+  font-size: 14px;
+  letter-spacing: -0.98px;
+  margin-left: 12px;
+  margin-bottom: 1px;
+  color: #202020;
+  cursor: pointer;
 }
-article#content .flexBox .left {
-  width: 30%;
-  border-right: 1px solid #e2e2e2;
-  padding: 20px 0;
-}
-article#content .flexBox .left h5 {
-  font-size: 24px;
+article#terms .accordion .title .left p b {
   font-weight: 500;
-  letter-spacing: -1.2px;
-  text-align: center;
   color: #3d78ff;
 }
-article#content .flexBox .left h4 {
-  font-size: 30px;
-  font-weight: bold;
-  letter-spacing: -1.5px;
-  text-align: center;
-  color: #202020;
-  margin-top: 10px;
+article#terms .accordion .title span {
+  padding: 10px;
+  cursor: pointer;
 }
-article#content .flexBox .left small {
-  display: block;
+article#terms .accordion .title span img {
+  transition: all 0.2s;
+  width: 15px;
+}
+article#terms .accordion .panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #eeeeee;
+  padding: 0 10px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+article#terms .accordion .panel::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+article#terms .accordion .panel::-webkit-scrollbar-track {
+  background-color: #fff;
+  border: 1px solid #e2e2e2;
+}
+article#terms .accordion .panel::-webkit-scrollbar-thumb {
+  background-color: #f2f2f2;
+  border: 1px solid #e2e2e2;
+}
+article#terms .accordion .panel pre {
+  width: 100%;
+  box-sizing: border-box;
+  white-space: pre-line;
   font-size: 12px;
   font-weight: 500;
-  letter-spacing: -0.6px;
-  text-align: center;
-  color: #202020;
+  line-height: 1.67;
+  letter-spacing: -0.84px;
+  color: #7d7d7d;
 }
-article#content .flexBox .right {
-  width: 70%;
-  background-color: #f9f9f9;
-  padding: 48px 0;
+article#terms .accordion .checkBoxRow {
+  padding: 10px 0;
+  margin-left: 50px;
 }
-article#content .flexBox .right .content {
-  width: 95%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin: 0 auto;
+article#terms .accordion .checkBoxRow .checkBoxDiv {
+  margin-right: 15px;
 }
-article#content .flexBox .right .content p.gray {
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: -0.5px;
-  text-align: left;
-  color: #c1c1c1;
+article#terms .accordion .checkBoxRow .checkBoxDiv label {
+  font-size: 12px;
 }
-article#content .flexBox .right .content .blue {
-  padding: 3px 19px;
-  background-color: #3d78ff;
-  border-radius: 20px;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: -0.5px;
-  text-align: center;
-  color: #fff;
-  margin-bottom: 5px;
+article#terms .accordion.active .title span img {
+  transform: rotate(90deg);
 }
-article#content .flexBox .right .content .blue_outline {
-  padding: 2px 19px;
-  background-color: #fff;
-  border: 1px solid #3d78ff;
-  border-radius: 20px;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: -0.5px;
-  text-align: center;
-  color: #3d78ff;
-  margin-bottom: 5px;
+article#terms .accordion.active .panel .paddingBox {
+  padding: 18px 16px;
+  box-sizing: border-box;
 }
-article#content .flexBox .right .content p {
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: -0.5px;
-  text-align: center;
-  color: #202020;
-}
-article#content .flexBox .right .content span.line {
-  width: 1px;
-  display: block;
-  height: 60px;
-  background-color: #e1e1e1;
-}
-article#content .flexBox.payInfo .left h5 {
-  font-size: 16px;
-  font-weight: bold;
-  letter-spacing: -0.8px;
-  text-align: center;
-  color: #202020;
-}
-article#content .flexBox.payInfo .right {
-  padding: 20px 0;
-  background-color: #f9f9f9;
-}
-article#content .flexBox.payInfo .right p {
-  text-align: center;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: -0.8px;
-  color: #202020;
-}
-article#content div#caution {
+
+article#payment {
   margin-top: 80px;
 }
-article#content div#caution .grayBox {
+article#payment h2 {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.65px;
+  text-align: left;
+  color: #202020;
+}
+article#payment button#creditCard {
+  margin-top: 10px;
+  width: 100%;
+  padding: 17px 0;
+  border-radius: 30px;
+  border: solid 1px #d9d9d9;
+  background-color: #f9f9f9;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.65px;
+  text-align: center;
+  color: #cbcbcb;
+  pointer-events: none;
+}
+article#payment button#creditCard.active {
+  background-color: #3d78ff;
+  color: white;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+article#caution {
+  margin-top: 80px;
+  margin-bottom: 200px;
+}
+article#caution h2 {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.65px;
+  text-align: left;
+  color: #202020;
+}
+article#caution .grayBox {
   margin-top: 10px;
   padding: 40px;
   background-color: #f9f9f9;
 }
-article#content div#caution .grayBox pre {
+article#caution .grayBox pre {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.71;
@@ -731,162 +796,138 @@ article#content div#caution .grayBox pre {
   text-align: left;
   color: #808080;
 }
-article#content .btnBox {
+article#caution .grayBox pre a {
+  color: #3d78ff;
+  text-decoration: underline;
+}
+
+.bottomSticky {
+  position: sticky;
+  bottom: 60px;
+  background-color: #fff;
+  display: none;
+  z-index: 2;
+}
+.bottomSticky .title {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  margin-top: 40px;
-  margin-bottom: 200px;
+  justify-content: space-between;
+  padding: 4px 40px;
+  box-sizing: border-box;
+  border: 1px solid #e8e8e8;
+  margin-top: 10px;
 }
-article#content .btnBox button {
-  width: 260px;
-  font-size: 18px;
-  letter-spacing: -0.65px;
-  text-align: center;
+.bottomSticky .title .left {
+  display: flex;
+  align-items: center;
+}
+.bottomSticky .title .left p {
+  font-size: 14px;
+  letter-spacing: -0.98px;
+  margin-left: 12px;
+  margin-bottom: 1px;
   color: #202020;
-  outline: none;
-  border: solid 1px #e2e2e2;
-  background-color: #ebebeb;
-  padding: 17px 0;
   cursor: pointer;
 }
-article#content .btnBox button.blue {
-  background-color: #3d78ff;
+.bottomSticky .title .left p b {
+  font-weight: 500;
+  color: #3d78ff;
+}
+.bottomSticky .title span {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #bbb;
+}
+
+.modal#modal_01 .popupBody {
+  width: 530px;
+}
+.modal#modal_01 .popupBody .head {
+  width: 100%;
+  height: auto;
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 34px;
+  box-sizing: border-box;
+}
+.modal#modal_01 .popupBody .head h5 {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: -0.9px;
+  text-align: center;
+  color: #22262f;
+}
+.modal#modal_01 .popupBody .body {
+  width: 100%;
+  padding: 30px 34px 20px 34px;
+  box-sizing: border-box;
+}
+.modal#modal_01 .popupBody .body p {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: -0.98px;
+  text-align: left;
+  color: #202020;
+}
+.modal#modal_01 .popupBody .body span.line {
+  width: 100%;
+  display: block;
+  height: 1px;
+  background-color: #e1e1e1;
+  margin: 10px 0;
+}
+.modal#modal_01 .popupBody .body .btnFlex {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+.modal#modal_01 .popupBody .body .btnFlex button {
+  width: 100px;
+  padding: 8px 0;
+  outline: none;
+  border: 1px solid #3d78ff;
+  background: none;
+  cursor: pointer;
+}
+.modal#modal_01 .popupBody .body .btnFlex button.blue {
   color: white;
+  background-color: #3d78ff;
+}
+.modal#modal_01 .popupBody .body .btnFlex button.blue_outline {
+  color: #3d78ff;
 }
 
 @media only screen and (max-width: 1200px) {
-  article#content {
-    margin-top: 60px;
+  article#payInfo .flexBox .left .center {
+    padding: 32px 1% 21px 1%;
   }
-  article#content p {
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: -0.98px;
+  article#payInfo .flexBox .left .bottom .row {
+    padding-left: 20px;
   }
-  article#content h3 {
-    margin-top: 60px;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: -0.5px;
-    text-align: left;
-    color: #202020;
+  article#payInfo .flexBox .left .bottom .row p {
+    font-size: 12px;
   }
-  article#content .flexBox {
-    flex-direction: column;
+  article#payInfo .flexBox .right {
+    display: none;
   }
-  article#content .flexBox.payInfo {
-    flex-direction: row;
+  article#terms .accordion .title {
+    padding: 4px 14px;
   }
-  article#content .flexBox.payInfo .left,
-  article#content .flexBox.payInfo .right {
-    width: 50%;
-    padding: 10px 0;
-    border: none;
-  }
-  article#content .flexBox.payInfo .left h5,
-  article#content .flexBox.payInfo .left p,
-  article#content .flexBox.payInfo .right h5,
-  article#content .flexBox.payInfo .right p {
-    font-size: 12px !important;
-    font-weight: bold !important;
-    letter-spacing: -0.7px !important;
-    text-align: center;
-    color: #202020;
-    margin: 0 !important;
-  }
-  article#content .flexBox.payInfo .left {
-    border-right: 1px solid #e8e8e8;
-  }
-  article#content .flexBox .left {
-    width: 100%;
-    border-right: 0px;
-    border-bottom: 1px solid #e2e2e2;
-  }
-  article#content .flexBox .right {
-    width: 100%;
-    background-color: #f9f9f9;
-    padding: 13px 0;
-  }
-  article#content .flexBox .right .content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    margin: 0 auto;
-  }
-  article#content .flexBox .right .content p.gray {
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: -0.5px;
-    text-align: left;
-    color: #c1c1c1;
-  }
-  article#content .flexBox .right .content .blue {
-    padding: 3px 19px;
-    background-color: #3d78ff;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: -0.5px;
-    text-align: center;
-    color: #fff;
-    margin-bottom: 5px;
-  }
-  article#content .flexBox .right .content .blue_outline {
-    padding: 2px 19px;
-    background-color: #fff;
-    border: 1px solid #3d78ff;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: -0.5px;
-    text-align: center;
-    color: #3d78ff;
-    margin-bottom: 5px;
-  }
-  article#content .flexBox .right .content p {
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: -0.5px;
-    text-align: center;
-    color: #202020;
-  }
-  article#content .flexBox .right .content span.line {
-    width: 50%;
-    height: 1px;
-    background-color: #e1e1e1;
-    margin: 10px 0;
-  }
-  article#content .flexBox.payInfo .left h5 {
-    font-size: 16px;
-    font-weight: bold;
-    letter-spacing: -0.8px;
-    text-align: center;
-    color: #202020;
-  }
-  article#content .flexBox.payInfo .right {
-    padding: 10px 0;
-    background-color: #f9f9f9;
-  }
-  article#content .flexBox.payInfo .right p {
-    text-align: center;
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: -0.8px;
-    color: #202020;
-  }
-  article#content div#caution .grayBox {
+  article#caution .grayBox {
     padding: 40px 20px;
   }
-  article#content div#caution .grayBox pre {
+  article#caution .grayBox pre {
     white-space: pre-line;
   }
-  article#content .btnBox {
-    margin-bottom: 60px;
+}
+@media only screen and (max-width: 900px) {
+  .bottomSticky {
+    display: block;
   }
-  article#content .btnBox button {
-    font-size: 13px;
+  .bottomSticky.hide {
+    display: none;
   }
 }

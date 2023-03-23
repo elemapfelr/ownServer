@@ -234,3 +234,15 @@ function gallerySlider() {
 	}, 5000);
 }
 gallerySlider();
+
+// 20230323 추가
+document.querySelector('#vidGuide').addEventListener('click', () => {
+	let width = window.innerWidth > 800 ? 800 : window.innerWidth - 20;
+	let height = width * 0.6;
+	modalShow({
+		id: 'youtube_00',
+		content: `
+		<iframe width="${width}" height="${height}" src="https://www.youtube.com/embed/OzaIAVrgQEo" title="[셀러봇캐시 등록방법] 정산계좌통합관리" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        `,
+	});
+});
