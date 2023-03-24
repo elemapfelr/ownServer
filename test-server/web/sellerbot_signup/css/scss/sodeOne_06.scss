@@ -1,0 +1,214 @@
+@import "./common", "./modal", "./sodeOne";
+
+main{
+    .fixed{
+        pointer-events: none;
+
+        &.active{
+            pointer-events: all;
+        }
+    }
+}
+
+article#emailLogin{
+    margin-top: 80px;
+    margin-bottom: 200px;
+
+    h2{
+        font-size: 18px;
+        letter-spacing: -0.65px;
+        text-align: left;
+        color: #202020;
+
+        small{
+            font-weight: 500;
+        }
+    }
+
+    .grayBox{
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        padding: 40px 0;
+        background-color: #f9f9f9;
+
+        .center{
+            width: 50%;
+            height: auto;
+            margin: 0 auto;
+
+            p{
+                font-size: 14px;
+                font-weight: 500;
+                letter-spacing: -0.98px;
+                color: #474246;
+            }
+
+            .row,
+            .flexRow {
+                position: relative;
+                margin-top: 5px;
+                margin-bottom: 40px;
+
+                span.underMsg {
+                    font-size: 12px;
+                    font-weight: 500;
+                    line-height: 1.67;
+                    letter-spacing: -0.84px;
+                    text-align: left;
+                    color: #bbb;
+                    position: absolute;
+                    top: 100%;
+                    left: 4px;
+
+                    b {
+                        font-weight: 500;
+                        color: #3d78ff;
+                    }
+
+                    &.red {
+                        color: #ff7070;
+                        display: none;
+                    }
+                }
+            }
+
+            .row {
+                margin-bottom: 60px;
+
+                input {
+                    width: 100%;
+                    outline: none;
+                    border: 1px solid #e2e2e2;
+                    padding: 12px 0;
+                    text-indent: 10px;
+                    font-size: 12px;
+                }
+            }
+
+            .flexRow {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .left {
+                    width: calc(100% - 120px);
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    input {
+                        width: 31%;
+                        outline: none;
+                        border: 1px solid #e2e2e2;
+                        padding: 12px 0;
+                        text-indent: 10px;
+                        color: #bbb;
+                        font-size: 12px;
+
+                        &:disabled {
+                            background-color: #f0f0f0;
+                        }
+
+                        &#verificationCode {
+                            width: 100%;
+                        }
+
+                        &:focus {
+                            outline: 2px solid black;
+                        }
+                    }
+
+                    span {
+                        color: #bbb;
+                        font-size: 12px;
+                        text-align: center;
+                    }
+
+                    select {
+                        width: 31%;
+                        outline: none;
+                        border: 1px solid #e2e2e2;
+                        padding: 10px 0;
+                        text-indent: 10px;
+                        font-size: 12px;
+                        letter-spacing: -0.84px;
+                        color: #bbb;
+
+                        &:focus {
+                            outline: 2px solid black;
+                        }
+
+                        &:disabled {
+                            background-color: #f0f0f0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    article#emailLogin{
+        h2{
+            font-size: 16px;
+        }
+        .grayBox {
+            padding: 24px 8px;
+            box-sizing: border-box;
+            .center {
+                width: 100%;
+
+                p {
+                    font-size: 12px;
+                }
+
+                .row,
+                .flexRow {
+
+                    span.underMsg {
+                        font-size: 10px;
+                    }
+                }
+
+                .row {
+                    margin-bottom: 40px;
+                    input {
+                        font-size: 10px;
+                    }
+                }
+
+                .flexRow {
+                    .left {
+                        input {
+                            font-size: 10px;
+                        }
+
+                        span {
+                            font-size: 10px;
+                        }
+
+                        select {
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                .flexRow.emailRow {
+                    flex-wrap: wrap;
+                    justify-content: right;
+
+                    .left {
+                        width: 100%;
+
+                        input,
+                        select {
+                            min-width: 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

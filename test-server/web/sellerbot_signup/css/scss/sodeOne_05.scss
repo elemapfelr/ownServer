@@ -36,8 +36,137 @@ article#payInfo{
         }
         .flexArea{
             width: 100%;
-            height: 200px;
+            height: auto;
             background-color: #f9f9f9;
+            display: flex;
+            border: 1px solid #e2e2e2;
+            border-top: 0;
+            box-sizing: border-box;
+
+            .left{
+                flex: 1;
+            }
+            .right{
+                flex: 1;
+            }
+
+            .left,.right{
+                .flexRow{
+                    display: flex;
+
+                    .title{
+                        width: 25%;
+                        background-color: #f2f2f2;
+                        padding: 12.5px 0;
+                        padding-left: 20px;
+                        box-sizing: border-box;
+                        font-size: 12px;
+                        font-weight: 500;
+                        letter-spacing: -0.6px;
+                        text-align: left;
+                        color: #212121;
+                    }
+
+                    .content{
+                        width: 75%;
+                        box-sizing: border-box;
+                        padding: 12.5px 0;
+                        padding-left: 50px;
+                        display: flex;
+                        align-items: center;
+
+                        &.column{
+                            flex-direction: column;
+                            align-items: flex-start;
+
+                            .flexText{
+                                display: flex;
+                                align-items: center;
+                                margin-bottom: 20px;
+                            }
+                        }
+
+                        p{
+                            font-size: 12px;
+                            font-weight: 500;
+                            letter-spacing: -0.6px;
+                            text-align: left;
+                            color: #202020;
+
+                            &.grayText{
+                                color: #d4d4d4;
+                                position: relative;
+                                width: 130px;
+                                
+                                &::after{
+                                    content: url(./../img/sodeOne_05_dc_arrow.svg);
+                                    display: block;
+                                    position: absolute;
+                                    top: -25%;
+                                    left: 0;
+                                }
+                            }
+
+                            &.bigText{
+                                font-weight: bold;
+                                font-size: 16px;
+                                color: #202020;
+                            }
+                        }
+
+                        span.check {
+                            width: 12px;
+                            height: 16px;
+                            position: relative;
+                            margin-right: 24px;
+        
+                            &::before {
+                                content: '';
+                                width: 8px;
+                                height: 2px;
+                                display: block;
+                                background-color: #202020;
+                                position: absolute;
+                                top: 10px;
+                                left: 5px;
+                                transform: rotate(40deg);
+                            }
+        
+                            &::after {
+                                content: '';
+                                width: 11px;
+                                height: 2px;
+                                display: block;
+                                background-color: #202020;
+                                position: absolute;
+                                top: 8px;
+                                left: 9.7px;
+                                transform: rotate(-45deg);
+                            }
+        
+                            &.circle{
+                                width: 18px;
+                                height: 18px;
+                                border: 1px solid $blue;
+                                border-radius: 20px;
+                                margin-right: 18px;
+        
+                                &::before{
+                                    left: 1px;
+                                    height: 1px;
+                                    background-color: $blue;
+                                }
+                                &::after{
+                                    top: 9px;
+                                    left: 5.9px;
+                                    height: 1px;
+                                    background-color: $blue;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     .grayBox{
@@ -45,6 +174,7 @@ article#payInfo{
         height: auto;
         background-color: #f9f9f9;
         padding: 40px 44px;
+        margin-top: 20px;
         box-sizing: border-box;
 
         p{
@@ -357,22 +487,28 @@ article#caution{
 
 @media only screen and (max-width: 1200px) {
     article#payInfo{
-        .flexBox{
-            .left{
-                .center{
-                    padding: 32px 1% 21px 1%;
-                }
-                .bottom{
-                    .row{
-                        padding-left: 20px;
-                        p{
-                            font-size: 12px;
+        .ticketInfo{
+            .flexArea{
+                flex-direction: column;
+    
+                .left,.right{
+                    .flexRow{
+                        .title{
+                            padding-left: 10px;
+                        }
+            
+                        .content{
+                            padding-left: 10px;
+                            flex-wrap: wrap;
+
+                            p.bigText{
+                                width: 100%;
+                                margin-left: 40px;
+                            }
                         }
                     }
                 }
-            }
-            .right{
-                display: none;
+                
             }
         }
     }
