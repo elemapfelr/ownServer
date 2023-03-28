@@ -146,8 +146,8 @@ header {
 				outline: none;
 				cursor: pointer;
 
-				// 20230328 로그인 시 button class에 logined 추가
-				&.logined {
+				// 20230328 로그인 시 button class에 userId 추가
+				&.userId {
 					color: #3d78ff;
 					padding: 4px 10px 5px 10px;
 					box-sizing: border-box;
@@ -501,7 +501,11 @@ footer {
 	header {
 		.bottom {
 			.right {
-				display: none;
+				&.logined{
+					button, span{
+						display: none;
+					}
+				}
 			}
 		}
 	}

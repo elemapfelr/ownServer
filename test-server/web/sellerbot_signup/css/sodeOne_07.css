@@ -130,7 +130,7 @@ header .bottom .right button {
   outline: none;
   cursor: pointer;
 }
-header .bottom .right button.logined {
+header .bottom .right button.userId {
   color: #3d78ff;
   padding: 4px 10px 5px 10px;
   box-sizing: border-box;
@@ -414,7 +414,7 @@ footer .footerWrap .right img {
   }
 }
 @media only screen and (max-width: 960px) {
-  header .bottom .right {
+  header .bottom .right.logined button, header .bottom .right.logined span {
     display: none;
   }
 }
