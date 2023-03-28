@@ -110,6 +110,7 @@ header {
 					}
 				}
 			}
+
 			// 20230317 수정 여기까지
 
 			button {
@@ -144,6 +145,15 @@ header {
 				background: none;
 				outline: none;
 				cursor: pointer;
+
+				// 20230328 로그인 시 button class에 logined 추가
+				&.logined {
+					color: #3d78ff;
+					padding: 4px 10px 5px 10px;
+					box-sizing: border-box;
+					border: 1px solid #3d78ff;
+					border-radius: 20px;
+				}
 			}
 
 			span {
@@ -157,10 +167,10 @@ header {
 		}
 	}
 
-	&.notiClose{
+	&.notiClose {
 		height: 50px;
 
-		.top{
+		.top {
 			display: none;
 		}
 	}
@@ -317,13 +327,13 @@ article#top {
 }
 
 // 20230317 추가 여기부터
-footer{
+footer {
 	width: 100%;
 	height: auto;
 	padding: 37px 0;
 	background-color: #f5f5f5;
 
-	.footerWrap{
+	.footerWrap {
 		width: 90%;
 		max-width: 1200px;
 		margin: 0 auto;
@@ -331,34 +341,36 @@ footer{
 		align-items: center;
 		justify-content: space-between;
 
-		.left{
-			.row{
+		.left {
+			.row {
 				margin-bottom: 10px;
 				display: flex;
 				align-items: center;
 
-				.footerTerms{
+				.footerTerms {
 					cursor: pointer;
 				}
 
-				p, span{
+				p,
+				span {
 					font-size: 13px;
 					font-weight: 500;
 					letter-spacing: -0.91px;
 					color: #474246;
 				}
-				span{
+
+				span {
 					margin: 0 10px;
 				}
 			}
 		}
 
-		.right{
+		.right {
 			display: flex;
 			align-items: center;
 			justify-content: flex-end;
 
-			img{
+			img {
 				width: 106px;
 				height: auto;
 				padding: 12px;
@@ -368,6 +380,7 @@ footer{
 		}
 	}
 }
+
 // 20230317 추가 여기까지
 
 .checkBoxDiv {
@@ -484,7 +497,18 @@ footer{
 	}
 }
 
+@media only screen and (max-width: 960px) {
+	header {
+		.bottom {
+			.right {
+				display: none;
+			}
+		}
+	}
+}
+
 @media only screen and (max-width: 900px) {
+
 	// 20230317 수정 여기부터
 	header {
 		.top {
@@ -493,6 +517,7 @@ footer{
 					i {
 						font-size: 14px;
 					}
+
 					.notiWrap {
 						width: 90%;
 
@@ -505,6 +530,7 @@ footer{
 			}
 		}
 	}
+
 	// 20230317 수정 여기까지
 
 	main {
@@ -563,47 +589,49 @@ footer{
 	}
 
 	// 20230317 수정 여기부터
-	footer{
+	footer {
 		padding: 30px 0;
 		padding-bottom: 90px;
-	
-		.footerWrap{
+
+		.footerWrap {
 			width: 100%;
 			max-width: 1200px;
 			margin: 0 auto;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-	
-			.left{
-				.row{
+
+			.left {
+				.row {
 					justify-content: space-around;
 					margin-bottom: 0;
 
-					p.footerTerms{
+					p.footerTerms {
 						margin-bottom: 10px;
 					}
 
-					&.flexWrap{
+					&.flexWrap {
 						flex-wrap: wrap;
 						justify-content: center;
-						p{
+
+						p {
 							margin: 0 20px;
 							text-align: center;
 							margin-bottom: 10px;
 						}
 					}
 
-					span{
+					span {
 						display: none;
 					}
 				}
 			}
-	
-			.right{
+
+			.right {
 				display: none;
 			}
 		}
 	}
+
 	// 20230317 수정 여기까지
 }

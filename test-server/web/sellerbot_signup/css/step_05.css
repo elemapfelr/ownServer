@@ -131,6 +131,13 @@ header .bottom .right button {
   outline: none;
   cursor: pointer;
 }
+header .bottom .right button.logined {
+  color: #3d78ff;
+  padding: 4px 10px 5px 10px;
+  box-sizing: border-box;
+  border: 1px solid #3d78ff;
+  border-radius: 20px;
+}
 header .bottom .right span {
   width: 1px;
   height: 12px;
@@ -297,7 +304,8 @@ footer .footerWrap .left .row {
 footer .footerWrap .left .row .footerTerms {
   cursor: pointer;
 }
-footer .footerWrap .left .row p, footer .footerWrap .left .row span {
+footer .footerWrap .left .row p,
+footer .footerWrap .left .row span {
   font-size: 13px;
   font-weight: 500;
   letter-spacing: -0.91px;
@@ -404,6 +412,11 @@ footer .footerWrap .right img {
   }
   article#top .processBar .step p {
     font-size: 12px;
+  }
+}
+@media only screen and (max-width: 960px) {
+  header .bottom .right {
+    display: none;
   }
 }
 @media only screen and (max-width: 900px) {
