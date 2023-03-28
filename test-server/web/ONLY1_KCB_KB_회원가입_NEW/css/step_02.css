@@ -206,6 +206,9 @@ article h1 small {
   text-align: left;
   color: #bbb;
 }
+article h1 b {
+  font-size: 0.7em;
+}
 
 .modal .footerTermModal {
   padding: 10px 0 16px 0;

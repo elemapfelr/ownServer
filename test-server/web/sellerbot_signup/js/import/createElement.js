@@ -4,6 +4,14 @@
  * @param {Properties} [props={}] - The properties of the element
  * @returns {HTMLElement} - The newly created element
  */
+// |이 코드는 createElement라는 함수를 정의하는 코드입니다. 이 함수는 HTML 요소를 생성하는 역할을 합니다.
+// |
+// |좋은 점:
+// |- 함수 내부에서는 조건문을 사용하여 'toggle'과 'checkbox' 태그에 대한 처리를 따로 구현하고 있습니다. 이를 통해 코드의 가독성과 유지보수성이 높아집니다.
+// |- 함수 내부에서는 for...in 반복문을 사용하여 객체의 속성을 순회하고 있습니다. 이를 통해 코드의 재사용성이 높아집니다.
+// |
+// |나쁜 점:
+// |- 함수 내부에서는 createElement 함수를 재귀적으로 호출하고 있습니다. 이는 함수 호출 스택을 쌓아 메모리를 많이 사용할 수 있습니다. 또한, 재귀 호출이 깊어질 경우 브라우저가 더 이상 처리하지 못하고 멈출 수 있습니다. 따라서, 이를 개선하기 위해 반복문을 사용하는 것이 좋습니다.
 export default function createElement(tag, properties) {
 	if (tag == 'toggle') {
 		let div = createElement('div', { className: 'toggleSwitch' });

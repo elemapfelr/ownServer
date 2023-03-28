@@ -57,38 +57,31 @@ document.querySelector('#manualDomain').addEventListener('keyup', () => {
 
 //인증번호 요청 클릭 시
 document.querySelector('#reqVerificationCode').addEventListener('click', (e) => {
-	if (!document.querySelector('#email').value) {
+	const email = document.querySelector('#email').value;
+	const domain = document.querySelector('#domain').value;
+	const manualDomain = document.querySelector('#manualDomain').value;
+
+	if (!email) {
 		document.querySelector('#email').focus();
 		return false;
-	} else if (document.querySelector('#domain').value == '') {
+	} else if (domain == '') {
 		document.querySelector('#domain').focus();
 		return false;
-	} else if (
-		document.querySelector('#domain').value == 'manual' &&
-		!document.querySelector('#manualDomain').value
-	) {
+	} else if (domain == 'manual' && !manualDomain) {
 		document.querySelector('#manualDomain').focus();
 		return false;
 	} else {
-		let domain;
-		if (document.querySelector('#domain').value == 'manual') {
-			domain = document.querySelector('#manualDomain').value;
-		} else {
-			domain = document.querySelector('#domain').value;
-		}
-		const emailAddress = document.querySelector('#email').value + '@' + domain;
+		const emailAddress = `${email}@${domain == 'manual' ? manualDomain : domain}`;
+
 		// 메일로 인증코드 발송
 		// ...
 
-		if (document.querySelector('#reqVerificationCode').classList.contains('blue')) {
-			document.querySelector(
-				'#msg1'
-			).innerHTML = `입력하신 이메일<b>(${emailAddress})</b>으로 인증번호가 재발송되었습니다.`;
-		} else {
-			document.querySelector(
-				'#msg1'
-			).innerHTML = `입력하신 이메일<b>(${emailAddress})</b>으로 인증번호가 발송되었습니다.`;
-		}
+		const msg = `입력하신 이메일<b>(${emailAddress})</b>으로 인증번호가 ${
+			document.querySelector('#reqVerificationCode').classList.contains('blue')
+				? '재발송'
+				: '발송'
+		}되었습니다.`;
+		document.querySelector('#msg1').innerHTML = msg;
 
 		document.querySelector('#reqVerificationCode').innerHTML = '재발송';
 		document.querySelector('#reqVerificationCode').classList.add('blue');
