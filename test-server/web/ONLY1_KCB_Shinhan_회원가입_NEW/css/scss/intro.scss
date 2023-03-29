@@ -1,0 +1,137 @@
+@import "./common", "./modal";
+
+section {
+    article {
+        &#intro_0 {
+            h1 {
+                margin-top: 80px;
+                font-size: 30px;
+            }
+
+            .flexRight {
+                margin-top: 140px;
+                display: flex;
+                justify-content: right;
+
+                img.intro_img {
+                    width: 70%;
+                    height: auto;
+                }
+            }
+        }
+
+        &#intro_1 {
+            margin-top: 40px;
+
+            .accordion {
+                cursor: pointer;
+                
+                &:first-child{
+                    margin-bottom: 40px;
+                }
+
+                .title {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    p {
+                        font-size: 14px;
+                        strong {
+                            font-weight: 500;
+                            color: #e85c65;
+                        }
+                    }
+
+                    span {
+                        img {
+                            transition: all .2s;
+                            width: 14px;
+                        }
+                    }
+                }
+
+                &.active {
+                    .title {
+                        span {
+                            img {
+                                transform: rotate(90deg);
+                            }
+                        }
+                    }
+                }
+
+                .panel {
+                    margin-top: 10px;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.2s ease-out;
+                    background-color: $gray;
+
+                    .paddingBox{
+                        width: 100%;
+                        padding: 18px 16px;
+                        box-sizing: border-box;
+
+                        h3{
+                            font-size: 14px;
+                            font-weight: bold;
+                            color: #202020;
+                        }
+                        span.line{
+                            display: block;
+                            margin: 9.5px 0;
+                            width: 100%;
+                            height: 1px;
+                            background-color: #d6d6d6;
+                        }
+                        p{
+                            margin-bottom: 5px;
+                            font-size: 12px;
+                        }
+                        small{
+                            display: block;
+                            font-size: 10px;
+                            color: #b2b2b2;
+                            margin: 10px 0;
+                        }
+                        img{
+                            width: 100%;
+                            height: auto;
+                        }
+                        p.center{
+                            font-size: 10px;
+                            text-align: center;
+                            margin-top: 1rem;
+                        }
+
+                        &.second{
+                            p{
+                                font-size: 12px;
+                                line-height: 1.67;
+                                letter-spacing: -0.84px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            button {
+                width: 100%;
+                height: 50px;
+                background-color: $blue;
+                border: none;
+                box-shadow: none;
+                outline: none;
+                line-height: 3.13;
+                font-size: 1rem;
+                font-weight: 500;
+                margin-top: 50px;
+                cursor: pointer;
+                margin-bottom: 40px;
+                letter-spacing: -1.12px;
+                color: white;
+            }
+        }
+    }
+}

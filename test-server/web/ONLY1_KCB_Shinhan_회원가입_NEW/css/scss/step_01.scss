@@ -1,0 +1,142 @@
+@import "./common", "./processBar", "./modal", "./accordion";
+
+article#terms{
+    .checkAll{
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        p{
+            font-size: 12px;
+            margin-left: 5px;
+            margin-bottom: 1px;
+        }
+    }
+
+    .panel.marketing{
+        .paddingBox{
+            pre{
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 1.67;
+                letter-spacing: -0.84px;
+                color: #7d7d7d;
+            }
+    
+            img{
+                width: 100%;
+                margin-top: 18px;
+            }
+        }
+    }
+}
+
+article#verify {
+    margin-top: 40px;
+
+    p {
+        font-size: .8rem;
+        display: inline;
+        position: relative;
+
+        &:nth-child(1)::after {
+            content: '*';
+            position: absolute;
+            top: 0;
+            right: -5px;
+            display: block;
+        }
+    }
+
+    .flexRow {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 5px;
+        margin-bottom: 40px;
+        position: relative;
+
+        input {
+            width: 30%;
+            outline: none;
+            border: 1px solid #e2e2e2;
+            padding: 12px 0;
+            text-indent: 10px;
+            color: #bbb;
+            font-size: 12px;
+
+            &:disabled{
+                background-color: #e2e2e2;
+            }
+
+            &#verificationCode {
+                width: 70%;
+            }
+        }
+
+        span {
+            color: #bbb;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        select {
+            width: 112px;
+            outline: none;
+            border: 1px solid #e2e2e2;
+            padding: 10px 0;
+            text-indent: 10px;
+            color: #bbb;
+        }
+
+        button {
+            width: 30%;
+            outline: none;
+            border: 1px solid #e2e2e2;
+            padding: 12px 0;
+            background-color: #f2f2f2;
+            color: #bbb;
+            font-size: 12px;
+            letter-spacing: -0.84px;
+            cursor: pointer;
+        }
+
+        span.errMsg{
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: -0.84px;
+            color: #f31616;
+            position: absolute;
+            bottom: -20px;
+            left: 4px;
+        }
+    }
+
+    .bottomBtn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 60px 0 40px 0;
+
+        button {
+            width: 49%;
+            outline: none;
+            border: none;
+            padding: 15px 0;
+            font-size: 1rem;
+            cursor: pointer;
+            background-color: #f2f2f2;
+            letter-spacing: -1.12px;
+            font-weight: 500;
+
+            &.gray {
+                color: #afafaf;
+            }
+
+            &.blue {
+                background-color: $blue;
+                color: white;
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+.processBar{
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .checkPoint{
+        width: 18px;
+        height: 18px;
+        border: 2px solid #e2e2e2;
+        border-radius: 20px;
+        position: relative;
+
+        &::before{
+            content: '';
+            width: 7px;
+            height: 2px;
+            display: block;
+            position: absolute;
+            top: 55.5%;
+            left: 1.5px;
+            background-color: #e2e2e2;
+            transform:  rotate(45deg);
+        }
+        &::after{
+            content: '';
+            width: 11px;
+            height: 2px;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            background-color: #e2e2e2;
+            transform: rotate(-45deg);
+        }
+
+        &.active{
+            border: 2px solid $blue;
+            &::before{
+                background-color: $blue;
+            }
+            &::after{
+                background-color: $blue;
+            }
+        }
+
+        &.done{
+            border: 2px solid $blue;
+            background-color: $blue;
+            &::before{
+                background-color: white;
+            }
+            &::after{
+                background-color: white;
+            }
+        }
+    }
+    .line{
+        width: calc((100% - 120px) / 5);
+        height: 2px;
+        background-color: #e2e2e2;
+
+        &.active{
+            background-color: $blue;
+        }
+    }
+}
