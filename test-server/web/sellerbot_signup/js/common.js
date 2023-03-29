@@ -18,6 +18,16 @@ headerSlider();
 document.querySelector('#closeHeaderNoti').addEventListener('click', () => {
 	// header 요소에 notiClose 클래스 추가
 	document.querySelector('header').classList.add('notiClose');
-	// main section 요소의 paddingTop 값을 140px로 변경
-	document.querySelector('main section').style.paddingTop = '140px';
+});
+
+document.querySelector('.m_menu_wra')?.addEventListener('click', () => {
+	document.querySelector('.m_menu_wra').classList.toggle('active');
+	document.querySelector('.m_sideMenu_wra').classList.toggle('active');
+	document.querySelector('.m_sideMenu_cover').classList.toggle('active');
+
+	if (document.querySelector('.m_menu_wra').classList.contains('active')) {
+		document.querySelector('body').style.overflow = 'hidden';
+	} else {
+		document.querySelector('body').style.overflow = '';
+	}
 });

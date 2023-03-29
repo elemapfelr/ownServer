@@ -50,7 +50,7 @@ header {
   background-color: #fff;
   position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 20;
 }
 header .top {
   width: 100%;
@@ -146,8 +146,100 @@ header .bottom .right span {
   margin-top: 4px;
   display: block;
 }
+header .bottom .m_menu_wra {
+  width: 50px;
+  height: 50px;
+  padding: 15px 12px;
+  cursor: pointer;
+  position: relative;
+  z-index: 102;
+  display: none;
+  box-sizing: border-box;
+}
+header .bottom .m_menu_wra .m_menu_box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+header .bottom .m_menu_wra .m_menu_box span {
+  position: absolute;
+  width: 100%;
+  background: #202020;
+  border-radius: 3px;
+  height: 1px;
+  left: 0;
+  transition: all 0.3s;
+}
+header .bottom .m_menu_wra .m_menu_box span:nth-child(1) {
+  top: 0;
+}
+header .bottom .m_menu_wra .m_menu_box span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+header .bottom .m_menu_wra .m_menu_box span:nth-child(3) {
+  bottom: 0;
+}
+header .bottom .m_menu_wra.active .m_menu_box span:nth-child(1) {
+  transform: translateY(9.5px) rotate(45deg);
+}
+header .bottom .m_menu_wra.active .m_menu_box span:nth-child(2) {
+  display: none;
+}
+header .bottom .m_menu_wra.active .m_menu_box span:nth-child(3) {
+  transform: translateY(-9.5px) rotate(-45deg);
+}
+header .bottom .m_sideMenu_wra {
+  position: fixed;
+  right: -101%;
+  top: 0;
+  max-width: 420px;
+  width: 100%;
+  height: 100%;
+  z-index: 101;
+  background: #3d78ff;
+  transition: cubic-bezier(0.89, 0.02, 0.12, 0.97) 0.3s;
+}
+header .bottom .m_sideMenu_wra.active {
+  right: 0;
+}
+header .bottom .m_sideMenu_wra .m_sideMenu {
+  padding: 0 0 60px;
+  box-sizing: border-box;
+}
+header .bottom .m_sideMenu_wra .m_sideMenu .m_sideMenu_header {
+  height: 80px;
+  padding: 30px 15px 15px 15px;
+  box-sizing: border-box;
+}
+header .bottom .m_sideMenu_wra .m_sideMenu .m_sideMenu_footer {
+  margin: 15px 0 0;
+  height: 60px;
+  display: flex;
+  padding: 0 15px;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+header .bottom .m_sideMenu_cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  display: none;
+}
+header .bottom .m_sideMenu_cover.active {
+  display: block;
+}
 header.notiClose {
   height: 50px;
+  padding: 15px 0;
 }
 header.notiClose .top {
   display: none;
@@ -415,8 +507,11 @@ footer .footerWrap .right img {
   }
 }
 @media only screen and (max-width: 960px) {
-  header .bottom .right.logined button, header .bottom .right.logined span {
+  header .bottom .right.logined {
     display: none;
+  }
+  header .bottom .m_menu_wra {
+    display: block;
   }
 }
 @media only screen and (max-width: 900px) {
