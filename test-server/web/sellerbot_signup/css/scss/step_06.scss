@@ -836,6 +836,26 @@ article#caution {
     .modal#modal_02 {
         .popupBody {
             width: 100%;
+
+            .head{
+                padding: 20px 14px;
+                h5{
+                    font-size: 1rem;
+                }
+            }
+
+            .body{
+                padding: 30px 14px 20px 14px;
+                span.line{
+                    margin: 20px 0;
+                }
+                .row{
+                    margin-bottom: 30px;
+                }
+                br{
+                    display: none;
+                }
+            }
         }
     }
 }

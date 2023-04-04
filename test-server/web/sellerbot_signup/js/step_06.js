@@ -178,7 +178,7 @@ function loanyBotAlert() {
         <img src="./img/sellerbotLogo.svg" alt="sellerbot cash">
     </div>
     <div class="body">
-        <p>등록 가능한 판매몰(5개) 초과로<br>선택한 이용권이 '파이봇'으로 변경되었어요.</p>
+        <p>등록 가능한 판매몰(5개) 초과로 <br>선택한 이용권이 '파이봇'으로 변경되었어요.</p>
 		<span class="line"></span>
 		<p><b>- 로니봇 이용을 원하시면</b></p>
 		<p>'이전'단계에서 판매몰을 5개 이하로 변경해주세요.</p>
@@ -231,12 +231,12 @@ function fiBotDCAlert() {
 		<span class="line"></span>
 		<div class="row">
 		<span class="check"></span>
-		<p>가입을 위해서는 결제수단 등록이 필수이며,<br>결제수단 등록 시 무료체험 14일이 제공됩니다.</p>
+		<p>가입을 위해서는 결제수단 등록이 필수이며, <br>결제수단 등록 시 무료체험 14일이 제공됩니다.</p>
 		</div>
 		<br>
 		<div class="row">
 		<span class="check"></span>
-		<p>체험 종료 후 매월 자동 정기결제가 되며,<br>해지는 언제든지 가능합니다.</p>
+		<p>체험 종료 후 매월 자동 정기결제가 되며, <br>해지는 언제든지 가능합니다.</p>
 		</div>
         <div class="btnFlex">
             <button class="blue" id="modalConfirm">확인</button>

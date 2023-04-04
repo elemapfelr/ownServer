@@ -1401,4 +1401,28 @@ article#caution .grayBox pre a {
   .modal#modal_02 .popupBody {
     width: 100%;
   }
+  .modal#modal_01 .popupBody .head,
+  .modal#modal_02 .popupBody .head {
+    padding: 20px 14px;
+  }
+  .modal#modal_01 .popupBody .head h5,
+  .modal#modal_02 .popupBody .head h5 {
+    font-size: 1rem;
+  }
+  .modal#modal_01 .popupBody .body,
+  .modal#modal_02 .popupBody .body {
+    padding: 30px 14px 20px 14px;
+  }
+  .modal#modal_01 .popupBody .body span.line,
+  .modal#modal_02 .popupBody .body span.line {
+    margin: 20px 0;
+  }
+  .modal#modal_01 .popupBody .body .row,
+  .modal#modal_02 .popupBody .body .row {
+    margin-bottom: 30px;
+  }
+  .modal#modal_01 .popupBody .body br,
+  .modal#modal_02 .popupBody .body br {
+    display: none;
+  }
 }
