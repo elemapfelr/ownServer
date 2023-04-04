@@ -1348,4 +1348,7 @@ article#caution .grayBox pre a {
   .bottomSticky.hide {
     display: none;
   }
+  .modal#modal_01 .popupBody {
+    width: 100%;
+  }
 }

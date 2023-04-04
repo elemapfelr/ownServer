@@ -785,13 +785,6 @@ article#content .center .bg video {
 article#content .center .bg video.active {
   display: block;
 }
-article#content .center .bg img {
-  width: 100%;
-  display: none;
-}
-article#content .center .bg img.active {
-  display: block;
-}
 article#content .center .timeOutBar {
   margin-top: 45px;
   width: 100%;
