@@ -921,10 +921,12 @@ article#payInfo .flexBox .right .arrowBtns {
 article#payInfo .flexBox .right .arrowBtns #galleryLeft img {
   transform: rotate(180deg);
 }
-article#payInfo .flexBox .right .arrowBtns #galleryLeft, article#payInfo .flexBox .right .arrowBtns #galleryRight {
+article#payInfo .flexBox .right .arrowBtns #galleryLeft,
+article#payInfo .flexBox .right .arrowBtns #galleryRight {
   cursor: pointer;
 }
-article#payInfo .flexBox .right .arrowBtns #galleryLeft img, article#payInfo .flexBox .right .arrowBtns #galleryRight img {
+article#payInfo .flexBox .right .arrowBtns #galleryLeft img,
+article#payInfo .flexBox .right .arrowBtns #galleryRight img {
   width: 20px;
   height: auto;
   filter: grayscale(100%) brightness(150%);
@@ -1243,10 +1245,12 @@ article#caution .grayBox pre a {
   color: #bbb;
 }
 
-.modal#modal_01 .popupBody {
+.modal#modal_01 .popupBody,
+.modal#modal_02 .popupBody {
   width: 530px;
 }
-.modal#modal_01 .popupBody .head {
+.modal#modal_01 .popupBody .head,
+.modal#modal_02 .popupBody .head {
   width: 100%;
   height: auto;
   background-color: #f2f2f2;
@@ -1256,38 +1260,81 @@ article#caution .grayBox pre a {
   padding: 20px 34px;
   box-sizing: border-box;
 }
-.modal#modal_01 .popupBody .head h5 {
+.modal#modal_01 .popupBody .head h5,
+.modal#modal_02 .popupBody .head h5 {
   font-size: 18px;
   font-weight: bold;
   letter-spacing: -0.9px;
   text-align: center;
   color: #22262f;
 }
-.modal#modal_01 .popupBody .body {
+.modal#modal_01 .popupBody .body,
+.modal#modal_02 .popupBody .body {
   width: 100%;
   padding: 30px 34px 20px 34px;
   box-sizing: border-box;
 }
-.modal#modal_01 .popupBody .body p {
+.modal#modal_01 .popupBody .body p,
+.modal#modal_02 .popupBody .body p {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: -0.98px;
   text-align: left;
   color: #202020;
 }
-.modal#modal_01 .popupBody .body span.line {
+.modal#modal_01 .popupBody .body span.line,
+.modal#modal_02 .popupBody .body span.line {
   width: 100%;
   display: block;
   height: 1px;
   background-color: #e1e1e1;
   margin: 10px 0;
 }
-.modal#modal_01 .popupBody .body .btnFlex {
+.modal#modal_01 .popupBody .body .row,
+.modal#modal_02 .popupBody .body .row {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.modal#modal_01 .popupBody .body .row span.check,
+.modal#modal_02 .popupBody .body .row span.check {
+  width: 16px;
+  height: 10px;
+  position: relative;
+  margin-right: 30px;
+}
+.modal#modal_01 .popupBody .body .row span.check::before,
+.modal#modal_02 .popupBody .body .row span.check::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  background-color: #3d78ff;
+  top: 5.5px;
+  left: 2.6px;
+  transform: rotate(45deg);
+}
+.modal#modal_01 .popupBody .body .row span.check::after,
+.modal#modal_02 .popupBody .body .row span.check::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background-color: #3d78ff;
+  top: 2.9px;
+  left: 6px;
+  transform: rotate(-45deg);
+}
+.modal#modal_01 .popupBody .body .btnFlex,
+.modal#modal_02 .popupBody .body .btnFlex {
   display: flex;
   justify-content: center;
   margin-top: 18px;
 }
-.modal#modal_01 .popupBody .body .btnFlex button {
+.modal#modal_01 .popupBody .body .btnFlex button,
+.modal#modal_02 .popupBody .body .btnFlex button {
   width: 100px;
   padding: 8px 0;
   outline: none;
@@ -1295,11 +1342,13 @@ article#caution .grayBox pre a {
   background: none;
   cursor: pointer;
 }
-.modal#modal_01 .popupBody .body .btnFlex button.blue {
+.modal#modal_01 .popupBody .body .btnFlex button.blue,
+.modal#modal_02 .popupBody .body .btnFlex button.blue {
   color: white;
   background-color: #3d78ff;
 }
-.modal#modal_01 .popupBody .body .btnFlex button.blue_outline {
+.modal#modal_01 .popupBody .body .btnFlex button.blue_outline,
+.modal#modal_02 .popupBody .body .btnFlex button.blue_outline {
   color: #3d78ff;
 }
 
@@ -1348,7 +1397,8 @@ article#caution .grayBox pre a {
   .bottomSticky.hide {
     display: none;
   }
-  .modal#modal_01 .popupBody {
+  .modal#modal_01 .popupBody,
+  .modal#modal_02 .popupBody {
     width: 100%;
   }
 }

@@ -205,13 +205,55 @@ function loanyBotAlert() {
 				document.querySelectorAll('.ticket_gallery ul li')[1].style.width = '50%';
 				ticketSelect();
 			}
-			document.querySelector('#modalConfirm').addEventListener('click', () => {
+			document.querySelector('#modal_01 #modalConfirm').addEventListener('click', () => {
 				document.querySelector('#modal_01').remove();
 				document.querySelector('body').style.overflow = '';
 				convertToFiBot();
 			});
-			document.querySelector('#cancelModal').addEventListener('click', convertToFiBot);
+			document
+				.querySelector('#modal_01 #cancelModal')
+				.addEventListener('click', convertToFiBot);
 		},
 	});
 }
 loanyBotAlert();
+
+// 금융사전용 결제수단 선택 시
+function fiBotDCAlert() {
+	let popupHtml = `
+    <div class="head">
+        <h5>무료체험 안내 (결제수단 등록 안내)</h5>
+        <img src="./img/sellerbotLogo.svg" alt="sellerbot cash">
+    </div>
+    <div class="body">
+        <h4>금융사 전용 고객이시군요!</h4>
+        <h4>선택한 이용권은 '파이봇 할인형'입니다.</h4>
+		<span class="line"></span>
+		<div class="row">
+		<span class="check"></span>
+		<p>가입을 위해서는 결제수단 등록이 필수이며,<br>결제수단 등록 시 무료체험 14일이 제공됩니다.</p>
+		</div>
+		<br>
+		<div class="row">
+		<span class="check"></span>
+		<p>체험 종료 후 매월 자동 정기결제가 되며,<br>해지는 언제든지 가능합니다.</p>
+		</div>
+        <div class="btnFlex">
+            <button class="blue" id="modalConfirm">확인</button>
+        </div>
+    </div>
+    `;
+	modalShow({
+		id: 'modal_02',
+		content: popupHtml,
+		function: () => {
+			const closeModal = () => {
+				document.querySelector('#modal_02').remove();
+				document.querySelector('body').style.overflow = '';
+			};
+
+			document.querySelector('#modal_02 #modalConfirm').addEventListener('click', closeModal);
+		},
+	});
+}
+fiBotDCAlert();
