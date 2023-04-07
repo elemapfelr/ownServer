@@ -166,7 +166,7 @@ header {
 			}
 		}
 
-		.m_menu_wra{
+		.m_menu_wra {
 			width: 50px;
 			height: 50px;
 			padding: 15px 12px;
@@ -176,12 +176,12 @@ header {
 			display: none;
 			box-sizing: border-box;
 
-			.m_menu_box{
+			.m_menu_box {
 				width: 100%;
 				height: 100%;
 				position: relative;
 
-				span{
+				span {
 					position: absolute;
 					width: 100%;
 					background: #202020;
@@ -190,29 +190,33 @@ header {
 					left: 0;
 					transition: all .3s;
 
-					&:nth-child(1){
+					&:nth-child(1) {
 						top: 0;
 					}
-					&:nth-child(2){
+
+					&:nth-child(2) {
 						top: 50%;
 						transform: translateY(-50%);
 					}
-					&:nth-child(3){
+
+					&:nth-child(3) {
 						bottom: 0;
 					}
 				}
 			}
 
-			&.active{
-				.m_menu_box{
-					span{
-						&:nth-child(1){
+			&.active {
+				.m_menu_box {
+					span {
+						&:nth-child(1) {
 							transform: translateY(9.5px) rotate(45deg);
 						}
-						&:nth-child(2){
+
+						&:nth-child(2) {
 							display: none;
 						}
-						&:nth-child(3){
+
+						&:nth-child(3) {
 							transform: translateY(-9.5px) rotate(-45deg);
 						}
 					}
@@ -220,7 +224,7 @@ header {
 			}
 		}
 
-		.m_sideMenu_wra{
+		.m_sideMenu_wra {
 			position: fixed;
 			right: -101%;
 			top: 0;
@@ -231,21 +235,21 @@ header {
 			background: #3d78ff;
 			transition: cubic-bezier(.89, .02, .12, .97) 0.3s;
 
-			&.active{
+			&.active {
 				right: 0;
 			}
 
-			.m_sideMenu{
+			.m_sideMenu {
 				padding: 0 0 60px;
 				box-sizing: border-box;
 
-				.m_sideMenu_header{
+				.m_sideMenu_header {
 					height: 80px;
-    				padding: 30px 15px 15px 15px;
+					padding: 30px 15px 15px 15px;
 					box-sizing: border-box;
 				}
 
-				.m_sideMenu_footer{
+				.m_sideMenu_footer {
 					margin: 15px 0 0;
 					height: 60px;
 					display: flex;
@@ -260,17 +264,17 @@ header {
 			}
 		}
 
-		.m_sideMenu_cover{
+		.m_sideMenu_cover {
 			position: fixed;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background: rgba(0,0,0,0.3);
+			background: rgba(0, 0, 0, 0.3);
 			z-index: 100;
 			display: none;
 
-			&.active{
+			&.active {
 				display: block;
 			}
 		}
@@ -611,11 +615,12 @@ footer {
 	header {
 		.bottom {
 			.right {
-				&.logined{
+				&.logined {
 					display: none;
 				}
 			}
-			.m_menu_wra{
+
+			.m_menu_wra {
 				display: block;
 			}
 		}
@@ -749,4 +754,133 @@ footer {
 	}
 
 	// 20230317 수정 여기까지
+}
+
+.modal {
+	&#footer_term_1_modal,
+	&#footer_term_2_modal,
+	&#footer_term_3_modal {
+		.popupBody {
+			width: 95%;
+			max-width: 680px;
+
+			.head {
+				width: 100%;
+				height: auto;
+				background-color: #f2f2f2;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 20px 34px;
+				box-sizing: border-box;
+
+				h5 {
+					font-size: 18px;
+					font-weight: bold;
+					letter-spacing: -0.9px;
+					text-align: center;
+					color: #22262f;
+				}
+			}
+
+			.body {
+				width: 100%;
+				padding: 30px 34px 20px 34px;
+				box-sizing: border-box;
+
+				.textDiv {
+					width: 100%;
+					border: 1px solid #e8e8e8;
+					box-sizing: border-box;
+					max-height: 280px;
+					overflow-y: auto;
+					overflow-x: hidden;
+					padding: 20px;
+
+					&::-webkit-scrollbar {
+						width: 12px;
+						height: 12px;
+					}
+
+					&::-webkit-scrollbar-track {
+						background-color: #fff;
+						border: 1px solid #e2e2e2;
+					}
+
+					&::-webkit-scrollbar-thumb {
+						background-color: #f2f2f2;
+						border: 1px solid #e2e2e2;
+					}
+
+					pre {
+						font-size: 16px;
+						font-weight: normal;
+						font-stretch: normal;
+						font-style: normal;
+						// line-height: 1.5;
+						// letter-spacing: -.5px;
+						text-align: left;
+						color: #22262f;
+						white-space: pre-line;
+					}
+				}
+
+				button{
+					margin: 0 auto;
+					margin-top: 30px;
+					background-color: #3d78ff;
+					color: white;
+					font-size: 14px;
+					text-align: center;
+					width: 200px;
+					display: block;
+					border: none;
+					outline: none;
+					padding: 5px 0;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.modal {
+		&#footer_term_1_modal,
+		&#footer_term_2_modal,
+		&#footer_term_3_modal {
+			.popupBody {
+				width: 95%;
+				max-width: 680px;
+				overflow: hidden;
+
+				.head{
+					padding: 20px 14px;
+					h5{
+						font-size: 16px;
+					}
+				}
+
+				.body {
+					width: 100%;
+					padding: 30px 14px 20px 14px;
+					box-sizing: border-box;
+	
+					.textDiv {
+						width: 100%;
+						border: 1px solid #e8e8e8;
+						box-sizing: border-box;
+						max-height: 280px;
+						overflow-y: auto;
+						overflow-x: hidden;
+						padding: 10px;
+
+						pre{
+							font-size: 14px;
+						}
+					}
+				}
+			}
+		}
+	}
 }

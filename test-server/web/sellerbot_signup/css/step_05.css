@@ -605,6 +605,107 @@ footer .footerWrap .right img {
     display: none;
   }
 }
+.modal#footer_term_1_modal .popupBody, .modal#footer_term_2_modal .popupBody, .modal#footer_term_3_modal .popupBody {
+  width: 95%;
+  max-width: 680px;
+}
+.modal#footer_term_1_modal .popupBody .head, .modal#footer_term_2_modal .popupBody .head, .modal#footer_term_3_modal .popupBody .head {
+  width: 100%;
+  height: auto;
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 34px;
+  box-sizing: border-box;
+}
+.modal#footer_term_1_modal .popupBody .head h5, .modal#footer_term_2_modal .popupBody .head h5, .modal#footer_term_3_modal .popupBody .head h5 {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: -0.9px;
+  text-align: center;
+  color: #22262f;
+}
+.modal#footer_term_1_modal .popupBody .body, .modal#footer_term_2_modal .popupBody .body, .modal#footer_term_3_modal .popupBody .body {
+  width: 100%;
+  padding: 30px 34px 20px 34px;
+  box-sizing: border-box;
+}
+.modal#footer_term_1_modal .popupBody .body .textDiv, .modal#footer_term_2_modal .popupBody .body .textDiv, .modal#footer_term_3_modal .popupBody .body .textDiv {
+  width: 100%;
+  border: 1px solid #e8e8e8;
+  box-sizing: border-box;
+  max-height: 280px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+}
+.modal#footer_term_1_modal .popupBody .body .textDiv::-webkit-scrollbar, .modal#footer_term_2_modal .popupBody .body .textDiv::-webkit-scrollbar, .modal#footer_term_3_modal .popupBody .body .textDiv::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+.modal#footer_term_1_modal .popupBody .body .textDiv::-webkit-scrollbar-track, .modal#footer_term_2_modal .popupBody .body .textDiv::-webkit-scrollbar-track, .modal#footer_term_3_modal .popupBody .body .textDiv::-webkit-scrollbar-track {
+  background-color: #fff;
+  border: 1px solid #e2e2e2;
+}
+.modal#footer_term_1_modal .popupBody .body .textDiv::-webkit-scrollbar-thumb, .modal#footer_term_2_modal .popupBody .body .textDiv::-webkit-scrollbar-thumb, .modal#footer_term_3_modal .popupBody .body .textDiv::-webkit-scrollbar-thumb {
+  background-color: #f2f2f2;
+  border: 1px solid #e2e2e2;
+}
+.modal#footer_term_1_modal .popupBody .body .textDiv pre, .modal#footer_term_2_modal .popupBody .body .textDiv pre, .modal#footer_term_3_modal .popupBody .body .textDiv pre {
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: left;
+  color: #22262f;
+  white-space: pre-line;
+}
+.modal#footer_term_1_modal .popupBody .body button, .modal#footer_term_2_modal .popupBody .body button, .modal#footer_term_3_modal .popupBody .body button {
+  margin: 0 auto;
+  margin-top: 30px;
+  background-color: #3d78ff;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  width: 200px;
+  display: block;
+  border: none;
+  outline: none;
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+  .modal#footer_term_1_modal .popupBody, .modal#footer_term_2_modal .popupBody, .modal#footer_term_3_modal .popupBody {
+    width: 95%;
+    max-width: 680px;
+    overflow: hidden;
+  }
+  .modal#footer_term_1_modal .popupBody .head, .modal#footer_term_2_modal .popupBody .head, .modal#footer_term_3_modal .popupBody .head {
+    padding: 20px 14px;
+  }
+  .modal#footer_term_1_modal .popupBody .head h5, .modal#footer_term_2_modal .popupBody .head h5, .modal#footer_term_3_modal .popupBody .head h5 {
+    font-size: 16px;
+  }
+  .modal#footer_term_1_modal .popupBody .body, .modal#footer_term_2_modal .popupBody .body, .modal#footer_term_3_modal .popupBody .body {
+    width: 100%;
+    padding: 30px 14px 20px 14px;
+    box-sizing: border-box;
+  }
+  .modal#footer_term_1_modal .popupBody .body .textDiv, .modal#footer_term_2_modal .popupBody .body .textDiv, .modal#footer_term_3_modal .popupBody .body .textDiv {
+    width: 100%;
+    border: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    max-height: 280px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
+  }
+  .modal#footer_term_1_modal .popupBody .body .textDiv pre, .modal#footer_term_2_modal .popupBody .body .textDiv pre, .modal#footer_term_3_modal .popupBody .body .textDiv pre {
+    font-size: 14px;
+  }
+}
 .modal {
   position: fixed;
   top: 0;
